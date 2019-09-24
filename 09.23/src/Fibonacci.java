@@ -39,6 +39,7 @@ Pro tips:
 
 
 import java.util.Arrays;
+import java.math.BigInteger;
 
 public class Fibonacci {
     public static void main(String args[]) {
@@ -85,4 +86,30 @@ public class Fibonacci {
         }
         return high;
     }
+
+    public static BigInteger fibBig(BigInteger index) {
+        if (index.equals(BigInteger.ZERO)) {
+            return BigInteger.ZERO;
+        }
+
+        if (index.equals(BigInteger.ONE)) {
+            return BigInteger.valueOf(1);
+        }
+
+        BigInteger first = BigInteger.valueOf(0);
+        BigInteger second = BigInteger.valueOf(1);
+        BigInteger next = BigInteger.valueOf(-1);
+
+        for (BigInteger i = BigInteger.valueOf(2);
+             i.compareTo(index) < 0;
+             i = i.add(BigInteger.ONE)) {
+
+            next = first.add(second);
+            first = second;
+            second = next;
+        }
+
+        return next;
+    }
+
 }
