@@ -1,33 +1,25 @@
-Let's Write: FizzBuzz non-modular
+Let's Write: FizzBuzz
 
 What is software testing?
  - Writing code to evaluate the correctness of code
- - Set *expectations* for a program's output given an input
- - Developing a specification for the program defined by its I/O
+ - Set expectations for input and output
+ - Develop specification for a program
 
 Two types of tests:
- - Unit tests: "white-box" tests, evaluate individual methods or classes
- - Integration tests: "black-box" tests, evaluate complete programs and processes
+ - Unit Tests: test specific module or function
+ - Integration tests: test large parts of program
 
 What does a test look like?
- - Object interaction (construction, method calls, etc)
- - "Assertions" that evaluate outcomes
-    - assertEquals
-    - assertTrue
-    - fail
- - Dependency mocking (optional)
-    - convert unpredictable network request into dummy response function
+ - "Assertions" evaluate outcomes
+   - assertEquals, assertTrue, fail()
+ - jUnit 4
 
-Let's write: FizzBuzz modular
 See/write: FizzBuzzTest
-
-See: Sorter
-See: test.SorterTest
 
 Some languages like JavaScript separate the above three components:
  - Test Runner (runs tests in sequence, reports output)
- - Assertion library
- - Mocking library
+ - Assertion library: expect(var).to.be(5)
+ - Mocking library:
 
 jUnit contains the first two. "Mockito" is a Java method mocking library (but we won't need it)
 
@@ -37,28 +29,41 @@ See: How do we add jUnit to our projects?
 *****************************************
 
 BIG IDEA: Abstraction - what is it?
+ - Taking complex things and making them *abstract*
 
+sendBytes(recipient, bytes) {
+}
+
+receiveBytes(sender, bytes) {
+}
 
 What are Classes?
  - Blueprints for Objects
- - Containers of "state", composed of variables inside
- - Expose methods for manipulating state
+ - Containers of "state"
+ - Exposes methods for implementing state
 
 C Programming "Procedural" vs Java OOP Programming
-C structs, functions that modify structs
-Java Objects, methods that modify object state
-Information hiding (encapsulation)
+
 
 See: Circle, a very simple container class
-Let's write: Rectangle, a simple container class with doubleDimensions() method
-Observe: doubleDimensions() performs operation without exposing actual stored state (encapsulation, abstraction)
+    // public: Anyone can access
+    // protected: Myself and my children
+    // private: Myself only
 
-What are Interfaces?
- - Describes the methods a class is *expected* to expose
- - Describes method names, but not implementation
+What are Interfaces (abstractly speaking)?
+ -
+
+What are Interfaces (Java?)
+ - Describes methods a class must implement
+ - Does NOT describe how the methods are implemented
 
 Implement: Shape2D
 See: Shape2DTest
+
+
+See: Sorter
+See: test.SorterTest
+
 
 Let's talk about Project 0...
 https://www.briancui.com/csc-143/projects/project0.html

@@ -1,7 +1,7 @@
 package scratch;
 
 public class Circle implements Shape2D {
-    int radius;
+    private int radius;
 
     public Circle(int radius) {
         this.radius = radius;

@@ -11,6 +11,7 @@ public class Shape2DTest {
     @Test
     public void RectangleTest() {
         Rectangle rect = new Rectangle(1, 2);
+
         assertEquals(1, rect.getWidth());
         assertEquals(2, rect.getHeight());
 
@@ -44,5 +45,8 @@ public class Shape2DTest {
 
         assertEquals(2, Math.round(s1.area()));
         assertEquals(314, Math.round(s2.area()));
+
+        s2 = s1;
+
     }
 }

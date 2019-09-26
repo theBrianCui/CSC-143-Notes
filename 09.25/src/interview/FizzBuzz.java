@@ -15,7 +15,7 @@ public class FizzBuzz {
      */
 
     public static void main(String args[]) {
-        for (int i = 1; i <= 100; ++i) {
+        for (int i = 0; i <= 100; i++) {
             System.out.println(fizzbuzz(i));
         }
     }
@@ -23,12 +23,15 @@ public class FizzBuzz {
     public static String fizzbuzz(int i) {
         if (i % 3 == 0 && i % 5 == 0) {
             return "FizzBuzz";
-        } else if (i % 3 == 0) {
+        }
+        if (i % 3 == 0) {
             return "Fizz";
-        } else if (i % 5 == 0) {
+        }
+        if (i % 5 == 0) {
             return "Buzz";
         }
 
         return Integer.toString(i);
     }
+
 }

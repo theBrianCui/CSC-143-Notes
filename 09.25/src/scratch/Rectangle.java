@@ -4,11 +4,13 @@ public class Rectangle implements Shape2D {
     int width;
     int height;
 
+    // Constructor
     public Rectangle(int width, int height) {
         this.width = width;
         this.height = height;
     }
 
+    // Methods
     public void setWidth(int width) {
         this.width = width;
     }
@@ -32,6 +34,6 @@ public class Rectangle implements Shape2D {
 
     @Override
     public double area() {
-        return width * height;
+        return (double) this.width * (double) this.height;
     }
 }
