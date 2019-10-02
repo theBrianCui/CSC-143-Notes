@@ -1,5 +1,5 @@
 
-#
+# .equals(), Polymorphism, Generics
 
 ## Previously, on CSC 143
 
@@ -70,19 +70,14 @@ Generics are a powerful language feature that allow you re-use the *same class* 
 
 See: PairInt
 
-The syntax for declaring a *generic type* depends on where the type is scoped. When you see `<>`, expect generics~
-
- - To declare a generic class variable, declare generic types next to class name, e.g. `public class A<T>`
- - To declare an instance of a given class with a generic type, construct it with the type attached, e.g. `A<int> = new A<int>();`
- - To declare a static method which accepts or returns a generic, declare the generic before the return value, e.g. `public static <B> B myMethod(B a)`
-
-See: Pair
-
 Generics are useful when your class *contains* a type but does not *depend* on its interface.
 The type is provided by clients of the class.
 
-See: School, University
+The syntax for declaring a *generic type* depends on where the type is scoped. When you see `<>`, expect generics~
 
-## @Override and Final
+ - To declare a generic class variable, declare generic types next to class name, e.g. `public class A<T>`
+ - to declare a generic class variables for a child class, declare generic type next to the class name and parent, e.g. `public class B<T, V> extends A<T>`
+ - To declare an instance of a given class with a generic type, construct it with the type attached, e.g. `A<int> = new A<int>();`
+ - To declare a static method which accepts or returns a generic, declare the generic before the return value, e.g. `public static <B> B myMethod(B a)`
 
-As part of the Java developer experience
+See: Pair, Triple
