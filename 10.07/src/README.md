@@ -24,6 +24,13 @@ Takeaways:
  - Write code that is *stable* and can be re-used, not modified, for when requirements change
  - Rely on stable interfaces and abstract classes (today) that never change, but can have concrete implementations that change
 
+## Project 0 Retrospective
+
+ - What did you enjoy?
+ - What did you find easy?
+ - What did you find frustrating, difficult, or time consuming?
+ - Did you feel prepared for P0?
+
 ## Generics
 
 Generics are a powerful language feature that allow you re-use the *same class* with different **variable types**.
