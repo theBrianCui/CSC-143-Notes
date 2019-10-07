@@ -55,7 +55,7 @@ This notion that a class fulfills a given interface allows us to treat think of 
  - Classes and their parents form an *"is-a"* relationship
  - Classes and their interfaces form an *"is-a"* relationship
 
-See: PointTest.java
+See: ShapeTest.java
 
 With this knowledge, Java permits classes to substitute their respective parents and interfaces.
 
@@ -63,6 +63,26 @@ When a child is substituted for a parent, the *child's* implementation is used a
 
 Clients using parent classes do not care about the underlying implementation, only the public interface
 The underlying implementation can be *extended* by children and used without knowledge of the children (abstraction!)
+
+### Casting
+
+Casting is a way of treating one reference type (e.g. `Square`) to act as another (`Shape`). The two rules of casting are:
+
+ - It is *always safe* to cast "up" the class hierarchy.
+ - It is *dangerous* to cast "down" the class hierarchy.
+
+To cast a reference, specify the desired reference type in parentheses next to the object.
+
+```
+Square square = new Square(5, origin);
+Shape shape = square; // Always safe to cast up
+
+// Dangerous: sq may not be a rectangle
+// You should check using instanceof to determine
+// if an instance is actually a class or a child 
+Rectangle r = (Rectangle) sq;
+
+```
 
 ## Generics
 
