@@ -1,5 +1,7 @@
 package lib;
 
+import java.math.BigInteger;
+
 /**
  * A simple container for two variables.
  * @param <L> Left value.
@@ -16,6 +18,10 @@ public class Pair<L, R> {
 
     public static <A, B> Pair<A, B> createPair(A left, B right) {
         return new Pair<A, B>(left, right);
+    }
+
+    public <A> A noop(A object) {
+        return object;
     }
 
     @Override
@@ -35,5 +41,16 @@ public class Pair<L, R> {
     @Override
     public int hashCode() {
         return left.hashCode() ^ right.hashCode();
+    }
+
+    public static void main(String args[]) {
+        Pair<String, Integer> nameToAge = new Pair<String, Integer>("Brian", 99);
+
+        System.out.println("Name: " + nameToAge.left);
+        System.out.println("Age: " + nameToAge.right);
+
+        BigInteger z = nameToAge.noop(BigInteger.ZERO);
+
+        Pair<String, Integer> john = Pair.createPair("John", 18);
     }
 }

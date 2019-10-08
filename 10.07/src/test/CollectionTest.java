@@ -35,7 +35,7 @@ public class CollectionTest {
         // I can assign an ArrayList<BigInteger> to a Collection<BigInteger>,
         // because ArrayList implements Collection
 
-        Collection<BigInteger> x = new ArrayList<BigInteger>();
+        Collection<BigInteger> x = new ArrayList<>();
         x.add(BigInteger.ZERO);
         x.add(BigInteger.ONE);
         x.add(BigInteger.TWO);

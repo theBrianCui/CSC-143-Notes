@@ -29,7 +29,7 @@ public class Circle extends Shape {
         }
 
         Circle r = (Circle) o;
-        return this.radius == r.radius && this.location.equals(r.getLocation());
+        return this.radius == r.radius;
     }
 
     @Override

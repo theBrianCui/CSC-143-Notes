@@ -22,7 +22,7 @@ Takeaways:
 
  - Extend existing code behavior, but do not affect its original specification (requirements, expectations)
  - Write code that is *stable* and can be re-used, not modified, for when requirements change
- - Rely on stable interfaces and abstract classes (today) that never change, but can have concrete implementations that change
+ - Rely on stable interfaces and abstract classes that never change, but can have concrete implementations that change
 
 ## Project 0 Retrospective
 
@@ -40,11 +40,16 @@ See: PairInt
 Generics are useful when your class *contains* a type but does not *depend* on its interface.
 The type is provided by clients of the class.
 
-The syntax for declaring a *generic type* depends on where the type is scoped. When you see `<>`, expect generics~
+The syntax for declaring a *generic type* depends on where the type is scoped. Generics are denoted inside angle brackets `<>`.
 
  - To declare a generic class variable, declare generic types next to class name, e.g. `public class A<T>`
- - to declare a generic class variables for a child class, declare generic type next to the class name and parent, e.g. `public class B<T, V> extends A<T>`
+ 
+ - To declare a generic class variables for a child class, declare generic type next to the class name and parent, e.g. `public class B<T, V> extends A<T>`
+ 
  - To declare an instance of a given class with a generic type, construct it with the type attached, e.g. `A<int> = new A<int>();`
+ 
+   - When Java can infer the type, you can use shorthand `<>` instead of `<int>` on the right hand side
+   
  - To declare a static method which accepts or returns a generic, declare the generic before the return value, e.g. `public static <B> B myMethod(B a)`
 
 See: Pair, Triple
@@ -56,14 +61,14 @@ See: Pair, Triple
 When a class is generic, all its children are naturally generic (makes sense). The result is you can make the container more specific:
 
 ```
-Collection<String> list = new ArrayList<String>();
+Collection<String> list = new ArrayList<Sting>();
 ```
 
-More on this below.
+More on Collections later.
 
 ## Abstract Classes
 
-We've discussed **abstraction** frequently in this class: abstraction hides complicated processes with simple interfaces.
+We've discussed **abstraction** frequently in this class: abstraction masks complicated processes with reveals simple interfaces.
 
 All classes we've written so far are **concrete**. That is to say, they can be instantiated, and have complete method implementations.
 
@@ -86,7 +91,7 @@ However, an abstract class is *still a class definition*! Unlike interfaces, abs
  - can contain concrete method implementations
  - can extend `abstract` classes and specify interfaces
 
-See: Shape.java, Circle.java, Rectangle.java
+See: Shape.java, Circle.java, Rectangle.java, ShapeTest.java
 
 Abstract classes **force** concrete behaviors to be defined in a child class.
 
@@ -97,9 +102,7 @@ Abstract classes **force** concrete behaviors to be defined in a child class.
 
  - Abstract classes can contain properties and implementation, Interfaces may only contain declarations.
 
- - Classes can only extend a single (abstract) class, but can implement several interfaces.
-
- - Abstract classes may extend other abstract classes, interfaces cannot extend each other.
+ - Classes can only extend a single (abstract) class, but can implement several interfaces (e.g. `Iterable<T>` + `Comparable<T>`)
 
 *Remark: In newer versions of Java, Interfaces can actually contain implementation. For our purposes, we'll treat them as if they can't.*
 
@@ -112,8 +115,8 @@ Java arrays are primitive types, which aren't children of Object, and therefore 
 `ArrayList` is an array-like class that supports many familiar operations.
 
  - `array[index] = payload --> .set(index, payload)`
- - `array[index] --> get(index)`
- - `array.length --> size()`
+ - `array[index] --> .get(index)`
+ - `array.length --> .size()`
 
 But arrays are not the only data structure we can use to store objects.
 
@@ -126,3 +129,4 @@ See: CollectionTest.java
 ## Project 1
 
 See: Building.java, Store.java, Supermarket.java, Restaraunt.java
+See: https://www.briancui.com/csc-143/projects/project1.html

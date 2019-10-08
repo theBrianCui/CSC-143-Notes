@@ -1,5 +1,7 @@
 package lib;
 
+import java.math.BigInteger;
+
 public class Triple<L, R, T> extends Pair<L, R> {
     T third;
 
@@ -33,5 +35,14 @@ public class Triple<L, R, T> extends Pair<L, R> {
     @Override
     public int hashCode() {
         return super.hashCode() ^ this.third.hashCode();
+    }
+
+    public static void main(String[] args) {
+        Triple<String, String, Integer> myTriple = new Triple<>("Brian", "Cui", 99);
+
+        Triple<String, String, Integer> john = Triple.createTriple("John", "Doe", 18);
+
+        // new BigInteger(5);
+        BigInteger.valueOf(10);
     }
 }

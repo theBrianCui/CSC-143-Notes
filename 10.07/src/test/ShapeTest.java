@@ -38,6 +38,7 @@ public class ShapeTest {
     @Test
     public void PositionableTest() {
         Positionable circle1 = new Circle("Wheel", 10, new Point(2, 4));
+
         Positionable circle2 = new Circle("Round", 10, new Point(1, 3));
 
         // As Positionable-s, the only methods I can invoke
