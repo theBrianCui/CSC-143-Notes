@@ -80,7 +80,9 @@ An abstract class is like an `interface` in that it cannot be directly construct
 
 ```
 public abstract class AbstractShape {
-    // No constructor allowed!
+    // Constructor OPTIONAL
+    // If exists, cannot be directly called!
+    // Must be called by a child using super(...)
 } 
 ```
 
