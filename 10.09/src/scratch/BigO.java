@@ -51,6 +51,22 @@ public class BigO {
     }
 
     // O(???)
+    public static int[][][] cube(int n) {
+        int[][][] cube = new int[n][n][n];
+        int counter = 0;
+
+        for (int row = 0; row < n; ++row) {
+            for (int col = 0; col < n; ++col) {
+                for (int depth = 0; depth < n; ++ depth) {
+                    cube[row][col][depth] = counter++;
+                }
+            }
+        }
+
+        return cube;
+    }
+
+    // O(???)
     public void selectionSort() {
         for (int sortedIndex = 0; sortedIndex < array.length; ++sortedIndex) {
 
@@ -73,6 +89,46 @@ public class BigO {
     }
 
     // O(???)
+    public boolean isSorted() {
+        int min = this.get(0);
+        for (int value : this.array) {
+            if (value < min)
+                return false;
+        }
+
+        return true;
+    }
+
+    // O(???)
+    private int indexOfBinarySearch(int target) {
+        return this.binSearch(target, 0, this.size());
+    }
+
+    private int binSearch(int target, int begin, int end) {
+        if (end < begin || begin >= this.size()) {
+            return -1;
+        }
+
+        if (begin == end) {
+            if (target == this.get(begin)) {
+                return begin;
+            }
+            return -1;
+        }
+
+        int middle = (begin + end) / 2;
+        int middleElement = this.get(middle);
+        if (target == middleElement) {
+            return middle;
+        }
+
+        if (target > middleElement) {
+            return binSearch(target, middle + 1, end);
+        }
+        return binSearch(target, begin, middle);
+    }
+
+    // O(???)
     public static int fib(int i) {
         if (i == 0)
             return 0;
@@ -88,9 +144,16 @@ public class BigO {
             arr.set(i, (int) Math.round(Math.random() * 100));
         }
 
+        int first = arr.get(0);
+        System.out.println("First item: " + first);
+
         System.out.println(String.format("Before: %s", arr.toString()));
         arr.selectionSort();
         System.out.println(String.format("After: %s", arr.toString()));
+
+        System.out.println(String.format("indexOfBinSearch(%d) returns: %d", first, arr.indexOfBinarySearch(first)));
+        System.out.println(String.format("indexOfBinSearch(%d) returns: %d", 999, arr.indexOfBinarySearch(999)));
+        System.out.println(String.format("indexOfBinSearch(%d) returns: %d", -1, arr.indexOfBinarySearch(-1)));
 
         char[][] triangle = BigO.triangle(10);
         for (char[] row : triangle) {
