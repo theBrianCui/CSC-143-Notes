@@ -82,9 +82,13 @@ The result of rule (3) is that we get several common "classes" that we can group
 ...
  
  - `O(2^n)` - *Exponential* - grows extremely quickly, intractable for large `n`. Used in "flood fill" search algorithms (trees, graphs).
+ 
+ - `O(n!)` - *Factorial* - grows intractably large and fast. Computing all the order permutations (possible shuffles) of a list is `O(n!)` as there are `n!` combinations.
 
 Big O analysis is common during technical interviews, and is something you should always be conscious of while programming.
 Often times programming challenges are designed to test the efficiency of your algorithm alongside the correctness of your solution.
+
+For small `n`, **any algorithm is OK.** Sometimes you want to make trade-offs based on simplicity and efficiency.
 
 *Remark:* `O(logn)` and `O(1)` are quite close in practice. For example, `log_2(2^30) = log_2(1073741824) = 30`. That's just 30 steps to search one billion entries!
 
