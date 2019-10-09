@@ -65,13 +65,23 @@ We can compute Big O with some simple rules:
  2. Count the number of "steps" in the algorithm as a function of `n`
  3. Drop constants and constant multipliers
 
-Examples:
+See: BigO.java
+
+The result of rule (3) is that we get several "classes" that we can group algorithms into. From fastest to slowest...
+
+ - `O(1)` - "Constant Time", this function does not scale based on input. Virtually instant.
+ 
+ - `O(log_2(n))` or `O(logn)` - "Logarithmic", this function scales based on the log-base-2 of the input size. Extremely fast.
+
+ - `O(n)` - "Linear", this function encounters (roughly) every element in the input. Generally pretty quick, though `O(logn)` is much preferred when available..
+
+ - `O(n * log_2(n))` or `O(nlogn)`
 
 
 The bigger the "Big O" class, the more expensive the algorithm. Examples:
 
  - Array lookup is `O(1)`
- - Binary tree search is `O(log_2(n))`, or `O(logn)`
+ - Binary tree search is `O(logn)`
  - Linear search is `O(n)`
  - Merge sort is `O(n * log(n))`, or `O(nlogn)`
  - ...?
