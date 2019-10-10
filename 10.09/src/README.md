@@ -106,20 +106,20 @@ With our newfound knowledge of Big O, we can analyze the efficiency of arrays, o
 
  - Length: `O(1)` in Java, thanks to an internal `.length` property. (Property lookup is a form of indexing, to the compiler).
 
- - Size: `O(n)` exactly. We can use Big O to *evaluate memory cost* too.
+ - Size, in memory: `O(n)` exactly. We can use Big O to *evaluate memory cost* too.
 
 Arrays are quite efficient! But frequently we need to do more than what the humble array provides.
 
 The ArrayList gives us several more methods to consider.
 Recall that the ArrayList doubles its internal size whenever it is completely full.
 
- - Append Back (`.add(E e)`): `O(???)`
+ - Append Back (`.add(E e)`): `O(n)` amortized, `O(n/n) = O(1)` average
  
- - Append Front (`.add(int index, E element)`): `O(???)`
+ - Append Front (`.add(int index, E element)`): `O(n)` always
  
- - Insert Middle (`.add(int index, E element)`): `O(???)`
+ - Insert Middle (`.add(int index, E element)`): `O(n)` always
  
- - Remove Middle (`.remove(int index)`): `O(???)`
+ - Remove Middle (`.remove(int index)`): `O(n)` always
 
 As we can see, some operations are quite costly! Sneak peek of upcoming data structures:
 

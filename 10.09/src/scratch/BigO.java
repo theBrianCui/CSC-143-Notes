@@ -9,22 +9,23 @@ public class BigO {
         this.array = new int[n];
     }
 
-    // O(???)
+    // O(1)
     public int get(int i) {
         return this.array[i];
+
     }
 
-    // O(???)
+    // O(1)
     public void set(int i, int value) {
         this.array[i] = value;
     }
 
-    // O(???)
+    // O(1)
     public int size() {
         return this.array.length;
     }
 
-    // O(???)
+    // O(n)
     public int indexOf(int o) {
         for (int i = 0; i < this.array.length; ++i) {
             if (o == this.get(i))
@@ -33,12 +34,12 @@ public class BigO {
         return -1;
     }
 
-    // O(???)
+    // O(n)
     public String toString() {
         return Arrays.toString(array);
     }
 
-    // O(???)
+    // O(n^2)
     public static char[][] triangle(int n) {
         char[][] square = new char[n][n];
         for (int row = 0; row < square.length; ++row) {
@@ -50,7 +51,7 @@ public class BigO {
         return square;
     }
 
-    // O(???)
+    // O(n^3)
     public static int[][][] cube(int n) {
         int[][][] cube = new int[n][n][n];
         int counter = 0;
@@ -66,7 +67,7 @@ public class BigO {
         return cube;
     }
 
-    // O(???)
+    // O(n^2)
     public void selectionSort() {
         for (int sortedIndex = 0; sortedIndex < array.length; ++sortedIndex) {
 
@@ -88,7 +89,7 @@ public class BigO {
         }
     }
 
-    // O(???)
+    // O(n)
     public boolean isSorted() {
         int min = this.get(0);
         for (int value : this.array) {
@@ -99,7 +100,7 @@ public class BigO {
         return true;
     }
 
-    // O(???)
+    // O(log_2(n))
     private int indexOfBinarySearch(int target) {
         return this.binSearch(target, 0, this.size());
     }
@@ -128,7 +129,7 @@ public class BigO {
         return binSearch(target, begin, middle);
     }
 
-    // O(???)
+    // O(2^n)
     public static int fib(int i) {
         if (i == 0)
             return 0;
