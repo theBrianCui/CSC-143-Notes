@@ -32,8 +32,9 @@ Accesses outside the array cause an `IndexOutOfBoundsException` to be thrown.
 
 See: CollectionTest.java, test one
 
-This is because of how arrays and Objects are stored in memory. An array must take up a contiguous chunk of space.
-Memory is taken and freed unpredictably, so an array cannot exceed its initial boundaries.
+This is because of how arrays and Objects are stored in memory. By definition, an array must take up a contiguous chunk of space.
+
+Writing beyond an array is dangerous - it can and will overwrite other objects nearby!
 
 Whiteboard: Memory layout, fixed length arrays, Objects in storage
 
@@ -51,8 +52,9 @@ so that the ArrayList provides "unlimited" length.
  3. GOTO 2
 
 Whiteboard: ArrayList in memory
+See: ArrayList constructor
 
-Array indexing is fast, but extending can be slow!
+Array indexing is fast, but extending can be slow! (Remember why references exist?)
 
 ## Big O
 
