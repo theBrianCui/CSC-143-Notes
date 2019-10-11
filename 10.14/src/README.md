@@ -18,12 +18,30 @@ As developers, fixed length arrays are a significant limitation.
   - Allocating an array that's too small can cause us can run out of space when we need it.
   - Allocating an array that's too large can be wasteful.
 
-### ArrayList
+### Big O
 
-Classes are a layer of **abstraction** that mask complex implementation with simple interfaces (public methods).
+We use **Big O** to measure the runtime and memory cost of algorithms.
 
-The **ArrayList** is a class containing the primitive array that enables "unlimited" length.
+Big O can be determined with three steps:
 
-  - ArrayList interface is a superset of the array interface, with indexing `O(1)`
+ 1. Start with some input size of length `n`
+ 2. Count the number of steps relative to `n`
+ 3. Drop constants and constant multipliers
+ 
+The most efficient algorithms have the smallest Big O.
 
-  - ArrayList *extends* array functionality with `add()` append and insert, `remove()` from middle or ends.
+
+
+
+## Linked Lists
+
+Arrays and ArrayLists are *contiguous* by definition, but this has its own consequences:
+
+  - Contiguous region must exist in the heap to store array
+  - Insertion at middle is costly, must copy all successive elements forward `O(n)`
+  - Insertion at front is costly, must copy all successive elements forward `O(n)`
+  - Deletion at front/middle is costly, must copy all successive elements backward `O(n)`
+  
+See (Debug): ArrayListTest.java
+
+The **Linked List** is a kind of data structure 
