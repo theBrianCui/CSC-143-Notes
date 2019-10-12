@@ -69,7 +69,7 @@ By chaining several values together using references, a Linked List is formed.
 
 Whiteboard: Singly Linked List
 
-See: Node.java
+See: Node.java, NodeTest.java
 
 Let's analyze the runtime cost of Linked List operations.
 
@@ -79,18 +79,37 @@ Let's analyze the runtime cost of Linked List operations.
   - Insert Front: `O(???)`
   - Insert Back: `O(???)`, with tail pointer, `O(???)`
   - Insert Middle: `O(???)`, during iteration, `O(???)`
+
   - Remove Front: `O(???)`
   - Remove Back: `O(???)`, with tail pointer, `O(???)`
   - Remove Middle: `O(???)`, during iteration, `O(???)`
 
-
 ## Interfaces and Runtime
 
-Java interfaces like Collection were designed so that runtime and storage cost are abstracted away.
+Java interfaces like Collection, and the classes the implement them like Array List,
+*abstract* away the complexities of underlying implementation.
 
-Calling `.add(int index, E element)` looks easy, but its computational cost depends on the *child structure implementation!*
+The simple `Node` structure acts as an internal container that manages the value and next item.
 
-*Regardless* of the backing structure (Array-like or List-like or Set-like), Java interfaces guarantee such methods are always available.
+Using it directly, however, is inconvenient and complex:
+
+  - Indexing and iteration requires looping over `Node` references
+  - Failing to preserve the head `Node` can accidentally cause other nodes to be lost
+  - Tracking list length requires counting every insertion and removal
+  - Middle insertion and removal can be hard to get right
+
+Let's write a wrapper class that manages the Node Object for us,
+revealing a simpler interface for the Linked List.
+
+See: LinkedList.java
+
+### Runtime
+
+Calling `.add(int index, E element)`, whether it be on a LinkedList or ArrayList looks easy,
+but its computational cost depends on the *child structure implementation!*
+
+*Regardless* of the backing structure (Array-like or List-like or Set-like),
+Java interfaces like `Collection` guarantee such methods are always available.
 
 Is this good design?
 
@@ -121,6 +140,4 @@ Big O does not often consider the cost of internal, practical memory management.
 
 Most of the time, we ignore these memory management costs, but they can have real practical performance affects!
 
-See: Next week's reading, ArrayList vs. LinkedList
->>>>>>> 7f8882cb6f3c65759dd4ab1e4efa85aa67fe7431
-
+See: This week's reading: ArrayList vs. LinkedList
