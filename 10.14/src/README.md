@@ -27,13 +27,28 @@ Big O can be determined with three steps:
  1. Start with some input size of length `n`
  2. Count the number of steps relative to `n`
  3. Drop constants and constant multipliers
- 
-The most efficient algorithms have the smallest Big O.
 
+Common "classes" of Big O are `O(1)` (constant time), `O(logn)` (logarithmic), `O(n)` (linear), `O(nlogn)` (linearithmic), `O(n^2)` (quadratic).
 
-
+The smaller the Big O, the more efficient the algorithm.
 
 ## Linked Lists
+
+### Pointers and References Recap
+
+**Memory addresses** are locations in memory, much like street addresses.
+
+Every Object in memory has a dedicated memory address, describing its physical location in memory.
+
+**Pointers** are plain integers that store memory addresses.
+
+A **reference** is a special kind of pointer that has a *type* and does not permit pointer arithmetic.
+
+In Java, every Object variable is actually a **reference** to the Object. Java is *pass by value*, meaning arguments and return values are copied as references.
+
+See: ReferenceTest.java
+
+### Linked Lists: Motivation
 
 Arrays and ArrayLists are *contiguous* by definition, but this has its own consequences:
 
@@ -44,4 +59,11 @@ Arrays and ArrayLists are *contiguous* by definition, but this has its own conse
   
 See (Debug): ArrayListTest.java
 
-The **Linked List** is a kind of data structure 
+### Linked Lists: Description
+
+The **Linked List** is a kind of data structure where each element stores a value (sometimes called payload) and a *reference* to the next value.
+
+By chaining several values together using references, a Linked List is formed.
+
+Whiteboard: Linked List
+
