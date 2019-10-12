@@ -73,7 +73,16 @@ See: Node.java
 
 Let's analyze the runtime cost of Linked List operations.
 
-  - 
+  - Indexing: `O(???)`
+  - Iteration: `O(???)`
+
+  - Insert Front: `O(???)`
+  - Insert Back: `O(???)`, with tail pointer, `O(???)`
+  - Insert Middle: `O(???)`, during iteration, `O(???)`
+  - Remove Front: `O(???)`
+  - Remove Back: `O(???)`, with tail pointer, `O(???)`
+  - Remove Middle: `O(???)`, during iteration, `O(???)`
+
 
 ## Interfaces and Runtime
 

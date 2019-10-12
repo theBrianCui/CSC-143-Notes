@@ -14,38 +14,30 @@ public class NodeTest {
     }
 
     @Test
-    public void ThreeNodeTest() {
+    public void ThreeNodeChainTest() {
         Node<String> head = new Node<>("John",
                                 new Node<>("Paul",
                                     new Node<>("George")));
 
-        // [John] -> [Paul] -> [George]
-
-        // head -> [John] -next> [Paul] -next> [George]
-
+        // head -> [John] -> [Paul] -> [George]
         assertEquals("John", head.payload);
 
         Node<String> tail = head.next;
-
         // tail -> [Paul] -next> [George]
 
         assertEquals("Paul", tail.payload);
 
         tail = tail.next;
-
         // tail -> [George]
 
         assertEquals("George", tail.payload);
 
         tail = tail.next;
-
         // tail is null
 
         try {
             assertEquals("should throw NullPointer exception", tail.payload);
             fail();
-        } catch (NullPointerException e) {
-
-        }
+        } catch (NullPointerException e) { }
     }
 }
