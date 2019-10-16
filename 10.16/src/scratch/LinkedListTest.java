@@ -3,6 +3,7 @@ package scratch;
 import junit.framework.TestCase;
 import org.junit.Test;
 
+import java.util.Arrays;
 import java.util.Iterator;
 
 import static junit.framework.TestCase.assertEquals;
@@ -65,5 +66,75 @@ public class LinkedListTest {
 
         B.pushBack("c");
         assertEquals(A, B);
+    }
+
+    @Test
+    public void LinkedListJoinTest() {
+        LinkedList<String> A = new LinkedList<>(Arrays.asList("one", "two", "three"));
+        LinkedList<String> B = new LinkedList<>(Arrays.asList("four", "five", "six"));
+
+        A.join(B);
+
+        assertEquals(6, A.size());
+        assertEquals(0, B.size());
+
+        Iterator<String> i = A.iterator();
+        assertEquals("one", i.next());
+        assertEquals("two", i.next());
+        assertEquals("three", i.next());
+        assertEquals("four", i.next());
+        assertEquals("five", i.next());
+        assertEquals("six", i.next());
+
+        assertFalse(i.hasNext());
+    }
+
+    @Test
+    public void LinkedListReverseTest() {
+        LinkedList<String> A = new LinkedList<>(Arrays.asList("one", "two", "three"));
+        A.reverse();
+
+        Iterator<String> i = A.iterator();
+        assertEquals("three", i.next());
+        assertEquals("two", i.next());
+        assertEquals("one", i.next());
+
+        assertFalse(i.hasNext());
+    }
+
+    @Test
+    public void LinkedListInsertTest() {
+        LinkedList<String> A = new LinkedList<>(Arrays.asList("one", "two", "three"));
+
+        A.insert(0, "zero");
+
+        Iterator<String> i = A.iterator();
+        assertEquals("zero", i.next());
+        assertEquals("one", i.next());
+        assertEquals("two", i.next());
+        assertEquals("three", i.next());
+        assertFalse(i.hasNext());
+
+        A.insert(4, "four");
+
+        i = A.iterator();
+        assertEquals("zero", i.next());
+        assertEquals("one", i.next());
+        assertEquals("two", i.next());
+        assertEquals("three", i.next());
+        assertEquals("four", i.next());
+        assertFalse(i.hasNext());
+
+        A.insert(2, "one point five");
+
+        i = A.iterator();
+        assertEquals("zero", i.next());
+        assertEquals("one", i.next());
+        assertEquals("one point five", i.next());
+        assertEquals("two", i.next());
+        assertEquals("three", i.next());
+        assertEquals("four", i.next());
+        assertFalse(i.hasNext());
+
     }
 }

@@ -143,14 +143,78 @@ public class LinkedList<T> implements Iterable<T> {
     This destroys the list passed as an argument.
      */
     public void join(LinkedList<T> o) {
+        if (o.size() == 0) {
+            return;
+        }
 
+        if (this.size() == 0) {
+            this.head = o.head;
+            this.tail = o.tail;
+            this.size = o.size;
+            o.clear();
+            return;
+        }
+
+        this.tail.next = o.head;
+        this.tail = o.tail;
+        this.size += o.size();
+        o.clear();
     }
 
     public void reverse() {
+        if (this.size() <= 1) {
+            return;
+        }
 
+        Node<T> prev = this.head;
+        Node<T> current = this.head.next;
+        Node<T> next = this.head.next.next;
+        prev.next = null;
+
+        this.tail = this.head;
+
+        while (current != null) {
+            next = current.next;
+            current.next = prev;
+            prev = current;
+            current = next;
+        }
+
+        this.head = prev;
     }
 
     public void insert(int index, T value) {
+        Node<T> insert = new Node<T>(value);
 
+        if (index == 0) {
+            insert.next = this.head;
+            this.head = insert;
+
+            ++size;
+            return;
+        }
+
+        if (index == size) {
+            this.tail.next = insert;
+            this.tail = insert;
+
+            ++size;
+            return;
+        }
+
+        Node<T> prev = this.head;
+        Node<T> current = this.head.next;
+        int i = 1;
+        while (i != index) {
+            prev = current;
+            current = current.next;
+            ++i;
+        }
+
+        prev.next = insert;
+        insert.next = current;
+
+        ++size;
+        return;
     }
 }
