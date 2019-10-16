@@ -23,6 +23,16 @@ As an engineer, the choice of data structure used can have a significant impact 
 Linked Lists are provide several interesting algorithmic opportunities, which are implemented
 quite differently than with ArrayLists.
 
-These problems are also commonly found as technical interview questions.
+These problems are also commonly found as technical interview questions!
 
 See: LinkedList.java
+
+## Doubly Linked Lists
+
+The *Doubly* Linked List extends the *Singly* Linked List by adding a reference to the previous node
+for each node in the list.
+
+See: DoubleNode.java
+
+
+

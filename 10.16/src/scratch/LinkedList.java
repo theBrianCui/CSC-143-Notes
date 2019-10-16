@@ -24,6 +24,14 @@ public class LinkedList<T> implements Iterable<T> {
         }
     }
 
+    // Want to copy the current linked list?
+    // We can take advantage of our existing Linked List(Iterable) constructor
+    // once we implement the Iterable interface!
+
+    public LinkedList<T> copy(LinkedList<T> other) {
+        return new LinkedList<T>(other);
+    }
+
     public void pushFront(T value) {
         if (head == null && tail == null) {
             head = new Node<T>(value);
@@ -130,6 +138,10 @@ public class LinkedList<T> implements Iterable<T> {
         // must individually free all ListNode elements in the heap, O(n)
     }
 
+    /*
+    Join two linked lists together.
+    This destroys the list passed as an argument.
+     */
     public void join(LinkedList<T> o) {
 
     }
