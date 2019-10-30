@@ -49,6 +49,14 @@ If we allow nodes to have *multiple successors*, or **children**, the resulting 
 
 **Whiteboard:** Linked List, Binary Tree
 
+Some definitions:
+
+ - Trees have a head node, called the **root**, much like Linked Lists.
+ 
+ - Each node *can* have **child** nodes.
+ 
+ - Nodes that do not have children are called **leaves**, or leaf nodes.
+
 Some observations:
 
  - Trees nodes are not sequential, and have no natural sense of order.
@@ -63,3 +71,8 @@ Some observations:
 
 **See:** BinaryTreeNode.java
 
+### Tree Construction
+
+Constructing a tree is similar to constructing a Linked List: construct nodes and attach them to each other using references.
+
+**See:** BinaryTreeTest.java
