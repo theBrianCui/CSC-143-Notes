@@ -53,7 +53,7 @@ Some definitions:
 
  - Trees have a head node, called the **root**, much like Linked Lists.
  
- - Each node *can* have **child** nodes.
+ - Each node *can* have **child** nodes. For binary trees, each node can have *up to* two children.
  
  - Nodes that do not have children are called **leaves**, or leaf nodes.
 
@@ -68,6 +68,8 @@ Some observations:
  - Linked Lists are trees, with a **branching factor** of one.
 
  - Trees cannot have cycles. What about linked lists?
+ 
+ - Trees can be "unbalanced". What are the consequences?
 
 **See:** BinaryTreeNode.java
 
@@ -76,3 +78,59 @@ Some observations:
 Constructing a tree is similar to constructing a Linked List: construct nodes and attach them to each other using references.
 
 **See:** BinaryTreeTest.java
+
+Looking up an individual node to a tree requires "walking" the path to the node.
+
+For a binary tree with `n` nodes, the Big O of lookup, given a path, is `O(???)` for a balanced binary tree.
+
+Not every tree is a binary tree! The two-child limit is artificially imposed; 
+we can TreeNode class where each node has limitless children.
+
+**See:** TreeNode.java
+
+### Tree Search
+
+Searching a Linked List is easy: walk the list, look for the target value.
+
+**See:** LinkedListTest.java
+
+Searching a tree for a target value is much harder: we no longer have a linear path to walk down.
+
+```
+public <T> boolean contains(BinaryTreeNode<T> root, T value) {
+  while (root != null) {
+    if (root.payload.equals(value))
+      return true;
+
+    // ??? Do we look left or right ???
+    // ??? If we pick the wrong direction, how do we back up ???
+  }
+}
+```
+
+Searching is closely related to several problems that require traversing *all* nodes in the tree:
+
+ - How many nodes are in the tree?
+ - What are all the leaf nodes in the tree?
+ - What's the maximum value stored in the tree?
+ ...
+
+Iteration won't work here. We need a new strategy.
+
+### Recursion
+
+**Recursion** is a strategy for solving problems by finding a solution based on smaller instances of the same problem.
+
+Recursion involves two big ideas:
+
+ - The **base case**, the simplest subproblem, where the solution is trivial.
+
+   e.g. determining if a value exists in a Linked List, that only contains only a single node. (Easy!)
+
+ - The **recursive case**, where a solution to a complex problem is derived from a simpler subproblem.
+ 
+   e.g. determining if a value exists in a Linked List at the present head node,
+        then determining if the value exists on the rest of the list (the simpler subproblem)
+
+#### Writing Recursive Algorithms
+
