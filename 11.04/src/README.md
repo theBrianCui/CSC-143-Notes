@@ -134,3 +134,12 @@ Recursion involves two big ideas:
 
 #### Writing Recursive Algorithms
 
+Writing recursive algorithms follows the same process.
+
+ 1. Write a condition that covers the base case.
+    This will return *exactly* the solution to the base case.
+
+ 2. Write the recursive case that:
+    This will return a *combination* of recursive calls to subproblem(s).
+
+See: RecursionTest.java
