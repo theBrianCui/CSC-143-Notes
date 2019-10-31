@@ -1,20 +1,12 @@
 package test;
 
 import org.junit.Test;
+import scratch.ListNode;
 
 import static junit.framework.TestCase.assertEquals;
 import static junit.framework.TestCase.assertTrue;
 
 public class LinkedListTest {
-    class ListNode<T> {
-        T payload;
-        ListNode<T> next;
-
-        ListNode(T payload) {
-            this.payload = payload;
-        }
-    }
-
     public <T> int indexOf(ListNode<T> root, T value) {
         int i = 0;
         while (root != null) {

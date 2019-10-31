@@ -20,6 +20,9 @@
   </component>
   <component name="ProjectId" id="1Srk7qguUz6VGDwhhe1eVpiJdl2" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../CSC-143-Project2" />
+  </component>
   <component name="RunDashboard">
     <option name="ruleStates">
       <list>
@@ -32,8 +35,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.LinkedListTest.searchTest">
-    <configuration name="BinaryTreeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.RecursionTest">
+    <configuration name="RecursionTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="11.04" />
       <extension name="coverage">
         <pattern>
@@ -42,13 +45,13 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="test" />
-      <option name="MAIN_CLASS_NAME" value="test.BinaryTreeTest" />
+      <option name="MAIN_CLASS_NAME" value="test.RecursionTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BinaryTreeTest.ConstructTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="RecursionTest.containsTreeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="11.04" />
       <extension name="coverage">
         <pattern>
@@ -57,14 +60,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="test" />
-      <option name="MAIN_CLASS_NAME" value="test.BinaryTreeTest" />
-      <option name="METHOD_NAME" value="ConstructTest" />
+      <option name="MAIN_CLASS_NAME" value="test.RecursionTest" />
+      <option name="METHOD_NAME" value="containsTreeTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BinaryTreeTest.IntegerPathTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="RecursionTest.listContainsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="11.04" />
       <extension name="coverage">
         <pattern>
@@ -73,14 +76,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="test" />
-      <option name="MAIN_CLASS_NAME" value="test.BinaryTreeTest" />
-      <option name="METHOD_NAME" value="IntegerPathTest" />
+      <option name="MAIN_CLASS_NAME" value="test.RecursionTest" />
+      <option name="METHOD_NAME" value="listContainsTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LinkedListTest.searchTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="RecursionTest.listMaxTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="11.04" />
       <extension name="coverage">
         <pattern>
@@ -89,8 +92,24 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="test" />
-      <option name="MAIN_CLASS_NAME" value="test.LinkedListTest" />
-      <option name="METHOD_NAME" value="searchTest" />
+      <option name="MAIN_CLASS_NAME" value="test.RecursionTest" />
+      <option name="METHOD_NAME" value="listMaxTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RecursionTest.rangeSumTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="11.04" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test" />
+      <option name="MAIN_CLASS_NAME" value="test.RecursionTest" />
+      <option name="METHOD_NAME" value="rangeSumTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -98,10 +117,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.LinkedListTest.searchTest" />
-        <item itemvalue="JUnit.BinaryTreeTest" />
-        <item itemvalue="JUnit.BinaryTreeTest.IntegerPathTest" />
-        <item itemvalue="JUnit.BinaryTreeTest.ConstructTest" />
+        <item itemvalue="JUnit.RecursionTest" />
+        <item itemvalue="JUnit.RecursionTest.containsTreeTest" />
+        <item itemvalue="JUnit.RecursionTest.listMaxTest" />
+        <item itemvalue="JUnit.RecursionTest.listContainsTest" />
+        <item itemvalue="JUnit.RecursionTest.rangeSumTest" />
       </list>
     </recent_temporary>
   </component>

@@ -139,7 +139,24 @@ Writing recursive algorithms follows the same process.
  1. Write a condition that covers the base case.
     This will return *exactly* the solution to the base case.
 
- 2. Write the recursive case that:
-    This will return a *combination* of recursive calls to subproblem(s).
+ 2. Write the recursive case that returns a *combination* of recursive calls to subproblem(s).
+ 
+ 3. Pray the recursive case works.
 
-See: RecursionTest.java
+**See:** RecursionTest.java
+
+Steps (2) and (3) can be challenging - sometimes the subproblem is not obvious,
+and the recursive call can result in an infinite loop!
+
+### Tree Search, Recursive
+
+Trees are naturally recursive: children are trees on their own, but a subset of the overall tree.
+
+With the power of recursion, we can finally write our tree search algorithm.
+
+ 1. Base case: the root is null, or contains the value we're looking for.
+ 
+ 2. Recursive case: determine if the children subtrees contain the value we're looking for.
+ 
+ 3. Pray
+
