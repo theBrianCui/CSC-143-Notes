@@ -160,3 +160,37 @@ With the power of recursion, we can finally write our tree search algorithm.
  
  3. Pray
 
+**See:** RecursionTest.java
+
+### Depth First Search
+
+The `contains` recursive method is an example of a **depth first search**.
+
+```
+    public <T> boolean containsTree(BinaryTreeNode<T> root, T value) {
+        ...
+
+        boolean inLeft = containsTree(root.left, value);
+        boolean inRight = containsTree(root.right, value);
+
+        return inLeft || inRight;
+    }
+```
+
+If you trace the recursive calls,
+
+ 1. the search searches all the way left down the tree,
+ 2. until there are no more left nodes, in which it steps one node to the righ,
+ 3. and then all the way left down that subtree, and so forth (GOTO 1)
+
+This is like trying to solve a corn maze by going as far as possible first,
+rather than inching out slowly in every direction from the starting point.
+
+See: https://upload.wikimedia.org/wikipedia/commons/7/7f/Depth-First-Search.gif
+
+DFS is in contrast to Breadth-First Search, which walks the tree one layer at a time.
+
+See: https://upload.wikimedia.org/wikipedia/commons/5/5d/Breadth-First-Search-Algorithm.gif
+
+The key implementation difference is that DFS uses the Stack, while BFS is implemented
+using a Queue. More on that next time...
