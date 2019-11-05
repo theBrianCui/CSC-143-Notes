@@ -62,5 +62,15 @@ When tracing the recursive calls of `containsTree`, we observe the following:
 
 This is the case with **all** function calls, not just recursive calls! The *caller* function must save its context (local variables) while the *callee* is running.
 
-Behind the scenes, **the Stack** is responsible for storing the context of each function call.
+Then when the callee calls its own functions, it must save its own state, and so forth, recursively, all the way down.
+
+Behind the scenes, **the Stack** is responsible for storing the context of each function call and passing return values from callees to callers.
+
+### What is The Stack?
+
+**The Stack** is a dedicated space in memory similar to **the Heap**. The Stack stores all the variables in the context of each function call.
+
+**Whiteboard:** Memory Layout (Stack | Heap)
+
+Remark: Traditionally, the "stack grows downwards", in terms of memory addresses. It is still a LIFO stack.
 
