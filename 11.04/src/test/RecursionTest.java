@@ -99,8 +99,40 @@ public class RecursionTest {
     }
 
     /**
+     * Gets the sum of a list of Integers.
+     * @param root Root of the list.
+     * @return The sum of the Integers in the list, or zero if the list is null.
+     */
+    public Integer getSumOfList(ListNode<Integer> root) {
+        if (root == null) {
+            return 0;
+        }
+
+        if (root.next == null) {
+            return root.payload;
+        }
+
+        return root.payload + getSumOfList(root.next);
+    }
+
+    @Test
+    public void listSumTest() {
+        assertEquals(Integer.valueOf(0), getSumOfList(null));
+        assertEquals(Integer.valueOf(0), getSumOfList(new ListNode<>(0)));
+        assertEquals(Integer.valueOf(999), getSumOfList(new ListNode<>(999)));
+
+        ListNode<Integer> list = new ListNode<>(5);
+        list.next = new ListNode<>(10);
+        list.next.next = new ListNode<>(10);
+        list.next.next.next = new ListNode<>(25);
+        list.next.next.next.next = new ListNode<>(50);
+
+        assertEquals(Integer.valueOf(100), getSumOfList(list));
+    }
+
+    /**
      * Gets the maximum Integer in the list.
-     * @param root Root of the tree.
+     * @param root Root of the list.
      * @return The maximum Integer in the list, or null if the list is empty.
      */
     public Integer getMaxOfList(ListNode<Integer> root) {
