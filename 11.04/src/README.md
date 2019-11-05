@@ -164,17 +164,17 @@ With the power of recursion, we can finally write our tree search algorithm.
 
 ### Depth First Search
 
-The `contains` recursive method is an example of a **depth first search**.
+The `containsTree` recursive method is an example of a **depth first search**.
 
 ```
-    public <T> boolean containsTree(BinaryTreeNode<T> root, T value) {
-        ...
+public <T> boolean containsTree(BinaryTreeNode<T> root, T value) {
+    ...
 
-        boolean inLeft = containsTree(root.left, value);
-        boolean inRight = containsTree(root.right, value);
+    boolean inLeft = containsTree(root.left, value);
+    boolean inRight = containsTree(root.right, value);
 
-        return inLeft || inRight;
-    }
+    return inLeft || inRight;
+}
 ```
 
 If you trace the recursive calls,
