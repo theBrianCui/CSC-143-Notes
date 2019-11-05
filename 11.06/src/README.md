@@ -1,4 +1,4 @@
-# Trees and Recursion
+# Trees, Recursion, and the Stack
 
 ## Previously, on CSC 143
 
@@ -180,7 +180,7 @@ The `contains` recursive method is an example of a **depth first search**.
 If you trace the recursive calls,
 
  1. the search searches all the way left down the tree,
- 2. until there are no more left nodes, in which it steps one node to the right,
+ 2. until there are no more left nodes, in which it steps one node to the righ,
  3. and then all the way left down that subtree, and so forth (GOTO 1)
 
 This is like trying to solve a corn maze by going as far as possible first,
