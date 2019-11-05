@@ -72,6 +72,7 @@ Some observations:
  - Trees can be "unbalanced". What are the consequences?
 
 **See:** BinaryTreeNode.java
+**See:** TreeNode.java
 
 ### Tree Construction
 
@@ -81,7 +82,7 @@ Constructing a tree is similar to constructing a Linked List: construct nodes an
 
 Looking up an individual node to a tree requires "walking" the path to the node.
 
-For a binary tree with `n` nodes, the Big O of lookup, given a path, is `O(???)` for a balanced binary tree.
+For a binary tree with `n` nodes, the Big O of lookup, given a path, is `O(???)`.
 
 Not every tree is a binary tree! The two-child limit is artificially imposed; 
 we can TreeNode class where each node has limitless children.
@@ -194,3 +195,23 @@ See: https://upload.wikimedia.org/wikipedia/commons/5/5d/Breadth-First-Search-Al
 
 The key implementation difference is that DFS uses the Stack, while BFS is implemented
 using a Queue. More on that next time...
+
+## Binary Tree Search Strategies
+
+ 1. In-Order: Left, Parent, Right
+ 
+ 2. Pre-Order: Parent, Left, Right
+ 
+ 3. Post-Order: Left, Right, Parent
+
+Notice how the "name" of the ordering indicates the position of the parent node.
+
+A minimum pseudocode-representation of in-order search:
+
+```
+search(root.left);
+print(root.payload);
+search(root.right);
+```
+
+See: Tree Search Reading

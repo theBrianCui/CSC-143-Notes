@@ -74,6 +74,10 @@ public class RecursionTest {
             return false;
         }
 
+        if (root.next == null) {
+            return root.payload.equals(value);
+        }
+
         if (root.payload.equals(value)) {
             return true;
         }
@@ -196,10 +200,8 @@ public class RecursionTest {
             return true;
         }
 
-        boolean inLeft = containsTree(root.left, value);
-        boolean inRight = containsTree(root.right, value);
-
-        return inLeft || inRight;
+        return containsTree(root.right, value) ||
+                containsTree(root.left, value);
     }
 
     @Test
