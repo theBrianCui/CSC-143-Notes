@@ -202,7 +202,22 @@ Don't make the mistake of telling an interviewer that binary tree search is alwa
 
 ### Tail Recursion
 
-Tail Recursion 
+Tail Recursion is a special form of recursion where the *solution* to the recursive case is
+passed as an argument to the recursive call.
+
+**See:** TailRecursionTest.java
+
+Observations:
+
+ - Unlike traditional recursion,
+        - the base case returns the trivial solution OR the solution passed by the argument
+        - the recursive return statement returns *exactly* the recursive call
+            - as a result, tail recursion is not appropriate for tree search (why?)
+        
+ - Every iterative algorithm can be turned into a tail recursive algorithm, and vice versa
+        - not possible with recursion, unless you manage your own stack
+
+ - Tail recursion can be optimized to take `O(1)` stack space by the compiler (how?)
 
 ### Project 4
 
