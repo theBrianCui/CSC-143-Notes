@@ -5,6 +5,10 @@
 What was easy?
 What was hard?
 What is a NullPointerException?
+```
+TreeNode a = null;
+a.payload;
+```
 Stack vs. Queue?
 Did you enjoy P2?
 
@@ -32,7 +36,7 @@ public <T> boolean contains(BinaryTreeNode<T> root, T value) {
 }
 ```
 
-**Recursion** is a strategy for solving problems by finding a solution based on smaller instances of the same problem. Recursion involves two big ideas:1
+**Recursion** is a strategy for solving problems by finding a solution based on smaller instances of the same problem. Recursion involves two big ideas:
 
  - The **base case**, the simplest subproblem, where the solution is trivial.
 
@@ -126,24 +130,24 @@ Quick math: `log(n) = d`
 
 What is the Big O of tree computations?
 
- - Exhaustive recursive tree search: `O(???)` in performance,
-                                     `O(???)` stack memory on average (balanced tree),
-                                     `O(???)` stack memory worst case (unbalanced tree) 
+ - Exhaustive recursive tree search: `O(n)` in performance,
+                                     `O(logn)` stack memory on average (balanced tree),
+                                     `O(n)` stack memory worst case (unbalanced tree) 
 
- - Path tree search: `O(???)` in performance on average,
-                     `O(???)` in performance worst case,
-                     `O(???)` in memory when implemented iteratively
+ - Path tree search: `O(logn)` in performance on average (balanced tree),
+                     `O(n)` in performance worst case (unbalanced tree),
+                     `O(1)` in stack memory when implemented iteratively
 
- - Tree insertion (leaf only): `O(???)` in performance on average,
-                               `O(???)` in performance worst case,
-                               `O(???)` in memory when implemented iteratively
+ - Tree insertion (leaf only): `O(logn)` in performance on average,
+                               `O(n)` in performance worst case,
+                               `O(1)` in memory when implemented iteratively
 
 Trees don't sound so great compared to our friends ArrayList and LinkedList:
 
  - ArrayList, LinkedList, and Tree both cost `O(n)` memory for storage (impossible to avoid)
 
  - ArrayList and LinkedList both cost `O(1)` stack memory to search
-    ... compared to `O(logn)` average, `O(n)` worst case tree search
+    ... compared to `O(logn)` average stack memory, `O(n)` worst case tree search
 
  - ArrayList has `O(n)` worst case insertion, LinkedList is `O(1)` insertion (during iteration)
     ... compared to `O(logn)` average, `O(n)` worst case tree insertion
@@ -173,8 +177,9 @@ BSTs enable an efficient type of search called **Binary Search**. The general re
 Observe: every step in the search *halves* the remaining search space!
          The search performs *as if* we knew the exact path to the target node beforehand!
 
-Binary search is `O(???)` performance on average for a balanced tree,
-                 `O(???)` performance worst case for an inbalanced tree
+Binary search is `O(logn)` performance on average for a balanced tree,
+                 `O(n)` performance worst case for an inbalanced tree
+                 `O(1)` iteratively stack space, though
 
 Compare to List search, always `O(n)`
 
@@ -198,7 +203,7 @@ Aha! Since BSTs are ordinary Binary Trees, we can leverage one of the DFS traver
 You'll get to implement Binary Search on your next project.
 
 Remark: Not every binary tree is a BST!
-Don't make the mistake of telling an interviewer that binary tree search is always `O(logn)`.
+Don't make the mistake of telling an interviewer that binary tree search is always `O(logn)` in performance.
 
 ### Tail Recursion
 
@@ -219,7 +224,7 @@ Observations:
 
  - Tail recursion can be optimized to take `O(1)` stack space by the compiler (how?)
 
-### Project 4
+### Project 3
 
 Trees and Recursion practice.
 

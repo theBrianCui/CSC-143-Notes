@@ -38,7 +38,7 @@ public class RecursionTest {
         list.next.next = new ListNode<>(15);
         list.next.next.next = new ListNode<>(25);
         list.next.next.next.next = new ListNode<>(50);
-        // [5 10 10 25 50]
+        // [5 10 15 25 50]
 
         assertEquals(Integer.valueOf(105), getSumOfList(list));
     }
