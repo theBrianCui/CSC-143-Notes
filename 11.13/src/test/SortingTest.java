@@ -18,7 +18,7 @@ public class SortingTest {
         list.next = new ListNode<>(3);
         list = list.next;
 
-        list.next = new ListNode<>(2);
+        list.next = new ListNode<>(6);
         list = list.next;
 
         list.next = new ListNode<>(1);
@@ -26,9 +26,12 @@ public class SortingTest {
 
         list.next = new ListNode<>(0);
         list = list.next;
-        // [5 4 3 2 1 0]
 
-        Sorting.selectionSort(head);
+        list.next = new ListNode<>(2);
+        list = list.next;
+        // [5 4 3 6 1 0 2]
+
+        head = Sorting.selectionSort(head);
 
         for (int i = 0; i <= 5; ++i) {
             assertEquals(Integer.valueOf(i), head.payload);
