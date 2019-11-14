@@ -60,8 +60,8 @@ Sorted lists have a number of useful properties:
 Whiteboard: Selection Sort
 See: Sorting.java
 
-Selection Sort Big O Performance:   `O(???)`
-               Big O Stack Memory:  `O(???)`
+Selection Sort Big O Performance:   `O(n^2)`
+               Big O Stack Memory:  `O(1)`
 
 Remark: The theoretical performance analysis of sorting algorithms assumes insertion, swap, and append are `O(1)`;
 practically we can think of it as always implemented on a Linked List.
@@ -77,8 +77,8 @@ practically we can think of it as always implemented on a Linked List.
 
 Whiteboard: Insertion Sort
 
-Insertion Sort Big O Performance:   `O(???)`
-               Big O Stack Memory:  `O(???)`
+Insertion Sort Big O Performance:   `O(n^2)`
+               Big O Stack Memory:  `O(1)`
 
 ### Optimal Sorting Algorithms
 
@@ -131,8 +131,8 @@ until finally the entire list has been reassembled (merged) in sorted order.
 
 Whiteboard: Merge Sort
 
-Merge Sort Big O Performance:   `O(???)`
-           Big O Stack Memory:  `O(???)`
+Merge Sort Big O Performance:   `O(n * log(n))`
+           Big O Stack Memory:  `O(log n)`
 
 You'll get to implement Merge Sort on your next project.
 
@@ -177,10 +177,10 @@ allowing higher priority elements to take priority over lower ones, even if they
 
 Both lists and trees offer sorting (BSTs). Are they optimal for priority queues?
 
- - Sorted list: `O(???)` access to min element, but `O(???)` average insertion
- - Balanced Binary Search Tree: `O(???)` access to min element, but `O(???)` average insertion
+ - Sorted list: `O(1)` access to min element, but `O(n)` average insertion
+ - Balanced Binary Search Tree: `O(logn)` access to min element, but `O(logn)` average insertion
 
-Observe: BSTs have `O(???)` access to *every* element, but we only need the *minimum* element.
+Observe: BSTs have `O(logn)` access to *every* element, but we only need the *minimum* element.
 
 Can we build a structure that has `O(1)` access to the minimum element, and `O(logn)` insertion?
 
@@ -227,9 +227,9 @@ Let's analyze the performance:
 
  - Min-element Retrieval: `O(1)`
  - Min-element Deletion: `O(logn)`
- - New element Insertion worst-case: `O(???)`
- - New element Insertion average: `O(???)`
+ - New element Insertion worst-case: `O(logn)`
+ - New element Insertion average: `O(1)`
 
-How can new element insertion be average `O(???)`?
+How can new element insertion be average `O(1)`?
 
 Why don't BSTs share this behavior?
