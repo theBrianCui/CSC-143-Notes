@@ -216,3 +216,20 @@ Properties (1) and (2) are maintained by special insertion and removal procedure
    Then *swap* the new root node with its smaller child, repeatedly, until (1) is fulfilled.
    This is known as *bubbling down*.
 
+An interesting side effect of property (2) is we can efficiently store Heaps in arrays:
+
+ - The root element is at index 1 (for convenience)
+ - The left child of an element is at index 2i
+ - The right child of an element is at index 2i + 1
+ - The parent of a node is floor(i / 2)
+
+Let's analyze the performance:
+
+ - Min-element Retrieval: `O(1)`
+ - Min-element Deletion: `O(logn)`
+ - New element Insertion worst-case: `O(???)`
+ - New element Insertion average: `O(???)`
+
+How can new element insertion be average `O(???)`?
+
+Why don't BSTs share this behavior?
