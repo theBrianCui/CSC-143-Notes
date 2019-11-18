@@ -31,6 +31,10 @@ public class ArrayListTable<K, V> implements Table<K, V> {
         }
         // Example end
 
+        // ArrayList is a List
+        // List provides ListIterator
+        // ListIterator has a "set" method that lets us replace values
+
         ListIterator<Pair<K, V>> i = table.listIterator();
         while (i.hasNext()) {
             Pair<K, V> pair = i.next();

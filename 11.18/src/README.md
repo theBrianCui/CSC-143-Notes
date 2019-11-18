@@ -118,6 +118,14 @@ Problem: unsorted lookup is `O(n)`, which is not good.
 If we used a balanced Binary Search Tree as a backing container (sorted by key),
 lookup would be `O(???)` and insertion would be `O(???)`.
 
+Note that two keys that `.equals()` each other (value equality) should map to the same value.
+        These two keys don't necessarily have to have reference equality, `==`.
+        
+If we used only reference equality, the following won't work,
+        since the two strings "John" are not reference equal, but ARE value equal:
+
+`table.get("John") == table.get("John")`
+
 ### Hashing
 
 Let's start with an observation: Arrays are `O(1)` lookup tables with integer keys!
@@ -138,40 +146,132 @@ We only need a single array lookup table that stores values.
 All we need is an way to get integers out of keys, which can be any generic type.
 Let's call that method `hashCode`.
 
-#### Attempt #1: Map All Keys to Zero
+#### Attempt #1: Map All Keys to Random
 
 ```
 class person {
-    ... various fields, methods, etc ...
-
-    @Override
+    ...
+    Random rand = new Random(0);
     public int hashCode() {
-        return 0;
+        return rand.nextInt(...);
+    }
+}
+
+class ArrayListTable {
+    ...
+    private ArrayList<Pair<K, V>> table = new ArrayList<>();
+
+    public V get(K key) {
+        return table.get(key.hashCode() % table.size());
     }
 }
 ```
 Is `hashCode` `O(1)` ?
 
+Is `get` `O(1)`?
+
 What's wrong with this solution?
 
-#### Attempt #2: Map All Keys to Zero, Store 2D Array
+#### Attempt #2: Map All Keys to Random, Store 2D Array, Walk List for Duplicates
 
 ```
 class person {
     ...
+    Random rand = new Random(0);
     public int hashCode() {
-        return 0;
+        return rand.nextInt();
     }
 }
-```
 
-```
 class ArrayListTable {
     ...
     private ArrayList<ArrayList<Pair<K, V>>> 2DTable = new ArrayList<>();
+
+    public V get(K key) {
+        for (Pair<K, V> pair : 2DTable.get(key.hashCode() % 2DTable.size())) {
+
+            if (pair.left.equals(key))
+                return pair.right;
+        }
+    }
 }
 ```
+
 Is `hashCode` `O(1)` ?
 
+Is `get` `O(1)`?
+
 What's wrong with this solution?
+
+#### Attempt #3: Map Keys To Random at Construct Time
+
+```
+class person {
+    Random rand = new Random(0);
+    int hashCode;
+
+    person() {
+        hashCode = rand.nextInt(...);
+    }
+
+    public int hashCode() {
+        return hashCode;
+    }
+}
+
+class ArrayListTable {
+    ...
+    private ArrayList<ArrayList<Pair<K, V>>> 2DTable = new ArrayList<>();
+
+    public V get(K key) {
+        for (Pair<K, V> pair : 2DTable.get(key.hashCode() % 2DTable.size())) {
+
+            if (pair.left.equals(key))
+                return pair.right;
+        }
+    }
+}
+```
+
+Is `hashCode` `O(1)` ?
+
+Is `get` `O(1)`?
+
+What's wrong with this solution?
+
+#### What Makes a Good Hash Function?
+
+A **Hash** is a function that takes arbitrary inputs and outputs values in a finite range.
+
+Whiteboard: Hash Function Domain and Range
+
+Observe: Infinite inputs map to finite outputs, meaning
+         there will always be *collisions* where two inputs map to the same output.
+
+What makes a good hash function?
+ 
+ 1. Predictability: The same input should always produce the same output.
+ 
+ 2. Randomness: Outputs should be uniformly distributed randomly (regardless of input)
+
+Observe: Similar inputs `"Brian", "Bryan", "Ryan"` should appear randomly distributed in
+         the output, despite their input similarity. Without randomness, hash tables
+         degrade to `O(n)` lookup!
+
+Hash function design is a significant focus of study in Computer Science. 
+
+#### How is hashing implemented in Java?
+
+In Java, every Object has a `.hashCode` function that returns a hash of the Object,
+which is a plain `int`. Like `.toString`, `.hashCode` must be overridden by the developer
+for custom classes.
+
+See: https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html
+
+The `.hashCode` dictates which table sublist the Object should be stored in.
+
+The use of a lookup table (array) containing sublists to store Objects is called
+**hashing with buckets**, where each sublist is a single "bucket". 
+
+General rule: when you override `.equals`, override `.hashCode`.
 
