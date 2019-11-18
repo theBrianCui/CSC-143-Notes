@@ -108,6 +108,8 @@ We can *make* arrays general purpose by storing `Pair<L, R>` values (think Proje
 ArrayList<Pair<String, Integer>> recipe = new ArrayList<>();
 ```
 
+See: ArrayListTable.java
+
 Problem: unsorted lookup is `O(n)`, which is not good.
          We could sort it, but that requires the data be `Comparable` in some meaningful way.
 
