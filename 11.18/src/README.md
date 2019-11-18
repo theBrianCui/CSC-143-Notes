@@ -54,3 +54,28 @@ in the queue gets a *priority* that dictates its position.
   - Passengers who pay for first class should board before economy class
   - Bidders in an auction should be considered in order of highest price first
 
+The data structures we've seen so far aren't ideal:
+
+  - Sorted lists are `O(1)` min-lookup, but `O(n)` insertion
+  - Binary Search Trees are `O(logn)` average min-lookup, but are also `O(logn)` insertion
+
+**Heaps** are a tree-like data structure optimized for min-value lookup and insertion.
+
+  - Root nodes are less than or equal to their child nodes
+  - The tree is complete, filled top to bottom, left to right
+
+Heaps give us `O(1)` min-lookup and average `O(1)` insertion, given a uniform distribution.
+
+The *completeness* guarantee allows us to store heaps using *arrays* with no wasted space
+and no reference overhead!
+
+  - Given node at index `i`,
+    - its left child is `2i`,
+    - its right child is `2i + 1`,
+    - its parent is `floor(i/2)`
+
+**Addendum**: Practically, priority queues backed by heaps do not maintain order
+within each priority. The only guarantee is a highest (or lowest) priority
+element is removed first, but not necessarily the ordering of the elements
+with equal priority.
+
