@@ -102,14 +102,28 @@ However, arrays and trees aren't general purpose:
  - Arrays can only map integers to values, and not arbitrary data (e.g. a String or "Student")
  - Trees must carefully arrange data for efficiency, paths may not be meaningful
 
+See: Table.java
+
 We can *make* arrays general purpose by storing `Pair<L, R>` values (think Project 1)
 
 ```
 ArrayList<Pair<String, Integer>> recipe = new ArrayList<>();
 ```
 
-See: ArrayListTable.java
+See: ArrayListTable.java, TableTest.java
 
 Problem: unsorted lookup is `O(n)`, which is not good.
          We could sort it, but that requires the data be `Comparable` in some meaningful way.
 
+If we used a balanced Binary Search Tree as a backing container (sorted by key),
+lookup would be `O(???)` and insertion would be `O(???)`.
+
+### Hashing
+
+Let's start with an observation: Arrays are `O(1)` lookup tables with integer keys!
+
+Except: Arrays are `O(1)` lookup tables with *integer keys*.
+
+We want lookup tables 
+
+Big Idea: 

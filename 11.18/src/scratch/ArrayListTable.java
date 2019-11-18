@@ -44,9 +44,20 @@ public class ArrayListTable<K, V> implements Table<K, V> {
         table.add(new Pair<>(key, value));
     }
 
-
     @Override
     public Iterator<Pair<K, V>> iterator() {
         return table.iterator();
+    }
+
+    public static void main(String args[]) {
+        Table<String, Integer> peopleAge = new ArrayListTable<>();
+
+        peopleAge.put("John", 20);
+        peopleAge.put("Alfred", 70);
+        peopleAge.put("Bruce", 40);
+
+        for(Pair<String, Integer> pair : peopleAge) {
+            System.out.println(pair.left + " : " + pair.right);
+        }
     }
 }
