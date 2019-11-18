@@ -79,3 +79,35 @@ within each priority. The only guarantee is a highest (or lowest) priority
 element is removed first, but not necessarily the ordering of the elements
 with equal priority.
 
+## Hashing and Maps
+
+Throughout this course, we have explored several ways of *storing* and *sorting* data.
+
+*Associating*, or *mapping* data is another significant problem in Computer Science,
+with real-world implications:
+
+ - Students are *mapped* to grades, and the classes they take
+ - Patients are *mapped* to medications at a pharmacy
+ - Products are *mapped* to prices in a store
+ - Employees are *mapped* to their salaries and job titles
+
+We've seen some ways of associating data already:
+
+ - Indices in an array map integers to stored values (lookup table, like Excel)
+ - Paths in a tree are associated to end values (like navigating in Google Maps)
+ - The `Pair<L, R>` class associates a left and right value
+
+However, arrays and trees aren't general purpose:
+
+ - Arrays can only map integers to values, and not arbitrary data (e.g. a String or "Student")
+ - Trees must carefully arrange data for efficiency, paths may not be meaningful
+
+We can *make* arrays general purpose by storing `Pair<L, R>` values (think Project 1)
+
+```
+ArrayList<Pair<String, Integer>> recipe = new ArrayList<>();
+```
+
+Problem: unsorted lookup is `O(n)`, which is not good.
+         We could sort it, but that requires the data be `Comparable` in some meaningful way.
+
