@@ -124,6 +124,54 @@ Let's start with an observation: Arrays are `O(1)` lookup tables with integer ke
 
 Except: Arrays are `O(1)` lookup tables with *integer keys*.
 
-We want lookup tables 
+We want lookup tables that map generic keys to generic values.
 
-Big Idea: 
+**Big Idea:** If we can map generic keys to *integers* first in `O(1)`,
+               then we can map those integers to values in `O(1)`!
+
+```
+Generic Key -> Integer -> Generic Value
+```
+
+We only need a single array lookup table that stores values.
+
+All we need is an way to get integers out of keys, which can be any generic type.
+Let's call that method `hashCode`.
+
+#### Attempt #1: Map All Keys to Zero
+
+```
+class person {
+    ... various fields, methods, etc ...
+
+    @Override
+    public int hashCode() {
+        return 0;
+    }
+}
+```
+Is `hashCode` `O(1)` ?
+
+What's wrong with this solution?
+
+#### Attempt #2: Map All Keys to Zero, Store 2D Array
+
+```
+class person {
+    ...
+    public int hashCode() {
+        return 0;
+    }
+}
+```
+
+```
+class ArrayListTable {
+    ...
+    private ArrayList<ArrayList<Pair<K, V>>> 2DTable = new ArrayList<>();
+}
+```
+Is `hashCode` `O(1)` ?
+
+What's wrong with this solution?
+
