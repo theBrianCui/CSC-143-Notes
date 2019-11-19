@@ -263,15 +263,62 @@ Hash function design is a significant focus of study in Computer Science.
 #### How is hashing implemented in Java?
 
 In Java, every Object has a `.hashCode` function that returns a hash of the Object,
-which is a plain `int`. Like `.toString`, `.hashCode` must be overridden by the developer
-for custom classes.
+which is a plain `int`.
+
+With Java library classes, we get a well defined `.hashCode` for free!
+Like `.toString`, `.hashCode` must be overridden by the developer for custom classes.
 
 See: https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html
 
 The `.hashCode` dictates which table sublist the Object should be stored in.
 
 The use of a lookup table (array) containing sublists to store Objects is called
-**hashing with buckets**, where each sublist is a single "bucket". 
+**hashing with buckets**, where each sublist is a single "bucket".
+
+Whiteboard: Hashing with Buckets
 
 General rule: when you override `.equals`, override `.hashCode`.
 
+See: Pair.java
+
+#### How do HashMaps work in Practice?
+
+HashMaps use *hashing with buckets*, in effect storing a linked list on each table entry,
+pushing an element to the list with each insertion.
+
+HashMaps, like ArrayLists, start with a limited size table (array).
+The bucket index is determined by `hashCode % size`.
+
+Ideally every element gets its own bucket: `O(1)` lookup!
+Collisions are inevitable; two+ elements can be stored in the same bucket.
+
+*Uniform randomness* of hash functions helps to spread out elements across several buckets,
+to minimize the cost of walking the sublists.
+
+If hashing is `O(1)`, and lookup is almost always `O(1)`, we've achieved our goal:
+generic lookup table with `O(1)` retrieval and storage!
+
+##### Load Factor and Expanding HashMaps
+
+If we pack too many elements in a HashMap, performance degrades to `O(n)`.
+
+To avoid overcrowding, HashMaps have a **load factor** that determines when
+the lookup table needs to be *expanded*.
+
+This is just like how ArrayLists expand when they're out of room:
+  - Allocate space for new HashMap table, twice as large
+  - Iterate over all elements, re-hash keys, and insert them in *new* location
+
+See: https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/HashMap.html
+
+Your next project will feature a HashMap implementation, including expansion!
+
+## Conclusion
+
+HashMaps are Magic: `O(1)` average insertion, retrieval, removal
+                    contingent on good hash function
+                   
+At what cost? `O(n)` iteration, unordered, cannot be sorted (why?)
+              Wasted space (how?)
+
+A pattern emerges: space vs. time tradeoff
