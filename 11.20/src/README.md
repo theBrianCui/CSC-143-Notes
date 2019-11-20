@@ -73,6 +73,25 @@ HashMaps are "magic"!
 But: HashMaps are not ordered and do not have natural sorting,
      without supplemental structures
 
+## Old Friends
+
+Remember the `HashSet<T>` from Project 1?
+
+A *set* is a collection of Objects without duplicates. The interface is:
+
+ - `.add(T)`: inserts a value into the set, no duplicates (`.equals()`)
+ - `.contains(T)`: returns true if the value is in the set
+ - `.remove(T)`: removes a value from the set
+
+A **Hash Set** is actually just a Hash Table: `O(1)` insert, lookup, removal!
+
+The Objects in the set are hashed and mapped to meaningless values-
+the presence of the Object key alone indicates that the Object is in the set.
+
+You could implement a `HashSet<T>` by leveraging a `HashMap<T>`.
+
+See: HashSet.java
+
 ## Graphs
 
 Let's think back to Linked Lists and Trees.

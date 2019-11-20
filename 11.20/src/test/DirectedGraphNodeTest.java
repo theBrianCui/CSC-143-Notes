@@ -7,7 +7,7 @@ public class DirectedGraphNodeTest {
 
     /**
      * In this directed graph, all edges point downwards
-     * except for the edge from 12 to 10.
+     * except for the edge from 12 to 10. It's like a water slide and ladder.
      *
      *    10  <--.
      *   /  \    |
