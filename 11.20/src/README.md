@@ -75,3 +75,56 @@ But: HashMaps are not ordered and do not have natural sorting,
 
 ## Graphs
 
+Let's think back to Linked Lists and Trees.
+
+(Singly) Linked Lists are a structure where each internal node points to a single `next` node.
+
+Trees are like Linked Lists, except a single node may have any number of `next` child nodes.
+
+A limitation with trees is that they *may not contain cycles*.
+ - Recursive searches are guaranteed to terminate (eventually a leaf node is reached)
+ - Paths are guaranteed to have a limited length (max root to deepest leaf)
+
+What happens when we remove this limitation?
+
+A **Graph** is a data structure composed of independent nodes,
+where each node can point to any number of other node in the graph.
+
+Formally speaking, a graph `G = (V, E)` is:
+ - A set of *vertices* `V` or *nodes*, which can hold payloads
+ - A set of *edges* `E` where each edge connects two vertices
+
+Whiteboard: Graph Structure
+
+Edges can have properties of their own:
+
+ - Edges can be *directed* (one-way), or *undirected* (two-way)
+ - Edges can have *weight*, or a "cost" to use - not in performance, but in semantics.
+
+Graphs have many real world parallels and use cases!
+
+ - Your social network: people are nodes, connections are edges
+ - Maps/Navigation: locations are nodes, streets are (directed) edges
+ - Networking: devices are nodes, edges are connections between nodes (forming the Internet)
+
+*Trees are graphs*. By definition, a tree is a *directed acyclic graph*.
+
+Remark: Graphs are unfortunately named, much like Heaps and The Heap.
+        In CS, a Graph is a data structure.
+        In Microsoft Excel, a Graph is a chart.
+        Know the difference!
+
+### Graph Traversal
+
+We know recursion for trees:
+
+ 1. Define a base case that solves a local subproblem
+    - a tree with no child nodes is easy to solve
+ 
+ 2. Define a recursive case that combines subproblem solutions
+    - walk all children and combine their results into a meaningful solution
+ 
+ 3. Pray, that the base case works, and the recursive case combines solutions
+
+What happens when we try recursion on graphs?
+
