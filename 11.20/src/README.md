@@ -90,9 +90,11 @@ What happens when we remove this limitation?
 A **Graph** is a data structure composed of independent nodes,
 where each node can point to any number of other node in the graph.
 
-Formally speaking, a graph `G = (V, E)` is:
+Formally speaking, a graph `G = { V, E }` is:
+
  - A set of *vertices* `V` or *nodes*, which can hold payloads
  - A set of *edges* `E` where each edge connects two vertices
+ - The set of nodes a node is connected to are called *neighbors*
 
 Whiteboard: Graph Structure
 
@@ -113,6 +115,13 @@ Remark: Graphs are unfortunately named, much like Heaps and The Heap.
         In CS, a Graph is a data structure.
         In Microsoft Excel, a Graph is a chart.
         Know the difference!
+
+### Graphs in Programming
+
+The most "natural" way to store a graph is to construct Node objects,
+and use references as edges.
+
+See: GraphNode.java, DirectedGraphNode.java, DirectedGraphNodeTest.java
 
 ### Graph Traversal
 
