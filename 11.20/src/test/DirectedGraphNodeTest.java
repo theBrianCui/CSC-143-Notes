@@ -61,6 +61,6 @@ public class DirectedGraphNodeTest {
      */
     @Test
     public void DiamondSumTest() {
-
+        assertEquals(Integer.valueOf(36), TreeSum(ten));
     }
 }
