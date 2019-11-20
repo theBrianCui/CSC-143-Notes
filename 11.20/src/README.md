@@ -180,5 +180,23 @@ Problem: trees are acyclic, graphs may not be!
 To avoid processing the same node more than once, we use a `HashSet`
 that contains all the nodes visited so far.
 
-### Dijkstra's Algorithm
+### Famous Graph Algorithms
 
+#### Shortest Path
+
+Perhaps the most well-known application of *graphs* are for
+*real-world navigation* like Google Maps.
+
+ - Nodes are locations (buildings, parks, etc)
+ - Edges are streets (one-way, two-way, highway, etc)
+   - The *cost* or *weight* of a particular edge
+     is the distance+time required to travel down the street.
+
+Problem: how do we *minimize* the cost of traveling from A to B?
+
+Tree search algorithms (DFS, BFS) are a good start,
+but assume all edges have the same weight.
+
+
+
+#### Minimum Spanning Tree
