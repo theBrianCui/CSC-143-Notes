@@ -61,6 +61,12 @@ public class DirectedGraphNodeTest {
      */
     @Test
     public void DiamondSumTest() {
+//        twelve.removeNeighbor(ten);
+//        nine.removeNeighbor(twelve);
+
         assertEquals(Integer.valueOf(36), TreeSum(ten));
+
+//        twelve.addNeighbor(ten);
+//        nine.addNeighbor(twelve);
     }
 }
