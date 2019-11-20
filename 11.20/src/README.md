@@ -192,11 +192,64 @@ Perhaps the most well-known application of *graphs* are for
    - The *cost* or *weight* of a particular edge
      is the distance+time required to travel down the street.
 
+Whiteboard: Graph of Locations and Streets
+
 Problem: how do we *minimize* the cost of traveling from A to B?
+         In other words, what is the **shorted path** from A to B?
 
 Tree search algorithms (DFS, BFS) are a good start,
 but assume all edges have the same weight.
 
+Big idea: recursively search the graph and process nodes in the order
+          of how "cheap" they are to access.
+          
+  For example, accessing the parking lot is cheap,
+  accessing Mt. Everest is hard,
+  so let's visit the parking lot first!
 
+An algorithm which considers the best short term case first
+is known as a **greedy algorithm**.
+
+**Dijkstra's Algorithm** is a well-known greedy algorithm invented by Edsger Dijkstra
+in 1956 (Dijkstra was a faculty at the University of Texas) for solving the shortest-path problem.
+
+```
+Initialize HashMap D of distances mapping nodes to minimum distances
+    root -> 0
+    all other nodes -> infinity
+
+Initialize a Priority Queue, Q, with the the root node only
+    The priority of each node is the minimum distance to reach that node that's known
+    We can store these in Pair objects, distance and node
+    Root node has D[root] = priority = 0
+
+Initialize a Visited Set, S, that starts empty
+
+While Q is not empty,
+    Pop a node V off priority Q
+    
+    If V is in visited set S:
+        Continue
+    Else:
+        Insert V into visited set S
+        
+        For all neighbors U of V:
+            If D[V] + EdgeCost(V, U) < D[U]:
+                Insert U into Q
+                D[U] = D[V] + EdgeCost(V, U)
+
+Return D
+```
+
+Whiteboard: Dijkstra's Algorithm
+
+Observations:
+ - When a node is popped off Q, the fastest path to that node is known
+ - A node can appear in Q more than once, but only gets processed once thanks to S
+ - Does NOT work with negative edges (like taking a slide down a hill)
 
 #### Minimum Spanning Tree
+
+Another real-world graph problem with billions of dollars at stake
+is formally known as the Minimum Spanning Tree problem.
+
