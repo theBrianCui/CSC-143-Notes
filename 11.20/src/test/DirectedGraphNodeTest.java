@@ -45,22 +45,8 @@ public class DirectedGraphNodeTest {
     }
 
     public Integer TreeSum(DirectedGraphNode<Integer> root) {
-        if (root == null) {
-            return 0;
-        }
-
-        if (root.getNeighbors().size() == 0) {
-            return root.getValue();
-        }
-
-        Integer total = 0;
-        for (GraphNode<Integer> neighbor : root.getNeighbors()) {
-
-            // Unsafe cast, but OK for demonstration since "we know" it's a DGN
-            total += TreeSum((DirectedGraphNode<Integer>) neighbor);
-        }
-
-        return total;
+        // TODO implement
+        return null;
     }
 
     /**
