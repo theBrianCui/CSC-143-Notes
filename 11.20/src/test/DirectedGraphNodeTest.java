@@ -5,6 +5,8 @@ import org.junit.Test;
 import scratch.DirectedGraphNode;
 import scratch.GraphNode;
 
+import java.util.HashSet;
+
 import static junit.framework.TestCase.assertEquals;
 
 public class DirectedGraphNodeTest {
@@ -49,10 +51,7 @@ public class DirectedGraphNodeTest {
         return null;
     }
 
-    /**
-     * In this directed graph, all edges point downwards
-     * except for the edge from 12 to 10. It's like a water slide and ladder.
-     *
+    /*
      *    10  <--.
      *   /  \    |
      *  5    9   |
@@ -68,5 +67,48 @@ public class DirectedGraphNodeTest {
 
 //        twelve.addNeighbor(ten);
 //        nine.addNeighbor(twelve);
+    }
+
+    public Integer GraphSum(DirectedGraphNode<Integer> root) {
+        // maintain a "visited" set to avoid duplicates
+        // the visited set is scoped inside this stack frame,
+        // and referenced by all recursive calls
+        return GraphSumNoDuplicates(new HashSet<>(), root);
+    }
+
+    public Integer GraphSumNoDuplicates(HashSet<DirectedGraphNode<Integer>> visited, DirectedGraphNode<Integer> root) {
+        if (root == null) {
+            return 0;
+        }
+
+        if (visited.contains(root)) {
+            return 0;
+        }
+
+        if (root.getNeighbors().size() == 0) {
+            return root.getValue();
+        }
+
+        visited.add(root);
+        Integer sum = root.getValue();
+
+        for (GraphNode<Integer> neighbor : root.getNeighbors()) {
+            sum += GraphSumNoDuplicates(visited, (DirectedGraphNode<Integer>) neighbor);
+        }
+
+        return sum;
+    }
+
+    /*
+     *    10  <--.
+     *   /  \    |
+     *  5    9   |
+     *   \  /    |
+     *    12 ----'
+     */
+
+    @Test
+    public void DiamondGraphSumTest() {
+        assertEquals(Integer.valueOf(36), GraphSum(ten));
     }
 }
