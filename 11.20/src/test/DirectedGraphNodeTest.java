@@ -3,6 +3,8 @@ package test;
 import org.junit.Test;
 import scratch.DirectedGraphNode;
 
+import static junit.framework.TestCase.assertEquals;
+
 public class DirectedGraphNodeTest {
 
     /**
@@ -30,5 +32,10 @@ public class DirectedGraphNodeTest {
         nine.addNeighbor(twelve);
 
         twelve.addNeighbor(ten);
+
+        // one-liner to retrieve a single element out of a Collection
+        // this is okay since we "know" twelve only has a single neighbor
+        // not general purpose
+        assertEquals(ten, twelve.getNeighbors().iterator().next());
     }
 }
