@@ -142,6 +142,23 @@ and use references as edges.
 
 See: GraphNode.java, DirectedGraphNode.java, DirectedGraphNodeTest.java
 
+Other forms of graph storage include 2D arrays (**adjacency list**),
+where every node is a row/column (like a spreadsheet)
+and a value is stored in the array if an edge exists between the two nodes.
+
+```
+        [0] [1] [2] [3] TIP
+  T [0]  F   F   T   F
+  A [1]  F   T   F   T
+  I [2]  F   T   F   F
+  L [3]  T   F   F   F
+```
+
+Whiteboard: output graph
+
+These don't scale well `O(n^2)`, but are simple enough to implement,
+and are easy to iterate over (at most two nested for loops, no recursion!)
+
 ### Graph Traversal
 
 We know recursion for trees:
@@ -154,5 +171,6 @@ We know recursion for trees:
  
  3. Pray, that the base case works, and the recursive case combines solutions
 
-What happens when we try recursion on graphs?
+What happens when we try *tree recursion* on graphs?
 
+See: DirectedGraphNodeTest.java
