@@ -174,3 +174,11 @@ We know recursion for trees:
 What happens when we try *tree recursion* on graphs?
 
 See: DirectedGraphNodeTest.java
+
+Problem: trees are acyclic, graphs may not be!
+
+To avoid processing the same node more than once, we use a `HashSet`
+that contains all the nodes visited so far.
+
+### Dijkstra's Algorithm
+
