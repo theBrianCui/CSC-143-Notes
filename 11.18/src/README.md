@@ -28,7 +28,7 @@ but are optimal in runtime, `O(nlogn)`.
     - Merging is an `O(n)` operation, and one-element lists are already sorted
     
     - Merge sort is *always* `O(nlogn)`,
-      while consuming `O(logn)` stack space for recursion.
+      while consuming `O(n * logn)` stack space for recursion.
       
     **Errata**: Merge takes `O(n * logn)` stack space due to requiring `O(n)`
     auxiliary memory for each merge step. In the previous class, it was incorrectly
@@ -116,7 +116,7 @@ Problem: unsorted lookup is `O(n)`, which is not good.
          We could sort it, but that requires the data be `Comparable` in some meaningful way.
 
 If we used a balanced Binary Search Tree as a backing container (sorted by key),
-lookup would be `O(???)` and insertion would be `O(???)`.
+lookup would be `O(logn)` and insertion would be `O(logn)`.
 
 Note that two keys that `.equals()` each other (value equality) should map to the same value.
         These two keys don't necessarily have to have reference equality, `==`.
@@ -166,9 +166,9 @@ class ArrayListTable {
     }
 }
 ```
-Is `hashCode` `O(1)` ?
+Is `hashCode` `O(1)` ? YES
 
-Is `get` `O(1)`?
+Is `get` `O(1)`? YES
 
 What's wrong with this solution?
 
@@ -197,9 +197,9 @@ class ArrayListTable {
 }
 ```
 
-Is `hashCode` `O(1)` ?
+Is `hashCode` `O(1)` ? YES
 
-Is `get` `O(1)`?
+Is `get` `O(1)`? NO
 
 What's wrong with this solution?
 
@@ -233,9 +233,9 @@ class ArrayListTable {
 }
 ```
 
-Is `hashCode` `O(1)` ?
+Is `hashCode` `O(1)` ? YES
 
-Is `get` `O(1)`?
+Is `get` `O(1)`? NO, but better
 
 What's wrong with this solution?
 

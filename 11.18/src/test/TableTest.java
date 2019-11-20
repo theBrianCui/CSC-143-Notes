@@ -15,6 +15,8 @@ public class TableTest {
         peopleAge.put("Alfred", 70);
         peopleAge.put("Bruce", 40);
 
+        System.out.println("John".hashCode());
+
         assertEquals(Integer.valueOf(20), peopleAge.get("John"));
         assertEquals(Integer.valueOf(40), peopleAge.get("Bruce"));
         assertEquals(null, peopleAge.get("Logan"));
