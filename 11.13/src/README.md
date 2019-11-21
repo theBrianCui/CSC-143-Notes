@@ -214,7 +214,7 @@ Properties (1) and (2) are maintained by special insertion and removal procedure
    farthest to the right into the root position.
    
    Then *swap* the new root node with its smaller child, repeatedly, until (1) is fulfilled.
-   This is known as *bubbling down*.
+   This is known as *bubbling down*. If the children are tied in value, prefer the left child (why?)
 
 An interesting side effect of property (2) is we can efficiently store Heaps in arrays:
 
