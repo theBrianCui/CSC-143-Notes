@@ -314,7 +314,7 @@ We also know Big O of Prim's is at least `O(|V| + |E|)`.
 ## You Made It!
 
 In this class we have seen every major data structure in Computer Science.
-* cheers and applause *
+*cheers and applause*
 
  - Array (+ArrayList)
  - Linked List (+Doubly, Stack, Queue)
