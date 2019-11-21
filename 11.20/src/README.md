@@ -305,7 +305,36 @@ Observations:
  
  - Prim's avoids cycles by checking if a vertex is already connected
 
+ - Prim's eventually processes every edge, but skips edges that don't add to the tree
+
  - Prim's is like a simpler Dijkstra's
 
 We also know Big O of Prim's is at least `O(|V| + |E|)`.
 
+## You Made It!
+
+In this class we have seen every major data structure in Computer Science.
+* cheers and applause *
+
+ - Array (+ArrayList)
+ - Linked List (+Doubly, Stack, Queue)
+ - Tree (+BST)
+ - Heap
+ - HashMap (+Set)
+ - Graph
+
+What's the best camera? The one you have on you.
+
+Poll: What's the best data structure?
+
+Answer: _________
+
+It's like asking between runtime and space. It's up to you as the engineer to make the call.
+
+Much of CS research is based on how we can optimize these fundamental structures.
+
+Are there more structures and algorithms to discover? Yes!
+
+ - Heap was discovered in 1964. Inventor J.W.J. Williams passed away in 2012, not long ago.
+
+See: Project 4
