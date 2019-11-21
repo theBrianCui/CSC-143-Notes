@@ -9,7 +9,7 @@ In this class we have explored *storing*, *sorting*, and *associating* data.
 When we *associate* or *map* data to other data, we require a sort of "lookup table"
 that correlates information, keys to values.
 
-Lists and Trees are at best `O(nlogn)` for generic types; can we do better?
+Lists and Trees are at best `O(nlogn)` and `O(logn)` for generic types; can we do better?
 
 **HashMaps** are derived from the observation that arrays are `O(1)` lookup tables
 from integers (array indices) to generic values.
@@ -60,7 +60,7 @@ To look up a key's associated value, we
 We need good randomness to spread values out across buckets,
 otherwise, HashMap performance degrades to `O(n)`.
 
-The **load factor** describes how full the HashMap will get before expanding.
+The **load factor** describes how full the HashMap will get before expanding. Current load factor = number of entries / size of array
 
 When a HashMap expands, it walks *all* entries in all buckets,
 re-hashing every key to determine its new location in the HashMap.

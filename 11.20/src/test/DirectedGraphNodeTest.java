@@ -47,8 +47,20 @@ public class DirectedGraphNodeTest {
     }
 
     public Integer TreeSum(DirectedGraphNode<Integer> root) {
-        // TODO implement
-        return null;
+        if (root == null) {
+            return 0;
+        }
+
+        if (root.getNeighbors().size() == 0) {
+            return root.getValue();
+        }
+
+        Integer sum = root.getValue();
+        for (GraphNode<Integer> neighbor : root.getNeighbors()) {
+            sum += TreeSum((DirectedGraphNode<Integer>) neighbor);
+        }
+
+        return sum;
     }
 
     /*
@@ -60,13 +72,13 @@ public class DirectedGraphNodeTest {
      */
     @Test
     public void DiamondSumTest() {
-//        twelve.removeNeighbor(ten);
-//        nine.removeNeighbor(twelve);
+        twelve.removeNeighbor(ten);
+        nine.removeNeighbor(twelve);
 
         assertEquals(Integer.valueOf(36), TreeSum(ten));
 
-//        twelve.addNeighbor(ten);
-//        nine.addNeighbor(twelve);
+        twelve.addNeighbor(ten);
+        nine.addNeighbor(twelve);
     }
 
     public Integer GraphSum(DirectedGraphNode<Integer> root) {
@@ -86,6 +98,7 @@ public class DirectedGraphNodeTest {
         }
 
         if (root.getNeighbors().size() == 0) {
+            visited.add(root);
             return root.getValue();
         }
 
