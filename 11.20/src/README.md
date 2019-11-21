@@ -220,7 +220,6 @@ Initialize HashMap D of distances mapping nodes to minimum distances
 
 Initialize a Priority Queue, Q, with the the root node only
     The priority of each node is the minimum distance to reach that node that's known
-    We can store these in Pair objects, distance and node
     Root node has D[root] = priority = 0
 
 Initialize a Visited Set, S, that starts empty
@@ -244,12 +243,69 @@ Return D
 Whiteboard: Dijkstra's Algorithm
 
 Observations:
+
  - When a node is popped off Q, the fastest path to that node is known
+ 
  - A node can appear in Q more than once, but only gets processed once thanks to S
+   
  - Does NOT work with negative edges (like taking a slide down a hill)
+
+Big O of Dijkstra's depends on the choice of priority queue.
+At least we know it's greater than `O(|V| + |E|)` (why?)
 
 #### Minimum Spanning Tree
 
 Another real-world graph problem with billions of dollars at stake
-is formally known as the Minimum Spanning Tree problem.
+is formally known as the **Minimum Spanning Tree** problem.
+
+Imagine you are in the utility business: connecting energy, water, oil, Internet
+
+ - Every house must be connected to the grid
+ - Want to minimize the cost of the pipes themselves
+
+The MST is a subset of nodes and edges in a graph such that
+
+ 1. all nodes in the graph are connected to all other nodes by a path
+ 2. the sum cost of al the edges is minimized
+
+Observe: MST is a "Tree" because the presence of any cycles indicates a redundant edge
+
+Whiteboard: Minimum Spanning Tree
+
+**Prim's Algorithm** was discovered by Czech mathematician Vojtěch Jarník in 1930 for finding MST.
+
+```
+Initialize connected vertex set S, that starts with the root
+
+Initialize edge set E, that starts empty
+
+Initialize a Priority Queue of Edges, Q, with all the root node's edges
+    The priority of each edge is the cost of the edge
+
+While S is not equal to all nodes in graph:
+    Pop an edge X = (V, U) off Q
+
+    If U is in connected vertex set S:
+        Continue
+    Else:
+        Add U to connected S
+        Add X to edge set E
+    
+        For all edges Y connected to U:
+            Insert Y into Q
+
+Return E
+```
+
+Whiteboard: Prim's Algorithm
+
+Observations:
+
+ - Prim's greedily adds the cheapest edge connected to the tree
+ 
+ - Prim's avoids cycles by checking if a vertex is already connected
+
+ - Prim's is like a simpler Dijkstra's
+
+We also know Big O of Prim's is at least `O(|V| + |E|)`.
 
