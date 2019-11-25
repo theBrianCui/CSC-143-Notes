@@ -142,7 +142,7 @@ and use references as edges.
 
 See: GraphNode.java, DirectedGraphNode.java, DirectedGraphNodeTest.java
 
-Other forms of graph storage include 2D arrays (**adjacency list**),
+Other forms of graph storage include 2D arrays (**adjacency matrix**),
 where every node is a row/column (like a spreadsheet)
 and a value is stored in the array if an edge exists between the two nodes.
 
