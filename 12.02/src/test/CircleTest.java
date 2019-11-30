@@ -99,4 +99,36 @@ public class CircleTest {
 
         assertEquals(expectedList, circleList);
     }
+
+    @Test
+    public void circleLambdaTest() {
+        List<Circle> circleList = Arrays.asList(
+                new Circle(1, "Frank"),
+                new Circle(9, "Bob"),
+                new Circle(3, "Eli"),
+                new Circle(0, "Charlie"),
+                new Circle(3, "Daniel"),
+                new Circle(7, "Alice")
+        );
+
+        Collections.sort(circleList, (Circle a, Circle b) -> {
+            int stringCompare = a.name.compareTo(b.name);
+
+            if (stringCompare == 0) {
+                return a.compareTo(b);
+            }
+            return stringCompare;
+        });
+
+        List<Circle> expectedList = Arrays.asList(
+                new Circle(7, "Alice"),
+                new Circle(9, "Bob"),
+                new Circle(0, "Charlie"),
+                new Circle(3, "Daniel"),
+                new Circle(3, "Eli"),
+                new Circle(1, "Frank")
+        );
+
+        assertEquals(expectedList, circleList);
+    }
 }

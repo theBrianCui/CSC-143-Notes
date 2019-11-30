@@ -256,21 +256,55 @@ A **higher-order function** is a function that *takes a function* as an argument
  - The function itself accepts a "function" as an argument, the `Comparator<T>`
  - The `compare(T, T)` method is invoked on pairs of elements in the list
 
-When we iterate over lists (for loop or for each),
-the *action* that we take on the elements inside can often be
-separated from the act of iteration itself, and thought of as a function.
+"Okay that's nice," you say,
+"but we still want to tease apart the method `compare` with its class."
 
- - Invoking a function, i.e. `println` for every element in the list
- - Transforming the list data, e.g. `toString` for every element of the list
- - Processing the list data, e.g. finding the sum of all the elements in the list
+Again, we'd like a way to pass *only* a pure function as an argument,
+not an instance of a class that containing a function.
 
-The three actions above translate to the three common functional programming operations below.
+#### Lambdas
+
+Formally, a **lambda** is an *anonymous function* - a function "without a name".
+
+A lambda stands alone - it does not attach to a class like a (static) method,
+instead, it can be treated as any other value expression like `1 + 1`.
+
+In Java, the syntax for lambdas is as follows:
 
 ```
-forEach(list, print)    // invoke "print" on every element in "list"
-map(list, toString)     // transform every element in "list" to its "toString"  
-reduce(list, sum)       // combine every element in the "list" using "sum"
+arguments -> return value
 ```
+
+Really! The following expression below is a lambda.
+If there is no return statement, the expression on the right is returned.
+
+```
+(int a, int b) -> a + b
+```
+
+If we want multiple lines, we can write a curly brace block,
+and use an explicit return statement.
+
+```
+(Circle a, Circle b) -> {
+    int stringCompare = a.name.compareTo(b.name);
+    
+    if (stringCompare == 0) {
+        return a.compareTo(b);
+    }
+    return stringCompare;
+}
+```
+
+Wow! Easy. Can we pass it in to `Collections.sort`?
+
+See: CircleTest.java
+
+Yes we can! We can use a *lambda* that is *not attached* to a class,
+or an instance of a class, to pass a function as an argument to another function!
+
+### Not so fast...
+
 
 ### Is Java a Functional Language?
 

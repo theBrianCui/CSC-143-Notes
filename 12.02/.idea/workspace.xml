@@ -35,7 +35,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.CircleTest">
+  <component name="RunManager" selected="JUnit.CircleTest.circleLambdaTest">
     <configuration name="CircleTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="12.02" />
       <extension name="coverage">
@@ -83,6 +83,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="CircleTest.circleLambdaTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="12.02" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test" />
+      <option name="MAIN_CLASS_NAME" value="test.CircleTest" />
+      <option name="METHOD_NAME" value="circleLambdaTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="CircleTest.circleNameComparatorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="12.02" />
       <extension name="coverage">
@@ -99,29 +115,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CircleTest.circleSortTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="12.02" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="test" />
-      <option name="MAIN_CLASS_NAME" value="test.CircleTest" />
-      <option name="METHOD_NAME" value="circleSortTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.CircleTest.circleLambdaTest" />
         <item itemvalue="JUnit.CircleTest" />
         <item itemvalue="JUnit.CircleTest.circleNameComparatorTest" />
         <item itemvalue="JUnit.CircleTest.circleDescendingComparatorTest" />
         <item itemvalue="JUnit.CircleTest.circleCompareToTest" />
-        <item itemvalue="JUnit.CircleTest.circleSortTest" />
       </list>
     </recent_temporary>
   </component>
