@@ -209,7 +209,7 @@ which tell the computer *how* to do something,
 
 we write *declarations* that tell the computer *what* to do.
 
-If we can guarantee that each *declaration* is correct,
+If we can guarantee that each *declaration* is correct in their implementation,
 a series of declarations will be a correct program.
 
 ### Pure Functions
@@ -275,10 +275,12 @@ In Java, the syntax for lambdas is as follows:
 arguments -> return value
 ```
 
-Really! The following expression below is a lambda.
+Really! The following expressions below are lambdas.
 If there is no return statement, the expression on the right is returned.
 
 ```
+a -> a * 2
+a, b -> a + b
 (int a, int b) -> a + b
 ```
 
@@ -303,8 +305,48 @@ See: CircleTest.java
 Yes we can! We can use a *lambda* that is *not attached* to a class,
 or an instance of a class, to pass a function as an argument to another function!
 
-### Not so fast...
+### Not so fast / "Functional Interfaces"
 
+As with many things in Java, lambdas still have some baggage.
+
+Let's examine the method signature of `Collections.sort` again.
+
+```
+public static <T> void sort​(List<T> list, Comparator<? super T> c)
+```
+
+When we pass a comparator lambda to `Collections.sort`,
+we are passing an Object that fulfills the `Comparator<T>` interface.
+
+Again, the `Comparator<T>` interface appears like
+(see https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Comparator.html)
+
+```
+interface Comparator<T> {
+    public abstract int compare(T o1, T o2)
+
+    ... other methods ... 
+}
+```
+
+If a lambda is an *anonymous function*,
+how could it have concretely fulfilled the `Comparator<T>` interface,
+because clients of `Comparator<T>` expect a `compare(T, T)` method attached to the Object?
+
+As it turns out, in Java, **lambdas may substitute interfaces with a single abstract method**.
+
+An interface with a single abstract method is called a **functional interface** (Java-specific term).
+
+The name of the abstract method does not matter:
+as long as there is *exactly one*, a lambda can be used in place of it.
+
+See: SampleFunctionalInterface.java
+See: LambdaTest.java
+
+In the background, Java actually *constructs a concrete instance* of the interface,
+where the lambda substitutes the abstract method requirement.
+
+Remark: Not all lambdas are pure functions... but they can be. A+ for effort
 
 ### Is Java a Functional Language?
 
@@ -318,7 +360,11 @@ However, since Java 8, Java has introduced several functional programming
 features that let developers take advantage of both
 OOP and functional programming patterns.
 
-### Functional Interfaces in Java
+```
+inOrder = BinaryTreeAlgorithms.inOrder(binarySearchTree);
+output = inOrder.stream()
+                .map(Objects::toString)
+                .collect(Collectors.joining(" "));
 
-## We've Come Full Circle
-
+assertEquals("10 25 30 40 45 50 60 75 80 90 100 110", output);
+```
