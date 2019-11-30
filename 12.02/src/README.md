@@ -240,88 +240,41 @@ Observations about `int abs(int)`:
 
  - All calls to the function with the *same* argument
    **always** produce the same output.
-   
-The function itself is so simple, we can formally prove its correctness:
-
-```
-public static int abs(int x) {
-  if (x < 0) {
-    return -1 * x;
-  }
-
-  return x;
-}
-
-"Proof by Induction"
-
-abs(0) == 0     correct
-abs(-1) == 1    correct
-abs(1) == 1     correct
-
-for n < -1,
-assume abs(n) == -n
-
-abs(n - 1) 
-    = -1 * (n - 1) 
-    = -n + 1    correct
-```
-
-(Formal proofs are out of scope for this class,
- but are an important part of discrete math/logic/algorithms)
 
 The `compare(T, T)` method from the `Comparator<T>` *can* be pure
 by writing a comparator that only uses arguments and causes no side effects.
 
 However, `compare(T, T)` is still an instance method,
 and still suffers the same problems as OOP methods described before.
- 
-### Composing Pure Functions
-
-Pure functions let us treat functions like we treat operators:
-composing several operators together to achieve a combined result.
-
-```
-public static double(int x) {
-    return x * 2;
-}
-
-assertEquals(4, double(double(1)));
-```
-
-Our second call to `double` is as if we had done two statements procedurally:
-
-```
-int x = 1;
-x = double(x);
-x = double(x);
-```
-
-Or in the object-oriented fashion,
-
-```
-class A {
-  int i;
-  void double() {
-     i = i * 2;
-  }
-}
-
-A i = new A(1);
-i.double();
-i.double();
-```
 
 ### Higher-Order Functions
 
 A **higher-order function** is a function that *takes a function* as an argument.
 
+`Collections.sort(List, Comparator)` can be thought of as a higher-order function:
 
+ - The function itself accepts a "function" as an argument, the `Comparator<T>`
+ - The `compare(T, T)` method is invoked on pairs of elements in the list
+
+When we iterate over lists (for loop or for each),
+the *action* that we take on the elements inside can often be
+separated from the act of iteration itself, and thought of as a function.
+
+ - Invoking a function, i.e. `println` for every element in the list
+ - Transforming the list data, e.g. `toString` for every element of the list
+ - Processing the list data, e.g. finding the sum of all the elements in the list
+
+The three actions above translate to the three common functional programming operations below.
+
+```
+forEach(list, print)    // invoke "print" on every element in "list"
+map(list, toString)     // transform every element in "list" to its "toString"  
+reduce(list, sum)       // combine every element in the "list" using "sum"
+```
 
 ### Is Java a Functional Language?
 
 Not really.
-
-No.
 
 Java is first and foremost an object-oriented programming language.
 
@@ -330,6 +283,8 @@ Objects and methods are a core part of Java language design.
 However, since Java 8, Java has introduced several functional programming
 features that let developers take advantage of both
 OOP and functional programming patterns.
+
+### Functional Interfaces in Java
 
 ## We've Come Full Circle
 
