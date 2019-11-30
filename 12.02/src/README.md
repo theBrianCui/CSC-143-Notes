@@ -36,11 +36,141 @@ Observe: trade-off between space, time, complexity
 
 ## Functional Programming
 
+### On Static Methods
+
+Methods in Java are functions attached to an *instance* of a type.
+
+```
+class Square implements Shape {
+  int width;
+
+  @Override
+  double area() {
+    return this.width * 2;
+  }
+}
+```
+
+In the `Square` class above, the *method signature*
+that defines the method and how it is called,
+shows that `area` returns a `double` and takes no arguments.
+
+But there *is* an implicit argument: the instance `this`.
+The `area` method cannot live on its own without a `Square` instance to attach to.
+
+Sometimes we want to write "plain" functions (not a formal term)
+which don't have a hard dependency on an instance.
+
+```
+class ShapeUtils {
+  public static void printArea(Shape shape) {
+    System.out.println(square.area());
+  }
+}
+
+```
+The closest thing to a standalone function is a *static method* in Java.
+The static method is attached to the *class*, not an *instance*.
+
+```
+Shape x = new Shape();
+x.width = 5;
+ShapeUtils.printArea(x);    // prints 10
+```
+
+### The Comparable<T> Interface
+
+A well-known use of a "standalone function" is a *comparator*.
+
+Recall the `Comparable<T>` interface in Java.
+Classes which have a natural ordering (i.e. can be sorted, can be put in a BST)
+must be comparable to each other.
+
+A class which implements `Comparable<T>` is obligated to supply a `int compareTo(T o)` method
+based on how `this` should be *naturally ordered* compared to `o`.
+
+ - If `this` comes before `o`, return `-1`
+ - If `this` and `o` are equal in order, return `0`
+ - If `this` comes after `o`, return `1`
+
+Remark: in a different universe, we might have used `enum`s instead of `-1, 0, 1`
+        why did we settle on integers?
+
+See: Circle.java, CircleTest.java
+
+When a class implements `Comparable<T>`,
+we can use the Java standard library static method `sort` in the `Collections` utility class
+
+```
+List<Integer> list = Arrays.asList(1, 5, 2, 3, 10);
+
+Collections.sort(list);
+
+// list is now [1, 2, 3, 5, 10]
+```
+
+Remark: unlike `.equals(...)`, the `Comparable<T>` interface is optional (why?)
+
+### The Comparator<T> Interface
+
+A **comparator** is a function which compares two Objects to define their order.
+The `.compareTo(T)` method is a comparator supplied by a class.
+
+However, we may not always want to use the native comparator method:
+we may want to arrange instances based on a different comparison.
+
+ - Sorting people by age, instead of name
+ - Sorting vehicles by weight, instead of price
+ - Sorting music by release date, instead of popularity
+    - Sorting music by release date, then popularity to break ties
+
+ - Sorting in descending order, rather than ascending
+
+We could:
+
+ - Modify the `.compareTo(T)` method inside the class (not good, why?)
+ - Extend the class and override `.compareTo(T)` (also not good, why?)
+ - Write our own sorting function (not good as well, why?)
+
+Ideally, we'd have a way to reuse `Collections.sort` *and* supply our own comparator.
+
+The `Comparator<T>` interface (note the slight difference in spelling)
+describes a standalone class with a method `compare(T, T)` that can be used in place
+of a native `compareTo(T)` method.
+
+See: https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Comparator.html
+
+See: CircleDescendingComparator.java
+
+See: CircleNameComparator.java
+
+In an interesting design choice, `Comparator<T>` does not make `compare(T, T)` a static method
+Instead, it is an instance method and the type must be constructed!
+
+That seems strange until you realize Java does not* let you pass the class itself.
+
+```
+Collections.sort(list, MyComparator);           // not OK, need an actual type
+Collections.sort(list, new MyComparator());     // OK, sort can invoke compare on the instance
+```
+
+*Remark: there is a feature in Java called *reflection* that does permit this.
+         Reflection is a bit of a language hack that makes Java act like an interpreted language
+         rather than a compiled language. Out of scope for this class, but kinda cool.
+
+While the `Comparator<T>` interface lets solves our problem of "substituting" methods,
+it is unwieldy to use - we must define an entire external class
+*and* construct an instance of it just to use it.
+
+We need a better way - a way to pass just a function as an argument - nothing more, nothing less.
+
+### What is Functional Programming?
+
 In this class (and previous classes), you have learned **imperative** programming.
  
- - Objects with internal state
- - Modifications to state via methods
- - Methods are written as a list of statements
+ - Objects with internal state (object oriented programming)
+ - Modifications to state via methods (procedural programming)
+ - Methods are written as a list of statements (imperative programming)
 
    - variable assignment, `int x = 5 + x;`
    - control flow, `for (int i = 0; i < 100; ++i) { ... }`
@@ -102,13 +232,90 @@ Observations about `int abs(int)`:
 
    - The argument is not modified
    - No variables outside the function are modified
-   - No implicit `this`, function is not attached to any instance
    - No system calls are invoked (e.g. `println`, write to file)
-
- - All the information needed for the function to run is in the argument
+   - All the information needed for the function to run is in the argument
  
+ - No implicit `this`, function is not attached to any instance
+   The function itself has no influence over any *state*
+
  - All calls to the function with the *same* argument
    **always** produce the same output.
+   
+The function itself is so simple, we can formally prove its correctness:
+
+```
+public static int abs(int x) {
+  if (x < 0) {
+    return -1 * x;
+  }
+
+  return x;
+}
+
+"Proof by Induction"
+
+abs(0) == 0     correct
+abs(-1) == 1    correct
+abs(1) == 1     correct
+
+for n < -1,
+assume abs(n) == -n
+
+abs(n - 1) 
+    = -1 * (n - 1) 
+    = -n + 1    correct
+```
+
+(Formal proofs are out of scope for this class,
+ but are an important part of discrete math/logic/algorithms)
+
+The `compare(T, T)` method from the `Comparator<T>` *can* be pure
+by writing a comparator that only uses arguments and causes no side effects.
+
+However, `compare(T, T)` is still an instance method,
+and still suffers the same problems as OOP methods described before.
+ 
+### Composing Pure Functions
+
+Pure functions let us treat functions like we treat operators:
+composing several operators together to achieve a combined result.
+
+```
+public static double(int x) {
+    return x * 2;
+}
+
+assertEquals(4, double(double(1)));
+```
+
+Our second call to `double` is as if we had done two statements procedurally:
+
+```
+int x = 1;
+x = double(x);
+x = double(x);
+```
+
+Or in the object-oriented fashion,
+
+```
+class A {
+  int i;
+  void double() {
+     i = i * 2;
+  }
+}
+
+A i = new A(1);
+i.double();
+i.double();
+```
+
+### Higher-Order Functions
+
+A **higher-order function** is a function that *takes a function* as an argument.
+
+
 
 ### Is Java a Functional Language?
 
@@ -119,3 +326,10 @@ No.
 Java is first and foremost an object-oriented programming language.
 
 Objects and methods are a core part of Java language design.
+
+However, since Java 8, Java has introduced several functional programming
+features that let developers take advantage of both
+OOP and functional programming patterns.
+
+## We've Come Full Circle
+
