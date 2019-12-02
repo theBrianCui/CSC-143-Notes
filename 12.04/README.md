@@ -87,4 +87,29 @@ Comparator<Circle> c = (Circle o1, Circle o2) -> -1 * o1.compareTo(o2);
 Collections.sort(myList, c);
 ```
 
+## Past and Present
+
+The great grandfather of all modern "C-style" programming languages
+is of course C itself.
+
+```
+#include <stdio.h>
+int main() {
+    printf("Hello, World!\n");
+}
+```
+
+C is like Java in many ways:
+
+ - Static typing (variables have types, `int, char, ...`)
+ - Block scope variables `{ }`
+ - Conditionals `if { } else { }` and loops `for (...)` ...
+ - Stack-based (pass-by-value, just like Java)
+
+Unlike Java, C does not have these language conveniences:
+
+ - Strong typing at runtime
+ - Pointer safety by using only references
+ - Garbage collection for heap memory
+ - Classes and methods, C is not object-oriented (!)
 
