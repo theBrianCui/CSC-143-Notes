@@ -35,7 +35,7 @@ Ideally we could pass in a function to substitute the existing
 
 Unfortunately Java does not permit functions to be passed as arguments!
 Instead, we must provide a **concrete class instance** implementing `Comparator`,
-which means the class supplies a `public int compare(T o1, T o2)` method. 
+which demands the `public int compare(T o1, T o2)` method. 
 
 ```
 public static <T> void sort​(List<T> list, Comparator<? super T> c)
@@ -48,4 +48,43 @@ Instead, Java forces us to:
  2. define a method `compare(T o1, T o2)` as our comparator
  3. create an instance of that class using `new T()`,
  4. pass that instance to `sort`.
+
+**Functional programming** is a programming paradigm that
+composes programs using *pure functions*.
+
+ - No side effects
+ - No implicit arguments
+ - The same input produces the same output
+
+Java **lambdas** are inspired by functional programming patterns,
+allowing us to define inline functions with no class dependency.
+
+```
+(Circle o1, Circle o2) -> -1 * o1.compareTo(o2);
+```
+
+Remark: not all lambdas are pure functions,
+        not all pure functions are lambdas
+
+A **lambda** can substitute a concrete class instance
+which implements a **functional interface** in Java.
+
+In Java, functional interfaces are those with **exactly one**
+abstract method.
+
+```
+interface Comparator<T> {
+    public abstract int compare(T o1, T o2);
+    ...
+}
+```
+
+The lambda can be used anywhere the interface is used
+so long as the method signature matches.
+
+```
+Comparator<Circle> c = (Circle o1, Circle o2) -> -1 * o1.compareTo(o2);
+Collections.sort(myList, c);
+```
+
 
