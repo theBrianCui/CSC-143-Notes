@@ -1,7 +1,299 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="baadebe1-ea8a-44bc-ad3a-74b9536b585e" name="Default Changelist" comment="" />
+    <list default="true" id="baadebe1-ea8a-44bc-ad3a-74b9536b585e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/scratch/SampleStringInterfaceFunctional.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scratch/SampleVoidFunctionalInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../09.23/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../09.23/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../09.23/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/../09.23/.idea/.name" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../09.23/.idea/libraries/lib.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../09.23/.idea/libraries/lib.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../09.23/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../09.23/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../09.23/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../09.23/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../09.23/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../09.23/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../09.23/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../09.23/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../09.23/Fibonacci.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../09.23/Fibonacci.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../09.23/lib/LICENSE.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../09.23/lib/LICENSE.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../09.23/lib/hamcrest-core-1.3.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../09.23/lib/hamcrest-core-1.3.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../09.23/lib/junit-4.12.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../09.23/lib/junit-4.12.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../09.23/lib/junit4.zip" beforeDir="false" afterPath="$PROJECT_DIR$/../09.23/lib/junit4.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../09.23/src/Fibonacci.java" beforeDir="false" afterPath="$PROJECT_DIR$/../09.23/src/Fibonacci.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../09.25/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../09.25/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../09.25/.idea/libraries/lib.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../09.25/.idea/libraries/lib.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../09.25/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../09.25/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../09.25/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../09.25/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../09.25/.idea/uiDesigner.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../09.25/.idea/uiDesigner.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../09.25/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../09.25/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../09.25/09.25.docx" beforeDir="false" afterPath="$PROJECT_DIR$/../09.25/09.25.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../09.25/09.25.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../09.25/09.25.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../09.25/09.25.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../09.25/09.25.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../09.25/README" beforeDir="false" afterPath="$PROJECT_DIR$/../09.25/README" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../09.25/src/interview/FizzBuzz.java" beforeDir="false" afterPath="$PROJECT_DIR$/../09.25/src/interview/FizzBuzz.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../09.25/src/lib/hamcrest-core-1.3.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../09.25/src/lib/hamcrest-core-1.3.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../09.25/src/lib/junit-4.12.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../09.25/src/lib/junit-4.12.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../09.25/src/scratch/Circle.java" beforeDir="false" afterPath="$PROJECT_DIR$/../09.25/src/scratch/Circle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../09.25/src/scratch/Rectangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/../09.25/src/scratch/Rectangle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../09.25/src/scratch/Shape2D.java" beforeDir="false" afterPath="$PROJECT_DIR$/../09.25/src/scratch/Shape2D.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../09.25/src/scratch/Sorter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../09.25/src/scratch/Sorter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../09.25/src/test/FizzBuzzTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../09.25/src/test/FizzBuzzTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../09.25/src/test/Shape2DTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../09.25/src/test/Shape2DTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../09.25/src/test/SorterTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../09.25/src/test/SorterTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../09.30/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../09.30/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../09.30/.idea/libraries/lib.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../09.30/.idea/libraries/lib.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../09.30/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../09.30/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../09.30/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../09.30/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../09.30/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../09.30/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../09.30/09.30.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../09.30/09.30.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../09.30/src/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../09.30/src/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../09.30/src/lib/hamcrest-core-1.3.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../09.30/src/lib/hamcrest-core-1.3.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../09.30/src/lib/junit-4.12.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../09.30/src/lib/junit-4.12.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../09.30/src/scratch/BasicInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/../09.30/src/scratch/BasicInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../09.30/src/scratch/Mixture.java" beforeDir="false" afterPath="$PROJECT_DIR$/../09.30/src/scratch/Mixture.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../09.30/src/scratch/Place.java" beforeDir="false" afterPath="$PROJECT_DIR$/../09.30/src/scratch/Place.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../09.30/src/scratch/School.java" beforeDir="false" afterPath="$PROJECT_DIR$/../09.30/src/scratch/School.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../09.30/src/scratch/University.java" beforeDir="false" afterPath="$PROJECT_DIR$/../09.30/src/scratch/University.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../09.30/src/scratch/pointer" beforeDir="false" afterPath="$PROJECT_DIR$/../09.30/src/scratch/pointer" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../09.30/src/scratch/pointer.c" beforeDir="false" afterPath="$PROJECT_DIR$/../09.30/src/scratch/pointer.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../09.30/src/test/PlaceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../09.30/src/test/PlaceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../09.30/src/test/ReferenceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../09.30/src/test/ReferenceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../10.02/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../10.02/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../10.02/.idea/libraries/lib.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../10.02/.idea/libraries/lib.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../10.02/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../10.02/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../10.02/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../10.02/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../10.02/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../10.02/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../10.02/10.02.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../10.02/10.02.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../10.02/src/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../10.02/src/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../10.02/src/lib/Pair.java" beforeDir="false" afterPath="$PROJECT_DIR$/../10.02/src/lib/Pair.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../10.02/src/lib/PairInt.java" beforeDir="false" afterPath="$PROJECT_DIR$/../10.02/src/lib/PairInt.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../10.02/src/lib/Triple.java" beforeDir="false" afterPath="$PROJECT_DIR$/../10.02/src/lib/Triple.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../10.02/src/lib/hamcrest-core-1.3.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../10.02/src/lib/hamcrest-core-1.3.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../10.02/src/lib/junit-4.12.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../10.02/src/lib/junit-4.12.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../10.02/src/scratch/A.java" beforeDir="false" afterPath="$PROJECT_DIR$/../10.02/src/scratch/A.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../10.02/src/scratch/Circle.java" beforeDir="false" afterPath="$PROJECT_DIR$/../10.02/src/scratch/Circle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../10.02/src/scratch/Point.java" beforeDir="false" afterPath="$PROJECT_DIR$/../10.02/src/scratch/Point.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../10.02/src/scratch/Point3D.java" beforeDir="false" afterPath="$PROJECT_DIR$/../10.02/src/scratch/Point3D.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../10.02/src/scratch/Rectangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/../10.02/src/scratch/Rectangle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../10.02/src/scratch/Shape.java" beforeDir="false" afterPath="$PROJECT_DIR$/../10.02/src/scratch/Shape.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../10.02/src/scratch/Square.java" beforeDir="false" afterPath="$PROJECT_DIR$/../10.02/src/scratch/Square.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../10.02/src/test/PairTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../10.02/src/test/PairTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../10.02/src/test/PointTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../10.02/src/test/PointTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../10.02/src/test/ShapeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../10.02/src/test/ShapeTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../10.07/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../10.07/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../10.07/.idea/libraries/lib.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../10.07/.idea/libraries/lib.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../10.07/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../10.07/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../10.07/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../10.07/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../10.07/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../10.07/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../10.07/10.07.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../10.07/10.07.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../10.07/src/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../10.07/src/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../10.07/src/lib/Pair.java" beforeDir="false" afterPath="$PROJECT_DIR$/../10.07/src/lib/Pair.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../10.07/src/lib/PairInt.java" beforeDir="false" afterPath="$PROJECT_DIR$/../10.07/src/lib/PairInt.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../10.07/src/lib/Triple.java" beforeDir="false" afterPath="$PROJECT_DIR$/../10.07/src/lib/Triple.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../10.07/src/lib/hamcrest-core-1.3.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../10.07/src/lib/hamcrest-core-1.3.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../10.07/src/lib/junit-4.12.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../10.07/src/lib/junit-4.12.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../10.07/src/scratch/Circle.java" beforeDir="false" afterPath="$PROJECT_DIR$/../10.07/src/scratch/Circle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../10.07/src/scratch/Point.java" beforeDir="false" afterPath="$PROJECT_DIR$/../10.07/src/scratch/Point.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../10.07/src/scratch/Point3D.java" beforeDir="false" afterPath="$PROJECT_DIR$/../10.07/src/scratch/Point3D.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../10.07/src/scratch/Positionable.java" beforeDir="false" afterPath="$PROJECT_DIR$/../10.07/src/scratch/Positionable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../10.07/src/scratch/Rectangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/../10.07/src/scratch/Rectangle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../10.07/src/scratch/Shape.java" beforeDir="false" afterPath="$PROJECT_DIR$/../10.07/src/scratch/Shape.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../10.07/src/test/CollectionTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../10.07/src/test/CollectionTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../10.07/src/test/ShapeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../10.07/src/test/ShapeTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../10.07/src/world/Building.java" beforeDir="false" afterPath="$PROJECT_DIR$/../10.07/src/world/Building.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../10.07/src/world/Business.java" beforeDir="false" afterPath="$PROJECT_DIR$/../10.07/src/world/Business.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../10.07/src/world/Restaraunt.java" beforeDir="false" afterPath="$PROJECT_DIR$/../10.07/src/world/Restaraunt.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../10.07/src/world/Store.java" beforeDir="false" afterPath="$PROJECT_DIR$/../10.07/src/world/Store.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../10.07/src/world/Supermarket.java" beforeDir="false" afterPath="$PROJECT_DIR$/../10.07/src/world/Supermarket.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../10.09/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../10.09/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../10.09/.idea/libraries/lib.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../10.09/.idea/libraries/lib.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../10.09/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../10.09/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../10.09/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../10.09/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../10.09/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../10.09/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../10.09/10.09.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../10.09/10.09.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../10.09/src/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../10.09/src/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../10.09/src/lib/Pair.java" beforeDir="false" afterPath="$PROJECT_DIR$/../10.09/src/lib/Pair.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../10.09/src/lib/PairInt.java" beforeDir="false" afterPath="$PROJECT_DIR$/../10.09/src/lib/PairInt.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../10.09/src/lib/Triple.java" beforeDir="false" afterPath="$PROJECT_DIR$/../10.09/src/lib/Triple.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../10.09/src/lib/hamcrest-core-1.3.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../10.09/src/lib/hamcrest-core-1.3.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../10.09/src/lib/junit-4.12.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../10.09/src/lib/junit-4.12.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../10.09/src/scratch/BigO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../10.09/src/scratch/BigO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../10.09/src/test/CollectionTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../10.09/src/test/CollectionTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../10.14/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../10.14/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../10.14/.idea/libraries/lib.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../10.14/.idea/libraries/lib.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../10.14/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../10.14/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../10.14/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../10.14/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../10.14/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../10.14/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../10.14/10.14.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../10.14/10.14.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../10.14/src/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../10.14/src/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../10.14/src/lib/Pair.java" beforeDir="false" afterPath="$PROJECT_DIR$/../10.14/src/lib/Pair.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../10.14/src/lib/PairInt.java" beforeDir="false" afterPath="$PROJECT_DIR$/../10.14/src/lib/PairInt.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../10.14/src/lib/Triple.java" beforeDir="false" afterPath="$PROJECT_DIR$/../10.14/src/lib/Triple.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../10.14/src/lib/hamcrest-core-1.3.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../10.14/src/lib/hamcrest-core-1.3.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../10.14/src/lib/junit-4.12.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../10.14/src/lib/junit-4.12.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../10.14/src/scratch/ArrayListTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../10.14/src/scratch/ArrayListTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../10.14/src/scratch/LinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/../10.14/src/scratch/LinkedList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../10.14/src/scratch/LinkedListTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../10.14/src/scratch/LinkedListTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../10.14/src/scratch/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/../10.14/src/scratch/Node.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../10.14/src/scratch/NodeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../10.14/src/scratch/NodeTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../10.14/src/scratch/ReferenceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../10.14/src/scratch/ReferenceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../10.16/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../10.16/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../10.16/.idea/libraries/lib.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../10.16/.idea/libraries/lib.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../10.16/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../10.16/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../10.16/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../10.16/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../10.16/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../10.16/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../10.16/10.16.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../10.16/10.16.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../10.16/src/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../10.16/src/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../10.16/src/lib/Pair.java" beforeDir="false" afterPath="$PROJECT_DIR$/../10.16/src/lib/Pair.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../10.16/src/lib/PairInt.java" beforeDir="false" afterPath="$PROJECT_DIR$/../10.16/src/lib/PairInt.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../10.16/src/lib/Triple.java" beforeDir="false" afterPath="$PROJECT_DIR$/../10.16/src/lib/Triple.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../10.16/src/lib/hamcrest-core-1.3.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../10.16/src/lib/hamcrest-core-1.3.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../10.16/src/lib/junit-4.12.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../10.16/src/lib/junit-4.12.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../10.16/src/scratch/DoubleNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/../10.16/src/scratch/DoubleNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../10.16/src/scratch/LinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/../10.16/src/scratch/LinkedList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../10.16/src/scratch/LinkedListTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../10.16/src/scratch/LinkedListTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../10.16/src/scratch/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/../10.16/src/scratch/Node.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../10.21/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../10.21/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../10.21/.idea/libraries/lib.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../10.21/.idea/libraries/lib.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../10.21/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../10.21/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../10.21/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../10.21/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../10.21/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../10.21/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../10.21/10.21.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../10.21/10.21.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../10.21/src/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../10.21/src/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../10.21/src/lib/Pair.java" beforeDir="false" afterPath="$PROJECT_DIR$/../10.21/src/lib/Pair.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../10.21/src/lib/PairInt.java" beforeDir="false" afterPath="$PROJECT_DIR$/../10.21/src/lib/PairInt.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../10.21/src/lib/Triple.java" beforeDir="false" afterPath="$PROJECT_DIR$/../10.21/src/lib/Triple.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../10.21/src/lib/hamcrest-core-1.3.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../10.21/src/lib/hamcrest-core-1.3.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../10.21/src/lib/junit-4.12.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../10.21/src/lib/junit-4.12.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../10.21/src/scratch/DoubleNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/../10.21/src/scratch/DoubleNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../10.21/src/scratch/LinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/../10.21/src/scratch/LinkedList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../10.21/src/scratch/LinkedListTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../10.21/src/scratch/LinkedListTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../10.21/src/scratch/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/../10.21/src/scratch/Node.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../10.28/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../10.28/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../10.28/.idea/libraries/lib.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../10.28/.idea/libraries/lib.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../10.28/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../10.28/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../10.28/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../10.28/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../10.28/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../10.28/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../10.28/10.28.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../10.28/10.28.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../10.28/src/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../10.28/src/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../10.28/src/lib/Pair.java" beforeDir="false" afterPath="$PROJECT_DIR$/../10.28/src/lib/Pair.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../10.28/src/lib/hamcrest-core-1.3.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../10.28/src/lib/hamcrest-core-1.3.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../10.28/src/lib/junit-4.12.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../10.28/src/lib/junit-4.12.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../10.28/src/scratch/Animal.java" beforeDir="false" afterPath="$PROJECT_DIR$/../10.28/src/scratch/Animal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../10.28/src/scratch/Named.java" beforeDir="false" afterPath="$PROJECT_DIR$/../10.28/src/scratch/Named.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../11.04/.idea/libraries/lib.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../11.04/.idea/libraries/lib.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../11.04/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../11.04/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../11.04/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../11.04/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../11.04/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../11.04/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../11.04/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../11.04/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../11.04/11.04.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../11.04/11.04.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../11.04/src/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../11.04/src/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../11.04/src/lib/Pair.java" beforeDir="false" afterPath="$PROJECT_DIR$/../11.04/src/lib/Pair.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../11.04/src/lib/PairInt.java" beforeDir="false" afterPath="$PROJECT_DIR$/../11.04/src/lib/PairInt.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../11.04/src/lib/Triple.java" beforeDir="false" afterPath="$PROJECT_DIR$/../11.04/src/lib/Triple.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../11.04/src/lib/hamcrest-core-1.3.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../11.04/src/lib/hamcrest-core-1.3.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../11.04/src/lib/junit-4.12.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../11.04/src/lib/junit-4.12.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../11.04/src/scratch/BinaryTreeNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/../11.04/src/scratch/BinaryTreeNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../11.04/src/scratch/DoublyLinkedListNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/../11.04/src/scratch/DoublyLinkedListNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../11.04/src/scratch/ListNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/../11.04/src/scratch/ListNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../11.04/src/scratch/TreeNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/../11.04/src/scratch/TreeNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../11.04/src/test/BinaryTreeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../11.04/src/test/BinaryTreeTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../11.04/src/test/LinkedListTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../11.04/src/test/LinkedListTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../11.04/src/test/RecursionTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../11.04/src/test/RecursionTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../11.06/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../11.06/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../11.06/.idea/libraries/lib.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../11.06/.idea/libraries/lib.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../11.06/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../11.06/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../11.06/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../11.06/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../11.06/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../11.06/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../11.06/11.06.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../11.06/11.06.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../11.06/src/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../11.06/src/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../11.06/src/lib/Pair.java" beforeDir="false" afterPath="$PROJECT_DIR$/../11.06/src/lib/Pair.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../11.06/src/lib/PairInt.java" beforeDir="false" afterPath="$PROJECT_DIR$/../11.06/src/lib/PairInt.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../11.06/src/lib/Triple.java" beforeDir="false" afterPath="$PROJECT_DIR$/../11.06/src/lib/Triple.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../11.06/src/lib/hamcrest-core-1.3.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../11.06/src/lib/hamcrest-core-1.3.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../11.06/src/lib/junit-4.12.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../11.06/src/lib/junit-4.12.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../11.06/src/scratch/BinaryTreeNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/../11.06/src/scratch/BinaryTreeNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../11.06/src/scratch/DoublyLinkedListNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/../11.06/src/scratch/DoublyLinkedListNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../11.06/src/scratch/ListNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/../11.06/src/scratch/ListNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../11.06/src/scratch/TreeNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/../11.06/src/scratch/TreeNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../11.06/src/test/BinaryTreeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../11.06/src/test/BinaryTreeTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../11.06/src/test/LinkedListTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../11.06/src/test/LinkedListTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../11.06/src/test/RecursionTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../11.06/src/test/RecursionTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../11.06/src/test/StackTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../11.06/src/test/StackTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../11.06/src/test/TailRecursionTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../11.06/src/test/TailRecursionTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../11.13/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../11.13/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../11.13/.idea/libraries/lib.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../11.13/.idea/libraries/lib.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../11.13/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../11.13/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../11.13/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../11.13/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../11.13/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../11.13/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../11.13/11.13.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../11.13/11.13.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../11.13/src/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../11.13/src/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../11.13/src/lib/Pair.java" beforeDir="false" afterPath="$PROJECT_DIR$/../11.13/src/lib/Pair.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../11.13/src/lib/PairInt.java" beforeDir="false" afterPath="$PROJECT_DIR$/../11.13/src/lib/PairInt.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../11.13/src/lib/Triple.java" beforeDir="false" afterPath="$PROJECT_DIR$/../11.13/src/lib/Triple.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../11.13/src/lib/hamcrest-core-1.3.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../11.13/src/lib/hamcrest-core-1.3.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../11.13/src/lib/junit-4.12.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../11.13/src/lib/junit-4.12.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../11.13/src/sorting/ListNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/../11.13/src/sorting/ListNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../11.13/src/sorting/Sorting.java" beforeDir="false" afterPath="$PROJECT_DIR$/../11.13/src/sorting/Sorting.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../11.13/src/test/SortingTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../11.13/src/test/SortingTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../11.18/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../11.18/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../11.18/.idea/libraries/lib.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../11.18/.idea/libraries/lib.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../11.18/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../11.18/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../11.18/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../11.18/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../11.18/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../11.18/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../11.18/11.18.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../11.18/11.18.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../11.18/src/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../11.18/src/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../11.18/src/lib/Pair.java" beforeDir="false" afterPath="$PROJECT_DIR$/../11.18/src/lib/Pair.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../11.18/src/lib/PairInt.java" beforeDir="false" afterPath="$PROJECT_DIR$/../11.18/src/lib/PairInt.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../11.18/src/lib/Triple.java" beforeDir="false" afterPath="$PROJECT_DIR$/../11.18/src/lib/Triple.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../11.18/src/lib/hamcrest-core-1.3.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../11.18/src/lib/hamcrest-core-1.3.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../11.18/src/lib/junit-4.12.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../11.18/src/lib/junit-4.12.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../11.18/src/scratch/ArrayListTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/../11.18/src/scratch/ArrayListTable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../11.18/src/scratch/Table.java" beforeDir="false" afterPath="$PROJECT_DIR$/../11.18/src/scratch/Table.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../11.18/src/test/TableTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../11.18/src/test/TableTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../11.20/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../11.20/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../11.20/.idea/libraries/lib.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../11.20/.idea/libraries/lib.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../11.20/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../11.20/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../11.20/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../11.20/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../11.20/.idea/uiDesigner.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../11.20/.idea/uiDesigner.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../11.20/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../11.20/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../11.20/11.20.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../11.20/11.20.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../11.20/src/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../11.20/src/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../11.20/src/lib/Pair.java" beforeDir="false" afterPath="$PROJECT_DIR$/../11.20/src/lib/Pair.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../11.20/src/lib/PairInt.java" beforeDir="false" afterPath="$PROJECT_DIR$/../11.20/src/lib/PairInt.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../11.20/src/lib/Triple.java" beforeDir="false" afterPath="$PROJECT_DIR$/../11.20/src/lib/Triple.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../11.20/src/lib/hamcrest-core-1.3.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../11.20/src/lib/hamcrest-core-1.3.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../11.20/src/lib/junit-4.12.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../11.20/src/lib/junit-4.12.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../11.20/src/scratch/DirectedGraphNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/../11.20/src/scratch/DirectedGraphNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../11.20/src/scratch/GraphNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/../11.20/src/scratch/GraphNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../11.20/src/scratch/HashSet.java" beforeDir="false" afterPath="$PROJECT_DIR$/../11.20/src/scratch/HashSet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../11.20/src/test/DirectedGraphNodeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../11.20/src/test/DirectedGraphNodeTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../11.25/Applications of Data Structures.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../11.25/Applications of Data Structures.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../11.25/Applications of Data Structures.pptx" beforeDir="false" afterPath="$PROJECT_DIR$/../11.25/Applications of Data Structures.pptx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../11.25/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../11.25/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../11.25/graph-1.png" beforeDir="false" afterPath="$PROJECT_DIR$/../11.25/graph-1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../11.25/graph-2.png" beforeDir="false" afterPath="$PROJECT_DIR$/../11.25/graph-2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../11.27/DevTools.pptx" beforeDir="false" afterPath="$PROJECT_DIR$/../11.27/DevTools.pptx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../11.27/hello.html" beforeDir="false" afterPath="$PROJECT_DIR$/../11.27/hello.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/lib.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/lib.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/12.02.iml" beforeDir="false" afterPath="$PROJECT_DIR$/12.02.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/Pair.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/Pair.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/PairInt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/PairInt.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/Triple.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/Triple.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/hamcrest-core-1.3.jar" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/hamcrest-core-1.3.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/junit-4.12.jar" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/junit-4.12.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scratch/Circle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/scratch/Circle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scratch/CircleDescendingComparator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/scratch/CircleDescendingComparator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scratch/CircleNameComparator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/scratch/CircleNameComparator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scratch/SampleFunctionalInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/scratch/SampleFunctionalInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/CircleTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/CircleTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/LambdaTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/LambdaTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../12.04/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../12.04/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../12.04/hello.c" beforeDir="false" afterPath="$PROJECT_DIR$/../12.04/hello.c" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -11,8 +303,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -22,7 +314,8 @@
   <component name="ProjectId" id="1UJAXgjV7OtsZpEiUhn25HzPbA4" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../CSC-143-Project4" />
+    <property name="full.screen.before.presentation.mode" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RunDashboard">

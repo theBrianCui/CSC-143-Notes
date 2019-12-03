@@ -64,7 +64,7 @@ which don't have a hard dependency on an instance.
 ```
 class ShapeUtils {
   public static void printArea(Shape shape) {
-    System.out.println(square.area());
+    System.out.println(shape.area());
   }
 }
 
@@ -95,6 +95,12 @@ based on how `this` should be *naturally ordered* compared to `o`.
 
 Remark: in a different universe, we might have used `enum`s instead of `-1, 0, 1`
         why did we settle on integers?
+        
+```
+int compareTo(T o) {
+    this - o;
+}
+```
 
 See: Circle.java, CircleTest.java
 

@@ -1,8 +1,7 @@
 package test;
 
 import org.junit.Test;
-import scratch.Circle;
-import scratch.SampleFunctionalInterface;
+import scratch.*;
 
 import java.util.*;
 
@@ -45,6 +44,7 @@ public class LambdaTest {
     @Test
     public void functionalInterfaceTest() {
         SampleFunctionalInterface lambdaSum = (a, b) -> a + b;
+        SampleStringInterfaceFunctional ls  = (a, b) -> a + b;
 
         assertEquals(15, lambdaSum.sumCanBeNamedAnything(5, 10));
 
@@ -66,11 +66,15 @@ public class LambdaTest {
             return stringCompare;
         };
 
+        Comparator<Circle> myStringComparator = new CircleNameComparator();
+
         assertEquals(-1, stringComparator.compare(
                 new Circle(5, "A"),
                 new Circle(5, "B")
         ));
 
         Collections.sort(new ArrayList<Circle>(), stringComparator);
+
+        SampleVoidFunctionalInterface voidLambda = () -> {};
     }
 }
