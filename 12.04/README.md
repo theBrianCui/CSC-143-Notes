@@ -12,12 +12,8 @@ public static <T extends Comparable<? super T>> void sort​(List<T> list)
 `Collections.sort` can sort any `List<T>`,
 so long as the type `T` being sorted is a `Comparable` type.
 
-Less formally, any type (`Integer`, `String`, etc.) that has an ordering
-is comparable (two instances can be compared for order),
-and therefore can be sorted.
-
 The `Comparable` Interface demands the `public int compareTo(T o)` method,
-which is a *comparator* that determines how two objects should be ordered.
+which is a *comparator* function that determines how two objects should be ordered.
 
 Because `compareTo(T o)` is a method of the class `T` itself,
 `T` has a natural ordering (ascending in some fashion)
@@ -101,15 +97,29 @@ int main() {
 
 C is like Java in many ways:
 
- - Static typing (variables have types, `int, char, ...`)
+ - Static typing (variables have types, `int, char, double, ...`)
  - Block scope variables `{ }`
  - Conditionals `if { } else { }` and loops `for (...)` ...
  - Stack-based (pass-by-value, just like Java)
 
-Unlike Java, C does not have these language conveniences:
+See: `hello.c`
+
+```
+gcc hello.c -o hello
+./hello
+```
+
+C gives the programmer total control over how their program behaves.
+Unlike Java, C distinguishes between values and pointers to those values.
+Access to raw pointers is both a blessing and a curse.
+
+See: `pointer.c`
+
+C is primitive, lacking the following Java features:
 
  - Strong typing at runtime
  - Pointer safety by using only references
  - Garbage collection for heap memory
  - Classes and methods, C is not object-oriented (!)
 
+The C stan
