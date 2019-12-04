@@ -317,14 +317,9 @@ Python 2 will officially be retired by new year 2020.
 
 See: https://pythonclock.org/
 
-### JavaScript
-
-Ah, the programming language of the web.
-
-For a decade, JavaScript was often touted as one of the worst designed languages,
-and for good reason.
-
 ### Ruby
+
+
 
 ### Lisp
 
