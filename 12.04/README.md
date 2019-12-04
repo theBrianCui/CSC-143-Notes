@@ -85,6 +85,8 @@ Collections.sort(myList, c);
 
 ## Past and Present
 
+### C
+
 The great grandfather of all modern "C-style" programming languages
 is of course C itself.
 
@@ -122,4 +124,207 @@ C is primitive, lacking the following Java features:
  - Garbage collection for heap memory
  - Classes and methods, C is not object-oriented (!)
 
-The C stan
+C's simplicity gives it a small footprint and is ideal for embedded systems
+or low level programming that prioritizes speed and efficiency.
+
+### C++
+
+C++ rode the wave of Object-Oriented Programming
+and formally introduced *classes* to C,
+including OOP features like inheritance, abstract methods, and polymorphism.
+
+```
+class A {
+private:
+    int payload;
+public:
+    A() : payload(0) {
+        cout << "A()" << endl;
+    }
+}
+```
+
+C++ maintains *backwards compatibillity* with C.
+Any C code can be compiled by a C++ compiler!
+
+C++ also maintains a similar attitude towards programmer responsibility:
+the programmer must specify *exactly* what the program must do.
+
+See: `classes.c`
+
+Unique to C++ are operator overrides.
+
+```
+    A& operator++() {
+        payload++;
+        return *this;
+    }
+
+    A operator++(int) {
+        A temp = *this;
+        payload++;
+
+        return temp;
+    }
+```
+
+These allow you to apply operators normally reserved for primitives,
+onto custom class types.
+
+The C++ standard library features a robust set of data structures including
+
+ - `string` (analagous to Java `String`)
+ - `vector<T>` (analagous to Java `ArrayList<T>`)
+ - `list<T>` (analagous to Java `LinkedList<T>`).
+ - and so many more
+
+```
+std::list<std::string> listOfStr;
+listOfStr.push_back("one");
+listOfStr.push_back("two");
+listOfStr.push_back("three");
+
+for (std::string str : listOfStr)       // for-each loop
+		std::cout << str <<std::endl;
+```
+
+The language is well equipped to handle modern programming tasks
+and continues to receive major updates every three years.
+
+```
+for (vector<double>::iterator i = vector.begin(); i != vector.end(); ++i)
+    *value = 0.0;   // iterator supports * operator, returns reference
+
+for (auto &value : vector)
+    value = 0.0;    // reference assignment modifies vector
+```
+
+C++ is complex and intimidating compared to Java,
+but features like pointers, references, and operator overloading
+make it an incredibly customizable language to work with.
+
+C++ is best suited for high-performance projects
+with high complexity and scale requirements.
+
+### Python
+
+Java, C, and C++ are known as **compiled languages**.
+
+ 1. *Parser* reads code character by character,
+    determines the code structure (tree) and meaning
+
+ 2. *Compiler* turns code structure into assembly code, for the architecture
+
+```
+gcc hello.c -S -o hello.asm
+```
+
+ 3. *Assembler* turns assembly into object code (bytecode)
+
+```
+gcc hello.c -c -o hello.o
+```
+
+ 4. *Linker* joins dependency object code files into a standalone executable
+
+```
+gcc hello.c -o hello
+```
+
+Unlike Java, which is compiled with JVM bytecode, and run on a JVM implementation,
+C and C++ both compile to "bare metal".
+
+ - That means every processor architecture (MIPS, ARM, x86-64, etc)
+    with its own bytecode will need their own compiler.
+
+An **interpreted language** is one that sidesteps compilation
+and is instead executed on the fly.
+
+1. Parser reads code character by character, determines meaning of each statement
+2. Interpreter executes statement immediately based on meaning.
+   The interpreter is a pre-compiled binary that understands each statement
+   (and has a function to handle each type)
+
+   Any external dependencies are dynamically loaded at runtime.
+
+3. GOTO 1
+
+Python has taken off as the go-to interpreted language for quick scripting.
+All you need is a `python` interpreter to run a Python file.
+
+```
+print("Hello, World!")
+
+def factorial(i):
+    if i <= 0:
+        return 1
+    return factorial(i - 1)
+```
+
+Python was designed to minimize code writing overhead
+so programmers can focus on the algorithms themselves.
+
+ - No variable types, argument types, or return types!
+ - No semicolons!
+ - No curly braces!
+ - Everything's a HashMap underneath!
+ - Built in structures like `list`, `dict`, `tuple`, `set`, and more!
+
+See: `tuple.py`
+
+Although most programmers learn Python as a language for quick, small tasks,
+Python gets a lot of positive attention in the mathematics,
+AI, and machine learning communities.
+
+Built-in support for `tuple` means the language can handle "vectors"
+and "matrices" (to any dimension) in the mathematical sense easily.
+
+```
+# 3D matrix, try this in Java!
+# no class definitions, no interfaces == easy money
+myVector = (((1, 2), (3, 4), (5, 6)),
+            ((7, 8), (9, 8), (7, 6)),
+            ((5, 4), (3, 2), (1, 0)))
+```
+
+As an **interpreted language**, Python has notable drawbacks.
+
+ - Minimal "compile time" error reporting.
+   The Python interpreter does a quick pass over the code before execution
+   to catch obvious mistakes, but cannot catch type errors or runtime errors.
+
+   In practice, it is extremely frustrating to see your program crash
+   at the last second because of a typo!
+
+ - Poor performance.
+   Compared to C, C++, or even Java, Python can be *orders of magnitude slower*.
+
+See: https://benchmarksgame-team.pages.debian.net/benchmarksgame/fastest/gpp-python3.html  
+
+Python has another notable drawback - a political one.
+
+In 2008, Python 3 was released and decidely *not* backwards compatible with Python 2.
+Python 3 resolves many of the language flaws in Python 2.
+
+See: https://docs.python.org/release/3.0.1/whatsnew/3.0.html
+
+Unfortunately, it has taken a decade for the most used Python 2 packages
+to be ported to Python 3.
+
+See: http://www.randalolson.com/2016/09/03/python-2-7-still-reigns-supreme-in-pip-installs/
+
+Python 2 will officially be retired by new year 2020.
+
+See: https://pythonclock.org/
+
+### JavaScript
+
+Ah, the programming language of the web.
+
+For a decade, JavaScript was often touted as one of the worst designed languages,
+and for good reason.
+
+### Ruby
+
+### Lisp
+
