@@ -363,6 +363,7 @@ See: `script.js`
 See: `index.html` (open in browser)
 
 Callbacks are executed in the order in which they arrive (a queue).
+Users may continue interacting with the page while requests are ongoing.
 
 While JavaScript was once exclusively used in the browser,
 featuring dedicated browser APIs for manipulating webpages,
@@ -372,3 +373,42 @@ And `Node.js` was born.
 
 ### Lisp
 
+Lisp, short for List Processing, is one of the oldest languages
+still in use, which embraces functional programming ideas.
+
+Lisp famously uses parentheses everywhere and
+*Polish notation* where operators and functions precede their arguments.
+
+```
+(+ 1 2)     ; => 3
+(mod 7 2)   ; => 1
+(write-line "Hello, World!")
+
+(defun factorial (n)
+  (if (< n 2)
+      1
+    (* n (factorial (- n 1)))))
+
+(write-line (write-to-string (factorial 5)))    ; => 120
+(setq fact 'factorial)
+
+(cons 1 (cons 2 (cons 3 nil)))  ; => '(1, 2, 3)
+(write-line
+    (write-to-string (
+        mapcar (lambda (arg) (* arg 2)) '(1 2 3 4 5)
+    )))
+```
+Code samples borrowed from 
+
+See: https://www.tutorialspoint.com/execute_lisp_online.php
+
+Lisp has a lot of love in academic circles,
+including CS and mathematics research.
+
+The relentlessly "simple" nature of Lisp syntax
+allows the code itself to be treated as data.
+Lisp is ideal for generating other Lisp code!
+
+The most widely used dialect of Lisp is called Clojure.
+
+See: https://clojure.org/community/companies
