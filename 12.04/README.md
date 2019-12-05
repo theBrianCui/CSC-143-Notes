@@ -317,9 +317,58 @@ Python 2 will officially be retired by new year 2020.
 
 See: https://pythonclock.org/
 
-### Ruby
+### JavaScript
 
+Ah, yes, the programming language of the web.
 
+JavaScript shares many ideas with Python as a language:
+
+ - Interpreted, not compiled*
+ - Dynamic typing, no type declarations
+ - Everything's a HashMap underneath
+ - Everything else is an array of some kind
+ - New data types introduced in modern JS are Map(), Set(), and more
+
+JavaScript features C-style syntax with the flexibility of Python.
+
+See: `script.js`
+See: `index.html` (open in browser)
+
+Designed for the web, JavaScript has exclusive APIs for manipulating webpages.
+With this in mind, JavaScript also has a "killer feature" unique to the language:
+first class support for **asynchronous programming**.
+
+C, C++, Java, and Python are all **synchronous**.
+Code statements run in the order in which they are written (makes sense).
+
+```
+// java
+String fileContents = "";
+fileContents = Files.readString("hello.txt", StandardCharsets.US_ASCII);
+fileContents += "world\n";
+Files.write("hello.txt", StandardCharsets.US_ASCII);
+System.out.println("done"); // "blocked" until previous statements finish
+```
+
+JavaScript deals with user-facing interfaces;
+webpages shouldn't freeze up with every slow network request!
+
+Instead of blocking, JavaScript has APIs for executing requests in the background,
+while other code may continue execution.
+
+When the request completes, a **callback** function
+(typically a lambda) is invoked as a follow up.
+
+See: `script.js`
+See: `index.html` (open in browser)
+
+Callbacks are executed in the order in which they arrive (a queue).
+
+While JavaScript was once exclusively used in the browser,
+featuring dedicated browser APIs for manipulating webpages,
+someone had the bright idea of running JavaScript on the server.
+
+And `Node.js` was born.
 
 ### Lisp
 
