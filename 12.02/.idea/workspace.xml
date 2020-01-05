@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="baadebe1-ea8a-44bc-ad3a-74b9536b585e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/scratch/SampleStringInterfaceFunctional.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/scratch/SampleVoidFunctionalInterface.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../09.23/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../09.23/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../09.23/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/../09.23/.idea/.name" afterDir="false" />
@@ -266,6 +264,10 @@
       <change beforePath="$PROJECT_DIR$/../11.20/src/scratch/GraphNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/../11.20/src/scratch/GraphNode.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../11.20/src/scratch/HashSet.java" beforeDir="false" afterPath="$PROJECT_DIR$/../11.20/src/scratch/HashSet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../11.20/src/test/DirectedGraphNodeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../11.20/src/test/DirectedGraphNodeTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../11.25/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../11.25/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../11.25/.idea/11.25.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../11.25/.idea/11.25.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../11.25/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../11.25/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../11.25/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../11.25/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../11.25/Applications of Data Structures.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../11.25/Applications of Data Structures.pdf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../11.25/Applications of Data Structures.pptx" beforeDir="false" afterPath="$PROJECT_DIR$/../11.25/Applications of Data Structures.pptx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../11.25/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../11.25/README.md" afterDir="false" />
@@ -289,10 +291,16 @@
       <change beforePath="$PROJECT_DIR$/src/scratch/CircleDescendingComparator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/scratch/CircleDescendingComparator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/scratch/CircleNameComparator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/scratch/CircleNameComparator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/scratch/SampleFunctionalInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/scratch/SampleFunctionalInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scratch/SampleStringInterfaceFunctional.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/scratch/SampleStringInterfaceFunctional.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scratch/SampleVoidFunctionalInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/scratch/SampleVoidFunctionalInterface.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/CircleTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/CircleTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/LambdaTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/LambdaTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../12.04/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../12.04/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../12.04/classes.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../12.04/classes.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../12.04/crash.c" beforeDir="false" afterPath="$PROJECT_DIR$/../12.04/crash.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../12.04/hello.c" beforeDir="false" afterPath="$PROJECT_DIR$/../12.04/hello.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../12.04/pointer.c" beforeDir="false" afterPath="$PROJECT_DIR$/../12.04/pointer.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../12.04/tuple.py" beforeDir="false" afterPath="$PROJECT_DIR$/../12.04/tuple.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />

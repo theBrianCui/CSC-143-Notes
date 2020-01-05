@@ -11,7 +11,7 @@ function factorial(i) {
 
 var a = null;
 var b = undefined;
-console.log("null is not undefined: " + (a != b))
+console.log("null is not undefined: " + (a !== b))
 
 var myObject = {}
 myObject.hello = "World";
