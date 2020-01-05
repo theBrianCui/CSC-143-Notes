@@ -55,7 +55,7 @@ and will be a recurring theme for this class.
 Every variable has a **type**;
 the validity of the type is **strongly** enforced.
 
-*See:* Hello.java
+*See:* Types.java
 
 
 
