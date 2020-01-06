@@ -57,8 +57,53 @@ the validity of the type is **strongly** enforced.
 
 *See:* Types.java
 
+ - You can't assign a variable to an *incompatible* type
+ - You can't pass a variable as an incompatible argument
+ - You can't cast an Object to an incompatible Object
 
+Java prevents us from making *type errors* (yay!)
 
- - Compiled: the language is translated from text to bytecode
-    that the Java Virtual Machine (JVM) can understand
+However, some type errors can be detected at compile time (good)
+     and some type errors are only detected at runtime (bad)
 
+## Let's Talk About Version Control
+
+*See:* Fibonacci.java
+
+Problem:
+ - Programming is complicated, most pieces of code depend on several others
+ - one change can easily break everything, hard to recover and track
+ - single source of truth prohibits large experimentation
+ - someone else can clobber your code
+
+Version Control: software for tracking code changes over time,
+enabling you to follow different versions of your code as it is developed
+
+What do we want in a VCS?
+ - Easy to take snapshots of the current code base: "commits"
+ - Easy to *branch* the existing code and track several variations at once
+ - Easy to collaborate with others and allow others to make changes without interference
+ - Easy on the filesystem
+
+`git` is a popular command line Version Control Software (VCS)
+used throughout the industry for its relative simplicity and efficiency.
+
+Git:
+ - A "repository" is where all the code for a program is stored (root folder)
+ - "Commits" are individual changes tagged with a message
+ - "Branches" are different independent variations of your program
+ - Your final program is the sum of your commits
+
+Steps for use:
+ 1. Initialize repository: `git init`
+ 2. Write code
+ 2.1 Check `git status`
+ 2.2 `git add`
+ 3. Commit code with a message: `git commit -m "my commit message"`
+ 4. GOTO 2
+
+Pro tips:
+ - .gitignore
+ - commit early, commit often
+ - branching is cheap
+ - checkout to time travel, branch if needed
