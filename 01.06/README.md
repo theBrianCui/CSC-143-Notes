@@ -60,6 +60,7 @@ the validity of the type is **strongly** enforced.
  - You can't assign a variable to an *incompatible* type
  - You can't pass a variable as an incompatible argument
  - You can't cast an Object to an incompatible Object
+ - You *can* transition from one primitive type to another type using operators
 
 Java prevents us from making *type errors* (yay!)
 
