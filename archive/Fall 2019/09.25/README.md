@@ -55,14 +55,17 @@ Buzz ...
 
 ## Software Testing
 
-What is software testing?
- - Writing code to evaluate the correctness of code
- - Set expectations for input and output
- - Develop specification for a program
+### What is software testing?
 
-Two types of tests:
- - Unit Tests: test specific module or function
- - Integration tests: test large parts of program
+Software testing is writing code to evaluate the correctness of code.
+
+ - *Expectations* or *Assertions* check the outputs of a program
+ - Tests enforce the specification for a program
+
+There are two types of tests:
+
+ - *Unit Tests:* test specific module or function
+ - *Integration tests:* test large parts of program as a whole
 
 What does a test look like?
  - "Assertions" evaluate outcomes
