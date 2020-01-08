@@ -81,16 +81,32 @@ public void myUnitTest() {
 A basic test is composed of a function (the test itself)
 that contains *assertions* that must all pass for the test to pass.
 
+Assertions aren't magic - they're code too.
 
+```
+public void assertEquals(Object o1, Object o2) {
+  if (!o1.equals(o2)) {
+    throw new AssertionError(String.format("Assertion failed, %s != %s\n", o1, o2));
+  }
+}
+```
 
-See/write: FizzBuzzTest
+*See:* FizzBuzzTest
+
+There are several *testing libraries* available for languages that
+contain all the needed components to write unit tests.
+
+Testing lib
 
 Some languages like JavaScript separate the above three components:
  - Test Runner (runs tests in sequence, reports output)
  - Assertion library: expect(var).to.be(5)
  - Mocking library:
 
-jUnit contains the first two. "Mockito" is a Java method mocking library (but we won't need it)
+jUnit contains the first two: a runner and assertion library.
+The test runner contains a `main` method which evaluates one or more tests.
+
+"Mockito" is a Java method mocking library (but we won't need it)
 
 See: How do we add jUnit to our projects?
  - jUnit is included in all project code
