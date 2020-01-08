@@ -31,7 +31,20 @@ you can open Eclipse projects inside your IntelliJ environment!
 
 ## FizzBuzz and Software Testing
 
-Let's Write: FizzBuzz
+*FizzBuzz* is a fairly simple programming challenge that has become
+a bit of an interviewing meme that filters programmers from non-programmer
+candidates to programming jobs. The problem goes:
+
+```
+Write a function that prints the numbers from 1 to 100, inclusive.
+Except, if the number is divisible by 3, print "Fizz".
+        if the number is divisible by 5, print "Buzz".
+        if the number is divisible by both, print "FizzBuzz".
+```
+
+*Let's Write:* FizzBuzz
+
+## Software Testing
 
 What is software testing?
  - Writing code to evaluate the correctness of code
