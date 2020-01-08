@@ -67,10 +67,21 @@ There are two types of tests:
  - *Unit Tests:* test specific module or function
  - *Integration tests:* test large parts of program as a whole
 
-What does a test look like?
- - "Assertions" evaluate outcomes
-   - assertEquals, assertTrue, fail()
- - jUnit 4
+Tests aren't magic - they're code!
+
+```
+public void myUnitTest() {
+  ArrayList<Integer> array = new ArrayList<>();
+  assertEquals(0, array.size());
+  array.add(500);
+  assertEquals(1, array.size());
+}
+```
+
+A basic test is composed of a function (the test itself)
+that contains *assertions* that must all pass for the test to pass.
+
+
 
 See/write: FizzBuzzTest
 
@@ -83,6 +94,16 @@ jUnit contains the first two. "Mockito" is a Java method mocking library (but we
 
 See: How do we add jUnit to our projects?
  - jUnit is included in all project code
+ 
+Software testing provides great value to large team projects!
+By *asserting* the behavior of a function or module,
+you define a specification for that behavior and
+you *protect* that behavior from being modified incorrectly.
+
+ - "Presubmit gating" prevents developers from pushing (uploading) code
+   that doesn't pass the test suite
+
+Software testing is however, not foolproof and perfect.
 
 *****************************************
 
