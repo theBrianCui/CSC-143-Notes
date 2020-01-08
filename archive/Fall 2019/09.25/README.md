@@ -42,6 +42,15 @@ Except, if the number is divisible by 3, print "Fizz".
         if the number is divisible by both, print "FizzBuzz".
 ```
 
+Example output:
+```
+1
+2
+Fizz
+4
+Buzz ...
+```
+
 *Let's Write:* FizzBuzz
 
 ## Software Testing
