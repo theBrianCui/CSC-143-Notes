@@ -1,3 +1,29 @@
+# IntelliJ, Test-Driven Development, Debugging, Project 0
+
+## IntelliJ
+
+IntelliJ is the preferred IDE of choice for this class.
+
+IntelliJ Community Edition is completely free to use
+and is compatible with your AdoptOpenJDK 11 install.
+
+Download: [https://www.jetbrains.com/idea/](https://www.jetbrains.com/idea/)
+
+You are welcome to use any IDE of choice for this class,
+though I recommend IntelliJ for a number of reasons.
+
+ - Robust debugging: real time variable and call stack inspection,
+   plus expression evaluation
+
+ - Built-in test suite support for jUnit
+ 
+ - Built-in support for Git
+  
+ - Customizable interface: light and dark theme, editor colors,
+   customizable keyboard shortcuts
+
+## FizzBuzz and Software Testing
+
 Let's Write: FizzBuzz
 
 What is software testing?
