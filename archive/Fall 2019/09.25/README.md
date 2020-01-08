@@ -91,25 +91,22 @@ public void assertEquals(Object o1, Object o2) {
 }
 ```
 
-*See:* FizzBuzzTest
-
 There are several *testing libraries* available for languages that
 contain all the needed components to write unit tests.
 
-Testing lib
-
-Some languages like JavaScript separate the above three components:
- - Test Runner (runs tests in sequence, reports output)
- - Assertion library: expect(var).to.be(5)
- - Mocking library:
+ - Test Runner: a program with a `main` method that runs tests and reports output)
+ - Assertion library: a collection of assertions like `assertEquals` and `assertTrue`
+ - Mocking library: a program that can substitute behavior of other classes
 
 jUnit contains the first two: a runner and assertion library.
-The test runner contains a `main` method which evaluates one or more tests.
-
 "Mockito" is a Java method mocking library (but we won't need it)
 
-See: How do we add jUnit to our projects?
- - jUnit is included in all project code
+*See:* Setting up a new Java project in IntelliJ with jUnit
+
+jUnit is included in all project code and should work out-of-the-box
+(no additional downloads) for IntelliJ.
+
+*See:* Writing tests for FizzBuzz
  
 Software testing provides great value to large team projects!
 By *asserting* the behavior of a function or module,
