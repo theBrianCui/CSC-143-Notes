@@ -15,12 +15,19 @@ though I recommend IntelliJ for a number of reasons.
  - Robust debugging: real time variable and call stack inspection,
    plus expression evaluation
 
- - Built-in test suite support for jUnit
+ - Built-in test suite support for jUnit: run and debug individual tests,
+   see the expected vs. actual output for assertions
  
- - Built-in support for Git
-  
+ - Built-in support for Git: use `git` entirely through the GUI,
+   inline `git diff` shows changes directly in the editor
+
  - Customizable interface: light and dark theme, editor colors,
    customizable keyboard shortcuts
+
+**Bonus**: IntelliJ supports Eclipse project configurations.
+
+In the future (in other classes or at work),
+you can open Eclipse projects inside your IntelliJ environment! 
 
 ## FizzBuzz and Software Testing
 
