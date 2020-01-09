@@ -1,5 +1,25 @@
 # IntelliJ, Test-Driven Development, Debugging, Project 0
 
+## Hey Siri, what's the weather like?
+
+*There is a 40% chance of snow next week!*
+
+Class on Monday 01/13 may be cancelled based on weather conditions.
+Please watch email and **Piazza** for announcements.
+
+The school will send out an announcement no later than 3pm.
+I will post on Piazza no later than 4pm to reflect this announcement,
+and whether or not I can personally make it.
+
+ - If the weather is sketchy, but class is NOT cancelled, we will NOT have a quiz.
+   Stay home if you have to, come attend lecture if you can.
+
+ - If the weather is sunshine and happiness, class will be on as usual.
+
+Class on 01/15 is already cancelled in anticipation of the launch
+of the new [Microsoft Edge](https://www.microsoftedgeinsider.com/en-us/).
+(Download Edge Beta today!)
+
 ## IntelliJ
 
 IntelliJ is the preferred IDE of choice for this class.
@@ -64,8 +84,8 @@ Software testing is writing code to evaluate the correctness of code.
 
 There are two types of tests:
 
- - *Unit Tests:* test specific module or function
- - *Integration tests:* test large parts of program as a whole
+ - **Unit Tests:** test specific module or function
+ - **Integration tests:** test large parts of program as a whole
 
 Tests aren't magic - they're code!
 
@@ -84,6 +104,7 @@ that contains *assertions* that must all pass for the test to pass.
 Assertions aren't magic - they're code too.
 
 ```
+@Test
 public void assertEquals(Object o1, Object o2) {
   if (!o1.equals(o2)) {
     throw new AssertionError(String.format("Assertion failed, %s != %s\n", o1, o2));
@@ -94,8 +115,8 @@ public void assertEquals(Object o1, Object o2) {
 There are several *testing libraries* available for languages that
 contain all the needed components to write unit tests.
 
- - Test Runner: a program with a `main` method that runs tests and reports output)
- - Assertion library: a collection of assertions like `assertEquals` and `assertTrue`
+ - **Test Runner:** a program with a `main` method that runs tests and reports output)
+ - **Assertion library:** a collection of assertions like `assertEquals` and `assertTrue`
  - Mocking library: a program that can substitute behavior of other classes
 
 jUnit contains the first two: a runner and assertion library.
@@ -107,55 +128,102 @@ jUnit is included in all project code and should work out-of-the-box
 (no additional downloads) for IntelliJ.
 
 *See:* Writing tests for FizzBuzz
- 
-Software testing provides great value to large team projects!
-By *asserting* the behavior of a function or module,
-you define a specification for that behavior and
-you *protect* that behavior from being modified incorrectly.
 
- - "Presubmit gating" prevents developers from pushing (uploading) code
-   that doesn't pass the test suite
+*See:* Debugging FizzBuzz
+
+#### Test-Driven Development
+
+**Test-Driven Development** is the idea that we write tests firsts,
+and write code second.
+
+By writing tests first, we are forced to reason about the
+**interface** of the code being tested, and the
+**specification** for its functionality.
+
+All of your projects in the class will use test-driven development!
 
 Software testing is however, not foolproof and perfect.
 
-*****************************************
+ - Tests are NOT a substitute for a formal proof of correctness
+ - Tests may not necessarily cover all use cases
+ - Tests can be "cheated"
+ - The test itself can be incorrect!
 
-BIG IDEA: Abstraction - what is it?
- - Taking complex things and making them *abstract*
+## Abstraction and Interfaces
 
-sendBytes(recipient, bytes) {
+Recall the notion of **abstraction**:
+masking complex implementation details with simple interfaces.
+
+### Classes and Objects
+
+Java is an *Object-Oriented* programming language.
+Before OOP, there was "procedural programming".
+
+```
+struct bread {
+  int temperature;
 }
 
-receiveBytes(sender, bytes) {
+void tosatBread(bread* b) {
+  b->temperature = b->temperature + 20;
 }
+```
 
-What are Classes?
- - Blueprints for Objects
- - Containers of "state"
- - Exposes methods for implementing state
+Rather than defining standalone functions that are called throughout the program,
+functionality is based on the usage of so-called **Objects**
+and the manipulation of those Objects via functions attached to the instances,
+known as **methods**.
 
-C Programming "Procedural" vs Java OOP Programming
+```
+class Bread {
+  int temperature;
 
+  void toast() {
+    this.temperature += 20;
+  }
+}
+```
 
-See: Circle, a very simple container class
-    // public: Anyone can access
-    // protected: Myself and my children
-    // private: Myself only
+In Java, a **class** is a blueprint for an Object. Classes contain:
 
-What are Interfaces (abstractly speaking)?
- -
+ - *Properties* (sometimes called instance variables, or fields)
+   that define the Object's internal state.
 
-What are Interfaces (Java?)
- - Describes methods a class must implement
- - Does NOT describe how the methods are implemented
+ - *Methods* (functions attached to the object) for modifying state
 
-Implement: Shape2D
-See: Shape2DTest
+*See:* Circle, a very simple container class
 
+Methods are a form of **abstraction** by hiding the underlying changes
+to the class via function calls.
 
-See: Sorter
-See: test.SorterTest
+Furthermore, Java explicitly allows us to hide properties
+or methods using *access modifiers*. 
 
+ - `public`: Anyone can access
+ - `protected`: Myself and my children (more on child classes later)
+ - `private`: Myself only
+
+### Interfaces
+
+In general programming, an **interface** is a set of interactions
+made available by a system.
+
+In Java, we said classes were blueprints for Objects.
+
+In Java, an **interface** is a blueprint for a class.
+
+ - Describes methods a class *must* implement
+ - Does NOT describe *how* the methods are implemented
+
+*See:* Shape2D
+*See:* Shape2DTest
+
+Unlike classes, interfaces cannot be directly constructed!
+Instead, an interface must be fulfilled by a concrete class.
+
+Interfaces are useful because they let clients (you)
+use classes that fulfill the interface's requirements
+*without any knowledge* of the underlying implementation! (Abstraction!)
 
 Let's talk about Project 0...
 https://www.briancui.com/csc-143/projects/project0.html

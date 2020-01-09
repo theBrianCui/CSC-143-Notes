@@ -1,8 +1,8 @@
 package scratch;
 
 public class Rectangle implements Shape2D {
-    private int width;
-    private int height;
+    int width;
+    int height;
 
     // Constructor
     public Rectangle(int width, int height) {

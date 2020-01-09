@@ -33,8 +33,6 @@ public class SorterTest {
 
             if (a > b)
                 return false;
-
-            first = i;
         }
 
         return true;
