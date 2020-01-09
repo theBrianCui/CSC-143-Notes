@@ -1,6 +1,6 @@
 # IntelliJ, Test-Driven Development, Debugging, Project 0
 
-## Hey Siri, what's the weather like?
+## Hey Siri, what's the weather like next Monday?
 
 *There is a 40% chance of snow next week!*
 
@@ -104,7 +104,6 @@ that contains *assertions* that must all pass for the test to pass.
 Assertions aren't magic - they're code too.
 
 ```
-@Test
 public void assertEquals(Object o1, Object o2) {
   if (!o1.equals(o2)) {
     throw new AssertionError(String.format("Assertion failed, %s != %s\n", o1, o2));
@@ -164,7 +163,7 @@ struct bread {
   int temperature;
 }
 
-void tosatBread(bread* b) {
+void toastBread(bread* b) {
   b->temperature = b->temperature + 20;
 }
 ```
@@ -214,6 +213,7 @@ In Java, an **interface** is a blueprint for a class.
 
  - Describes methods a class *must* implement
  - Does NOT describe *how* the methods are implemented
+ - Cannot have properties* (for the purposes of this class)
 
 *See:* Shape2D
 *See:* Shape2DTest
