@@ -225,6 +225,17 @@ Interfaces are useful because they let clients (you)
 use classes that fulfill the interface's requirements
 *without any knowledge* of the underlying implementation! (Abstraction!)
 
-Let's talk about Project 0...
-https://www.briancui.com/csc-143/projects/project0.html
+*See:* Popular Java interfaces
 
+A class can mix-and-match any number of interfaces,
+so long as it fulfills all the methods of those interfaces.
+
+## Project 0
+
+Project 0 features two Java interfaces that you need to implement.
+
+ - *Iterator*: describes classes which iterate over a list or sequence
+
+ - *Comparable*: describes classes which can be compared (ordered)
+
+[Check out the Project 0 specification here](https://www.briancui.com/csc-143/projects/project0.html)
