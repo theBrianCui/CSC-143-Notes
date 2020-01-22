@@ -34,10 +34,11 @@ See: Point.java, Point3D.java
 
 In general, `.equals()` is implemented as:
 
- 0. Check if `this == o`, early exit if true
- 1. Check if the types are equal (`instanceof` or `.getClass()` - be careful of the differences!)
- 2. Check `super.equal(o)` if `this` has a parent
- 3. Check all variables are `.equal()`
+ 1. Check if `o == null`, `return false` if true (why?)
+ 2. Check if `this == o`, early exit if true (why?)
+ 3. Check if the types are equal (`instanceof` or `.getClass()` - be careful of the differences!)
+ 4. Check `super.equal(o)` if `this` has a parent
+ 5. Check all variables are `.equal()`
 
 See: PointTest.java
 
@@ -57,11 +58,12 @@ This notion that a class fulfills a given interface allows us to treat think of 
 
 See: ShapeTest.java
 
-With this knowledge, Java permits classes to substitute their respective parents and interfaces.
+Java permits classes to substitute their respective parents and interfaces.
 
 When a child is substituted for a parent, the *child's* implementation is used at runtime.
 
-Clients using parent classes do not care about the underlying implementation, only the public interface
+Clients using parent classes do not care about the underlying implementation, only the public interface.
+
 The underlying implementation can be *extended* by children and used without knowledge of the children (abstraction!)
 
 ### Casting
