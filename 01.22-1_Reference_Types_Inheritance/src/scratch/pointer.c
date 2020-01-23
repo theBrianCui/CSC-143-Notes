@@ -24,7 +24,15 @@ int main() {
     myStruct.i = 143;
     myStruct.c = 'b';
 
+    struct A myOtherStruct;
+    myStruct.i = 123;
+    myStruct.c = 'z';
+
     struct A* myPointer = &myStruct;
+
+    // ...
+
+    myPointer = &myOtherStruct;
 
     printf("1. PRINT OUT A\n");
     printAByValue(myStruct);

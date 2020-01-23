@@ -7,7 +7,8 @@
  - Unit tests evaluate individual functions, methods, or short chunks of code with few responsibilities
  - Integration tests evaluate many functions used together, large chunks of code, or the entire program
 
-Tests contain **assertions** that compare expected vs. actual outputs; the test fails if they do not match
+Tests contain **assertions** that compare expected vs. actual outputs;
+the test fails if they do not match
 
 **Classes** are blueprints for objects: containers of *state*.
 
@@ -18,6 +19,17 @@ Tests contain **assertions** that compare expected vs. actual outputs; the test 
    - Interfaces are like blueprints for classes
    - Classes can implement any number of interfaces (mix and match)
    - `Iterator<T>` and `Comparable<T>` in Project 0
+
+When a class implements an interface,
+the class must implement *every* method of the interface.
+
+Just like classes, interfaces are a type,
+that can be assigned to any implementing class!
+
+See: BasicInterface.java
+
+However, because an interface itself lacks a concrete implementation,
+the interface cannot be directly constructed.
 
 ## Reading: Single Responsibility Principle
 
@@ -75,7 +87,7 @@ In practice, pointers are difficult to use.
  - Pointer arithmetic mistakes
  - No runtime type validation 
  - Memory leaks
- - Must be conscious of pass-by-value vs. pass-by-pointer
+ - Must be conscious of pass-by-value vs. pass-by-pointer-by-value
 
 ### References
 
@@ -102,7 +114,7 @@ Object-Oriented Programming has three pillars:
 
 ### Inheritance
 
-Inheritance is a form of code reuse that allows classes with share behavior to share a common base.
+Inheritance is a form of code reuse that allows classes with similar behavior to share a common base.
 
 When a child class **extends** a parent class...
 

@@ -61,6 +61,11 @@ public class ReferenceTest {
         argumentA.i = 5;
     }
 
+    void assignModifyA(A argumentA) {
+        argumentA = new A(10);
+        argumentA.i = 5;
+    }
+
     A modifyAReturn(A argumentA) {
         argumentA.i = 999;
         argumentA = new A(12);

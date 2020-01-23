@@ -50,6 +50,7 @@ public class ShapeTest {
         // Squares fulfill the interface already supplied by Rectangle
 
         Rectangle r = new Square(5, origin);
+
         assertEquals(25, Math.round(r.area()));
 
         // The correct version of .toString() is determined at runtime

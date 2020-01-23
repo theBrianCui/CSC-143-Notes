@@ -16,7 +16,11 @@ public class Point {
 
     @Override
     public boolean equals(Object o) {
-        if (this == o){
+        if (o == null) {
+            return false;
+        }
+
+        if (this == o) {
             return true;
         }
 

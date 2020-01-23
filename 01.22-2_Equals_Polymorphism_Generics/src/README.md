@@ -18,7 +18,7 @@ All Classes inherit from Object, the top-level Java class.
 
 See: https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html
 
-Object provides some override-able methods that the Java designers deicided were a core part of the language and required for every class. The ones we care about in this class are:
+Object provides some override-able methods that the Java designers decided were a core part of the language and required for every class. The ones we care about in this class are:
 
  - `.toString()`: Returns the `String` representation of the class (as decided by the developer)
  - `.equals()`: Compares two objects by *state* (rather than memory address, or physical equality)
@@ -37,6 +37,13 @@ In general, `.equals()` is implemented as:
  1. Check if `o == null`, `return false` if true (why?)
  2. Check if `this == o`, early exit if true (why?)
  3. Check if the types are equal (`instanceof` or `.getClass()` - be careful of the differences!)
+ 
+  - `instanceOf` permits parent classes to equal child classes,
+                 but violates symmetry of equality
+  - `getClass()` only allows Objects to be equal if their classes are equal,
+                 preserves symmetry of equality
+                 but violates Liskov Substitution Principle 
+ 
  4. Check `super.equal(o)` if `this` has a parent
  5. Check all variables are `.equal()`
 
@@ -64,7 +71,7 @@ When a child is substituted for a parent, the *child's* implementation is used a
 
 Clients using parent classes do not care about the underlying implementation, only the public interface.
 
-The underlying implementation can be *extended* by children and used without knowledge of the children (abstraction!)
+The underlying implementation can be *extended* by children and used without knowledge of the parent (abstraction!)
 
 ### Casting
 
@@ -79,7 +86,7 @@ To cast a reference, specify the desired reference type in parentheses next to t
 Square square = new Square(5, origin);
 Shape shape = square; // Always safe to cast up
 
-// Dangerous: sq may not be a rectangle
+// Dangerous: shape may not be a rectangle
 // You should check using instanceof to determine
 // if an instance is actually a class or a child 
 Rectangle r = (Rectangle) sq;
