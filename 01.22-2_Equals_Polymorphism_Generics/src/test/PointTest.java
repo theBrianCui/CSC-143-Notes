@@ -12,14 +12,16 @@ public class PointTest {
         Point a = new Point(0, 0);
         Point b = new Point(5, 4);
 
-        assertEquals(a, a);
+        assertEquals(a, a); // a.equals(a)
         assertFalse(a.equals(b));
         b.x = 0;
         b.y = 0;
 
-        // assertEquals calls .equals() on Objects, == on primitives
+        // assertEquals calls .equals() on Objects,
+        // == on primitives
         assertEquals(a, b);
         assertTrue(a.equals(b));
+        assertTrue(b.equals(a));
 
         // references are unchanged and are still different
         assertFalse(a == b);

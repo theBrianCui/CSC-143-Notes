@@ -89,7 +89,11 @@ Shape shape = square; // Always safe to cast up
 // Dangerous: shape may not be a rectangle
 // You should check using instanceof to determine
 // if an instance is actually a class or a child 
-Rectangle r = (Rectangle) sq;
+Rectangle r = (Rectangle) shape;
+
+if (shape instanceof Rectangle) {
+  // OK, shape is Rectangle
+}
 
 ```
 
@@ -105,8 +109,13 @@ The type is provided by clients of the class.
 The syntax for declaring a *generic type* depends on where the type is scoped. When you see `<>`, expect generics~
 
  - To declare a generic class variable, declare generic types next to class name, e.g. `public class A<T>`
+ 
  - to declare a generic class variables for a child class, declare generic type next to the class name and parent, e.g. `public class B<T, V> extends A<T>`
- - To declare an instance of a given class with a generic type, construct it with the type attached, e.g. `A<int> = new A<int>();`
+ 
+ - To declare an instance of a given class with a generic type, construct it with the type attached, e.g.
+ 
+   `A<Integer> = new A<>();`
+ 
  - To declare a static method which accepts or returns a generic, declare the generic before the return value, e.g. `public static <B> B myMethod(B a)`
 
 See: Pair, Triple

@@ -24,6 +24,10 @@ public class Point {
             return true;
         }
 
+//        if (!(this.getClass() == o.getClass())) {
+//            return false;
+//        }
+
         if (!(o instanceof Point)) {
             return false;
         }

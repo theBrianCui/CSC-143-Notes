@@ -23,10 +23,14 @@ public class Point3D extends Point {
             return true;
         }
 
+//        if (!(this.getClass() == o.getClass())) {
+//            return false;
+//        }
+
         if (!(o instanceof Point3D)) {
             return false;
         }
 
-        return super.equals(o) && this.y == ((Point3D) o).y;
+        return super.equals(o) && this.z == ((Point3D) o).z;
     }
 }

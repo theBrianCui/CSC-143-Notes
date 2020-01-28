@@ -12,8 +12,18 @@ public class Triple<L, R, T> extends Pair<L, R> {
         return new Triple<A, B, C>(left, right, third);
     }
 
+    public static void main(String args[]) {
+        Triple<Integer, Integer, String> t = new Triple<>(1, 2, "A");
+
+        Triple<Integer, Integer, String> z = Triple.createTriple(5, 5, "H");
+    }
+
     @Override
     public boolean equals(Object o) {
+        if (o == null) {
+            return false;
+        }
+
         if (this == o) {
             return true;
         }
@@ -33,5 +43,12 @@ public class Triple<L, R, T> extends Pair<L, R> {
     @Override
     public int hashCode() {
         return super.hashCode() ^ this.third.hashCode();
+    }
+}
+
+class TripleInt extends Triple<Integer, Integer, Integer> {
+
+    public TripleInt(Integer left, Integer right, Integer third) {
+        super(left, right, third);
     }
 }

@@ -1,5 +1,7 @@
 package lib;
 
+import java.util.ArrayList;
+
 /**
  * A simple container for two variables.
  * @param <L> Left value.
@@ -14,12 +16,20 @@ public class Pair<L, R> {
         this.right = right;
     }
 
+    public <A> L getLeft(ArrayList<A> b) {
+        return this.left;
+    }
+
     public static <A, B> Pair<A, B> createPair(A left, B right) {
         return new Pair<A, B>(left, right);
     }
 
     @Override
     public boolean equals(Object o) {
+        if (o == null) {
+            return false;
+        }
+
         if (this == o) {
             return true;
         }
