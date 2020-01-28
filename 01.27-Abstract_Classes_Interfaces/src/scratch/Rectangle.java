@@ -1,5 +1,7 @@
 package scratch;
 
+import lib.Pair;
+
 public class Rectangle extends Shape {
     private int width;
     private int height;
@@ -32,6 +34,10 @@ public class Rectangle extends Shape {
 
     @Override
     public final boolean equals(Object o) {
+        if (o == null) {
+            return false;
+        }
+
         if (this == o) {
             return true;
         }

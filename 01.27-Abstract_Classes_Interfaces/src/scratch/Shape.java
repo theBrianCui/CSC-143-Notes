@@ -4,7 +4,7 @@ public abstract class Shape implements Positionable {
     String name;
     Point location;
 
-    // Abstract classes have no constructor:
+    // Abstract classes might have no constructor:
     // They cannot be constructed!
 
     // Just like an interface, methods declared abstract
@@ -23,6 +23,9 @@ public abstract class Shape implements Positionable {
 
     // Abstract classes are not obligated to contain implementation
     // however, even for interfaces.
+//    public abstract void setLocation(Point location);
+//
+//    public abstract Point getLocation();
     @Override
     public void setLocation(Point location) {
         this.location = location;
@@ -39,13 +42,21 @@ public abstract class Shape implements Positionable {
     // See Shape::equals() vs Rectangle::equals() in this project
     @Override
     public boolean equals(Object o) {
+        if (o == null) {
+            return false;
+        }
+
+        if (this == o) {
+            return true;
+        }
+
         if (!(o instanceof Shape)) {
             return false;
         }
 
         Shape s = (Shape) o;
-        this.name.equals(s.name);
-        this.location.equals(s.location);
+//        this.name.equals(s.name);
+//        this.location.equals(s.location);
 
         return this.name.equals(s.name) && this.location.equals(s.location);
     }

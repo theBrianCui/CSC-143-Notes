@@ -16,6 +16,10 @@ public class Circle extends Shape {
 
     @Override
     public final boolean equals(Object o) {
+        if (o == null) {
+            return false;
+        }
+
         if (this == o) {
             return true;
         }

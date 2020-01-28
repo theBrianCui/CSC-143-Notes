@@ -14,6 +14,8 @@ public class ShapeTest {
 
     @Test
     public void ShapeTest() {
+//        Shape shape = new Shape();
+
         Shape circle1 = new Circle("Wheel", 10, origin);
         Shape circle2 = new Circle("Wheel", 10, origin);
 
@@ -25,6 +27,7 @@ public class ShapeTest {
 
         assertFalse(rectangle1.equals(rectangle2));
 
+        // rectangle2.rotate90();
         if (rectangle2 instanceof Rectangle) {
             ((Rectangle) rectangle2).rotate90();
         }
@@ -35,13 +38,23 @@ public class ShapeTest {
         assertEquals("Box (Rectangle: 2 x 4)", rectangle1.toString());
     }
 
+    public static Positionable noop(Positionable a) {
+        return a;
+    }
+
     @Test
     public void PositionableTest() {
         // Shape implements Positionable AND Circle inherits Shape THUS Circle implements Positionable
 
         Positionable circle1 = new Circle("Wheel", 10, new Point(2, 4));
 
-        Positionable circle2 = new Circle("Round", 10, new Point(1, 3));
+        Circle otherCircle = new Circle("Round", 10, new Point(1, 3));
+
+        Positionable circle2 = noop(otherCircle);
+
+        if (circle1 instanceof Circle) {
+            ((Circle) circle1).area();
+        }
 
         // As Positionable-s, the only methods I can invoke
         // are getLocation and setLocation without casting.
