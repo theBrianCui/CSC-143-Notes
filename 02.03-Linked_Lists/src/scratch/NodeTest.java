@@ -26,7 +26,6 @@ public class NodeTest {
         assertEquals("Paul", tail.payload);
         // tail -> [Paul] -next> [George]
 
-
         tail = tail.next;
         assertEquals("George", tail.payload);
         // tail -> [George]
@@ -47,6 +46,16 @@ public class NodeTest {
         assertEquals("John", head.payload);
         // we could walk the list once more
         // all elements are still referenced, so none get garbage collected
+
+
+
+        head.next.next.payload = "Jacob";
+
+        Node<String> front = head;
+        while (front.next != null) {
+            front = front.next;
+        }
+        // head.next.next.next.payload = "Broken";
     }
 
     @Test

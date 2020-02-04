@@ -7,6 +7,7 @@ import static junit.framework.TestCase.assertTrue;
 import static org.junit.Assert.assertFalse;
 
 public class ReferenceTest {
+
     static class A {
         int i;
         A(int i) { this.i = i; }

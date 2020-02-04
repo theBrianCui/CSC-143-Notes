@@ -3,6 +3,8 @@ package scratch;
 import junit.framework.TestCase;
 import org.junit.Test;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Iterator;
 
 import static junit.framework.TestCase.assertEquals;
@@ -40,5 +42,22 @@ public class LinkedListTest {
         assertEquals("Baz", i.next());
 
         assertFalse(i.hasNext());
+    }
+
+    @Test
+    public void LinkedListForEachTest() {
+        LinkedList<String> list = new LinkedList<>();
+        list.pushBack("Foo");
+        list.pushBack("Bar");
+        list.pushBack("Baz");
+
+        ArrayList<String> expected = new ArrayList(Arrays.asList("Foo", "Bar", "Baz"));
+
+        ArrayList<String> names = new ArrayList();
+        for (String name : list) {
+            names.add(name);
+        }
+
+        assertEquals(expected, names);
     }
 }

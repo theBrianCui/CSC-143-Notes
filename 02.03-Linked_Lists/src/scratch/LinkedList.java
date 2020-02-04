@@ -29,10 +29,6 @@ public class LinkedList<T> implements Iterable<T> {
             head = new Node<T>(value);
             tail = head;
 
-        } else if (head == tail) {
-            head = new Node<T>(value);
-            head.next = tail;
-
         } else {
             Node<T> front = new Node<T>(value);
             front.next = head;
@@ -46,10 +42,6 @@ public class LinkedList<T> implements Iterable<T> {
         if (head == null && tail == null) {
             head = new Node<T>(value);
             tail = head;
-
-        } else if (head == tail) {
-            tail = new Node<T>(value);
-            head.next = tail;
 
         } else {
             Node<T> back = new Node<T>(value);
