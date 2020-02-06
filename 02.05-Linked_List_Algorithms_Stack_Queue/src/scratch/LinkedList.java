@@ -112,8 +112,14 @@ public class LinkedList<T> implements Iterable<T> {
             return false;
         }
 
-        // Iterator<T> i = this.iterator();
+//        Iterator<T> i = this.iterator();
         Iterator<T> j = other.iterator();
+
+//        while (i.hasNext()) {
+//            if (!(i.next().equals(j.next()))) {
+//                return false;
+//            }
+//        }
 
         for (T value : this) {
             if (!(j.next()).equals(value)) {
@@ -139,6 +145,10 @@ public class LinkedList<T> implements Iterable<T> {
     This destroys the list passed as an argument.
      */
     public void join(LinkedList<T> o) {
+        if (o == null) {
+            return;
+        }
+
         if (o.size() == 0) {
             return;
         }
@@ -181,7 +191,7 @@ public class LinkedList<T> implements Iterable<T> {
 
     public void insert(int index, T value) {
         Node<T> insert = new Node<T>(value);
-        if (index > size) {
+        if (index > size || index < 0) {
             throw new IndexOutOfBoundsException();
         }
 
