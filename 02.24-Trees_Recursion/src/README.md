@@ -86,7 +86,7 @@ Some observations:
  
  - As a result, trees do not support indexing. How else can we identify nodes?
 
- - Trees are naturally `O(???)`, where `b` is the **branching factor** (max children per node) and `d` is the depth.
+ - Trees are naturally `O(b^d)`, where `b` is the **branching factor** (max children per node) and `d` is the depth.
 
  - Linked Lists are trees, with a **branching factor** of one.
 

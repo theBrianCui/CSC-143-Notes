@@ -149,13 +149,13 @@ public class RecursionTest {
         }
 
         Integer current = root.payload;
-        Integer nextMax = getMaxOfList(root.next);
+        Integer rest = getMaxOfList(root.next);
 
-        if (nextMax == null || current.compareTo(nextMax) > 0) {
+        if (rest == null ||
+                current > rest) {
             return current;
         }
-
-        return nextMax;
+        return rest;
     }
 
     @Test

@@ -37,6 +37,7 @@ public class BinaryTreeTest {
     }
 
     public Integer getIntegerAtPath(BinaryTreeNode<Integer> root, ArrayList<String> path) {
+
         for (String d : path) {
             if (d.equals("left")) {
                 root = root.left;
