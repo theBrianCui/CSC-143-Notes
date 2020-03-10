@@ -24,6 +24,14 @@ public class TailRecursionTest {
         return rangeSumTailRecursive(limit - 1, solution + limit);
     }
 
+    public int rangeSumRecursive(int limit) {
+        if (limit == 0) {
+            return 0;
+        }
+
+        return limit + rangeSumRecursive(limit - 1);
+    }
+
     @Test
     public void rangeSumTest() {
         assertEquals(0, rangeSum(0));

@@ -61,7 +61,7 @@ When tracing the recursive calls of `containsTree`, we observe the following:
  - The context of each function call is preserved until it returns
  - Each function call can only return when its own recursive calls return
 
-This is the case with **all** function calls, not just recursive calls! The *caller* function must save its context (local variables) while the *callee* is running.
+This is the case with **all** function calls, not just recursive calls! The *caller* function must save its context (local variables) while the *callee* is running. The callee is going to take up space for context, called a **stack frame**.
 
 Then when the callee calls its own functions, it must save its own state, and so forth, recursively, all the way down.
 
@@ -115,7 +115,7 @@ Let `b` be the branching factor and `d` be the depth of the tree.
 
 Given `b^d = n` nodes in a tree, it costs `O(n)` memory to store a tree.
 
-Quick math: `log(n) = d`
+Quick math: `log_b (n) = d`
 
 What is the Big O of tree computations?
 
