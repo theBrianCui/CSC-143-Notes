@@ -150,6 +150,8 @@ See: CircleDescendingComparator.java
 
 See: CircleNameComparator.java
 
+See: CircleTest.java
+
 In an interesting design choice, `Comparator<T>` does not make `compare(T, T)` a static method
 Instead, it is an instance method and the type must be constructed!
 
@@ -260,7 +262,7 @@ A **higher-order function** is a function that *takes a function* as an argument
 `Collections.sort(List, Comparator)` can be thought of as a higher-order function:
 
  - The function itself accepts a "function" as an argument, the `Comparator<T>`
- - The `compare(T, T)` method is invoked on pairs of elements in the list
+ - The `compare(T, T)` method inside the argument is invoked on pairs of elements in the list
 
 "Okay that's nice," you say,
 "but we still want to tease apart the method `compare` with its class."
@@ -306,7 +308,7 @@ and use an explicit return statement.
 
 Wow! Easy. Can we pass it in to `Collections.sort`?
 
-See: CircleTest.java
+See: LambdaTest.java
 
 Yes we can! We can use a *lambda* that is *not attached* to a class,
 or an instance of a class, to pass a function as an argument to another function!
@@ -337,7 +339,7 @@ interface Comparator<T> {
 
 If a lambda is an *anonymous function*,
 how could it have concretely fulfilled the `Comparator<T>` interface,
-because clients of `Comparator<T>` expect a `compare(T, T)` method attached to the Object?
+because clients of `Comparator<T>` expect a `compare(T, T)` method that is attached to an Object?
 
 As it turns out, in Java, **lambdas may substitute interfaces with a single abstract method**.
 
@@ -346,7 +348,16 @@ An interface with a single abstract method is called a **functional interface** 
 The name of the abstract method does not matter:
 as long as there is *exactly one*, a lambda can be used in place of it.
 
+That lambda will replace the functionality of that single abstract method,
+regardless of what that method is named.
+
+For the substitution to be valid, the lambda must have
+  - compatible arguments
+  - compatible return type
+  - see reading for more
+
 See: SampleFunctionalInterface.java
+
 See: LambdaTest.java
 
 In the background, Java actually *constructs a concrete instance* of the interface,
