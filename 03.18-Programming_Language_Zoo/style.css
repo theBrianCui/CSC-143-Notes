@@ -1,0 +1,22 @@
+.numberContainer {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.number {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 3rem;
+    height: 3rem;
+    padding: .25rem;
+    border: 1px solid black;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+button {
+    font-size: 2rem;
+    margin: .5rem;
+}
