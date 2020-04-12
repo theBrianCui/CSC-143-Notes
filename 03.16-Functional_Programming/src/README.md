@@ -98,7 +98,7 @@ Remark: in a different universe, we might have used `enum`s instead of `-1, 0, 1
         
 ```
 int compareTo(T o) {
-    this - o;
+    this.x - o.x;
 }
 ```
 
