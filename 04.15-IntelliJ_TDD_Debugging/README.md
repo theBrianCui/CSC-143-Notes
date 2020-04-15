@@ -212,7 +212,9 @@ so long as it fulfills all the methods of those interfaces.
 
 ## Project 0
 
-Project 0 features two Java interfaces that you need to implement.
+Project 0 features some Java interfaces that you need to implement.
+
+ - *Iterable*: describes classes which can be iterated over
 
  - *Iterator*: describes classes which iterate over a list or sequence
 
