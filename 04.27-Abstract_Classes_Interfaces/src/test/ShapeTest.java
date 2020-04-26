@@ -6,6 +6,7 @@ import org.w3c.dom.css.Rect;
 import scratch.*;
 
 import static junit.framework.TestCase.assertEquals;
+import static junit.framework.TestCase.assertTrue;
 import static org.junit.Assert.assertFalse;
 
 public class ShapeTest {
@@ -14,7 +15,7 @@ public class ShapeTest {
 
     @Test
     public void ShapeTest() {
-//        Shape shape = new Shape();
+        //Shape shape = new Shape();
 
         Shape circle1 = new Circle("Wheel", 10, origin);
         Shape circle2 = new Circle("Wheel", 10, origin);
@@ -44,13 +45,15 @@ public class ShapeTest {
 
     @Test
     public void PositionableTest() {
-        // Shape implements Positionable AND Circle inherits Shape THUS Circle implements Positionable
+        // Shape implements Positionable AND Circle inherits Shape
+        // THUS Circle implements Positionable
 
         Positionable circle1 = new Circle("Wheel", 10, new Point(2, 4));
 
         Circle otherCircle = new Circle("Round", 10, new Point(1, 3));
 
         Positionable circle2 = noop(otherCircle);
+        assertTrue(otherCircle == circle2);
 
         if (circle1 instanceof Circle) {
             ((Circle) circle1).area();
@@ -72,5 +75,8 @@ public class ShapeTest {
         }
 
         assertEquals(circle1, circle2);
+
+        Object[] array = new Object[5];
+        array.toString();
     }
 }

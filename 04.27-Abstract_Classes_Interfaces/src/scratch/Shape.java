@@ -1,9 +1,12 @@
 package scratch;
 
-public abstract class Shape implements Positionable {
+public abstract class Shape implements Positionable<Point> {
     String name;
     Point location;
 
+    public Shape() {
+
+    }
     // Abstract classes might have no constructor:
     // They cannot be constructed!
 

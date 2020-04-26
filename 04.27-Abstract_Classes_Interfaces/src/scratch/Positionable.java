@@ -1,6 +1,6 @@
 package scratch;
 
-public interface Positionable {
-    public void setLocation(Point location);
-    public Point getLocation();
+public interface Positionable<T extends Point> {
+    public void setLocation(T location);
+    public T getLocation();
 }
