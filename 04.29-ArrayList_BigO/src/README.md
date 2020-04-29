@@ -31,7 +31,7 @@ Whiteboard: Memory layout, fixed length arrays, Objects in storage
 
 So how is it possible that the ArrayList extend its length?
 
-See: CollectionTest.java, test two
+See: ArraysTest.java, test two
 
 ArrayList is *backed* by a primitive array, but the *fixed length* limitation of arrays are abstracted away
 so that the ArrayList provides "unlimited" length.
