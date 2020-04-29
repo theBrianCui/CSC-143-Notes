@@ -2,23 +2,28 @@
 
 ## ArrayList
 
-The `ArrayList` is a Java class that holds a list of Objects,
-much like a "primitive" array.
+The `ArrayList<T>` is a generic Java class that holds a list of Objects.
 
- - `array[index] = payload --> .set(index, payload)`
- - `array[index] --> .get(index)`
- - `array.length --> .size()`
+For read and write operations, the `ArrayList` class features a set of methods
+that match the functionality of primitive arrays.
+
+ - `primitive array -> ArrayList method call`
+
+ - Assignment: `array[index] = payload --> .set(index, payload)`
+ - Retrieval: `array[index] --> .get(index)`
+ - Length Lookup: `array.length --> .size()`
 
 ### How do ArrayLists work?
 
 In Java, arrays are a fixed length: `int[] num = new int[5]`
 
 Practically, there is no such thing as an "unlimited length (primitive) array".
-Accesses outside the array cause an `IndexOutOfBoundsException` to be thrown.
+Accesses outside the array cause an `ArrayIndexOutOfBoundsException` to be thrown.
 
-See: CollectionTest.java, test one
+See: ArraysTest.java, test one
 
-This is because of how arrays and Objects are stored in memory. By definition, an array must take up a contiguous chunk of space.
+This is because of how arrays and Objects are stored in memory.
+By definition, an array must take up a contiguous chunk of space.
 
 Writing beyond an array is dangerous - it can and will overwrite other objects nearby!
 
@@ -55,30 +60,42 @@ We can compute Big O with some simple rules:
 
 See: BigO.java
 
-The result of rule (3) is that we get several common "classes" that we can group algorithms into. From fastest (most efficient) to slowest (least efficient)...
+The result of rule (3) is that we get several common "classes" that we can group algorithms into.
+From fastest (most efficient) to slowest (least efficient)...
 
  - `O(1)` - *Constant Time*, this function does not scale based on input. Virtually instant. Array lookup and assignment.
  
- - `O(log_2(n))` or `O(logn)` - *Logarithmic*, this function scales based on the log-base-2 of the input size. Extremely fast, like halving the input every step. Binary search.
+ - `O(log_2(n))` or `O(logn)` - *Logarithmic*, this function scales based on the log-base-2 of the input size.
+    Logarithm is the inverse of exponential, thus grows very slowly.
+    Extremely fast, like halving the input every step. Binary search.
 
- - `O(n)` - *Linear*, this function encounters (roughly) every element in the input. Generally pretty quick, though `O(logn)` is much preferred when available.
+ - `O(n)` - *Linear*, this function encounters (roughly) every element in the input.
+    Generally pretty quick, though `O(logn)` is much preferred when available.
 
- - `O(n * log_2(n))` or `O(nlogn)` - *Linearithmic*, worse than linear time but not by a significant amount. Good sorting algorithms are linearithmic.
+ - `O(n * log_2(n))` or `O(nlogn)` - *Linearithmic*, worse than linear time but not by a significant amount.
+    Optimal sorting algorithms are linearithmic.
 
- - `O(n^2)` - *Quadratic* - grows quickly, only suited for "small" `n`. Slower sorting algorithms, like selection sort, are quadratic.
+ - `O(n^2)` - *Quadratic* - grows quickly, only suited for "small" `n`.
+    Slower sorting algorithms, like selection sort, are quadratic.
+    Likely the case when two nested loops are present.
 
 ...
  
- - `O(2^n)` - *Exponential* - grows extremely quickly, intractable for large `n`. Used in "flood fill" search algorithms (trees, graphs).
+ - `O(2^n)` - *Exponential* - grows extremely quickly, intractable for large `n`.
+    Used in "flood fill" search algorithms (binary trees).
+    Recall naive fibonacci recursive algorithm.
  
- - `O(n!)` - *Factorial* - grows intractably large and fast. Computing all the order permutations (possible shuffles) of a list is `O(n!)` as there are `n!` combinations.
+ - `O(n!)` - *Factorial* - grows intractably large and fast.
+    Computing all the order permutations (possible shuffles) of a list is `O(n!)` as there are `n!` combinations.
 
 Big O analysis is common during technical interviews, and is something you should always be conscious of while programming.
 Often times programming challenges are designed to test the efficiency of your algorithm alongside the correctness of your solution.
 
 For small `n`, **any algorithm is OK.** Sometimes you want to make trade-offs based on simplicity and efficiency.
 
-*Remark:* `O(logn)` and `O(1)` are quite close in practice. For example, `log_2(2^30) = log_2(1073741824) = 30`. That's just 30 steps to search one billion entries!
+*Remark:* `O(logn)` and `O(1)` are quite close in practice.
+For example, `log_2(2^30) = log_2(1073741824) = 30`.
+That's just 30 steps to search one billion entries!
 
 ### ArrayList and Big O
 
@@ -153,7 +170,8 @@ Big O does not often consider the cost of internal, practical memory management.
  - Cost of cache "misses". Computers automatically store recently used and predictably used memory in faster cache storage.
  
    - ArrayList has the advantage that its references are contiguous, and more cache friendly: several references can be loaded into cache at once.
-   - Other structures are less cache-friendly because they 
+   
+   - Other structures are less cache-friendly because they store data separately
 
 Most of the time, we ignore these memory management costs, but they can have real practical performance affects!
 

@@ -9,13 +9,17 @@ import java.util.Collection;
 import static junit.framework.TestCase.assertEquals;
 import static junit.framework.TestCase.fail;
 
-public class CollectionTest {
+public class ArraysTest {
     // Arrays are a fixed length at instantiation
     // Attempts to add to the array throw an exception
     @Test
     public void ArrayTest() {
         int[] numbers = new int[5];
         assertEquals(5, numbers.length);
+
+        numbers[0] = 0;
+        numbers[1] = 4;
+        numbers[2] = 9;
 
         for (int i = 0; i < numbers.length; ++i) {
             numbers[i] = i;

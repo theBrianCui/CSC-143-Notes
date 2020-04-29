@@ -39,7 +39,7 @@ public class BigO {
         return Arrays.toString(array); // O(n)
     }
 
-    // O(n^2)
+    // O(n^2) - quadratic
     public static char[][] triangle(int n) {
         char[][] square = new char[n][n];
         for (int row = 0; row < square.length; ++row) { // O(n * n)
@@ -67,7 +67,7 @@ public class BigO {
         return cube;
     }
 
-    // O(???)
+    // O(n^2)
     public void selectionSort() {
         for (int sortedIndex = 0; sortedIndex < array.length; ++sortedIndex) {
 
@@ -102,7 +102,7 @@ public class BigO {
         return true;
     }
 
-    // O(log(n))
+    // O(log_2 (n))
     private int indexOfBinarySearch(int target) {
         return this.binSearch(target, 0, this.size());
     }
