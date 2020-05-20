@@ -96,7 +96,33 @@ public class LinkedList<T> implements Iterable<T> {
     @Override
     public boolean equals(Object o) {
         /* YOUR CODE HERE */
-        return false;
+        if (o == null) {
+            return false;
+        }
+
+        if (this == o) {
+            return true;
+        }
+
+        if (this.getClass() != o.getClass()) {
+            return false;
+        }
+
+        LinkedList<T> other = (LinkedList<T>) o;
+        if (this.size() != other.size()) {
+            return false;
+        }
+
+        Iterator<T> iterator = this.iterator();
+        Iterator<T> otherIterator = other.iterator();
+
+        while (iterator.hasNext()) {
+            if (!iterator.next().equals(otherIterator.next())) {
+                return false;
+            }
+        }
+
+        return true;
     }
 
     public void clear() {
@@ -114,7 +140,26 @@ public class LinkedList<T> implements Iterable<T> {
     This destroys the list passed as an argument.
      */
     public void join(LinkedList<T> o) {
-        /* YOUR CODE HERE */
+        if (o == null) {
+            return;
+        }
+
+        if (o.size() == 0) {
+            return;
+        }
+
+        if (this.size() == 0) {
+            this.head = o.head;
+            this.tail = o.tail;
+            this.size = o.size;
+            o.clear();
+            return;
+        }
+
+        this.tail.next = o.head;
+        this.tail = o.tail;
+        this.size += o.size();
+        o.clear();
     }
 
     public void reverse() {
@@ -125,9 +170,12 @@ public class LinkedList<T> implements Iterable<T> {
         Node<T> prev = this.head;
         Node<T> current = this.head.next;
         Node<T> next = this.head.next.next;
-        prev.next = null;
 
-        this.tail = this.head;
+        this.head.next = null;
+
+        Node<T> tempHead = this.head;
+        this.head = this.tail;
+        this.tail = tempHead;
 
         while (current != null) {
             next = current.next;
@@ -135,12 +183,11 @@ public class LinkedList<T> implements Iterable<T> {
             prev = current;
             current = next;
         }
-
-        this.head = prev;
     }
 
     public void insert(int index, T value) {
-        Node<T> insert = new Node<T>(value);
+        Node<T> node = new Node<T>(value);
+
         if (index > size || index < 0) {
             throw new IndexOutOfBoundsException();
         }
@@ -164,9 +211,7 @@ public class LinkedList<T> implements Iterable<T> {
             ++i;
         }
 
-        prev.next = insert;
-        insert.next = current;
-
-        ++size;
+        prev.next = node;
+        node.next = current;
     }
 }

@@ -12,7 +12,8 @@ See: LinkedList.java
 
 ## Stack
 
-A *stack* is a data structure which mimics a stack of items in real life. It supports operations:
+A *stack* is a data structure which mimics a stack of items in real life.
+It supports operations:
 
  - Push, that inserts an element on the top of the stack
  - Pop, that returns and removes the element on top of the stack
@@ -22,7 +23,8 @@ Whiteboard: Linked List as Stack
 
 ## Queue
 
-A *queue* is a data structure which mimics a queue in real life. It supports operations:
+A *queue* is a data structure which mimics a queue in real life.
+It supports operations:
 
  - Add (enqueue), that inserts an element to the back of the queue
  - Remove (dequeue), returns and removes an element in the front of the queue
