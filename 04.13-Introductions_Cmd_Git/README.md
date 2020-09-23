@@ -40,11 +40,11 @@ Compilation, for us Java developers, is a kind of **abstraction**.
 
 An **interface** is a set of interactions made available by a system.
 
- - A grocery store accepts money as a forw2payment
-   (instead of labor - raising chickens, w2
+ - A grocery store accepts money as a for payment
+   (instead of labor - raising chickens)
 
- - `javac` takes a minimum of one argumenw2e file to be compiled.
- - `java` takes a minimum of one argumentw2 class to be executed.
+ - `javac` takes a minimum of one argumene file to be compiled.
+ - `java` takes a minimum of one argument class to be executed.
 
 Abstraction and interfaces go hand-in-hand,
 and will be a recurring theme for this class.

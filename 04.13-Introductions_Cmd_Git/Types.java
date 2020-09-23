@@ -14,7 +14,7 @@ class Types {
         double myDouble = 3.14;
 
         long myLong = myInt;
-        // myLong = myDouble;   not OK
+        // myLong = myDouble; //   not OK
 
         // float myFloat = myDouble; // dangerous, converting to smaller width (4 byte)
         float myFloat = (float) 3.14;
@@ -30,7 +30,7 @@ class Types {
         boolean oneIsOdd = isOdd(1);
 
         String message = "Hello, World!";
-        Integer intMessage = (Integer) message;
+        // Integer intMessage = (Integer) message;
         // incompatible types: String cannot be converted to Integer
 
         A myA = new A();
