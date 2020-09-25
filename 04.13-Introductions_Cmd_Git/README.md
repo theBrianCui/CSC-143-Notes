@@ -86,6 +86,29 @@ What do we want in a VCS?
  - Easy on the filesystem
 
 `git` is a popular command line Version Control Software (VCS)
+used throughout the industry for its relative simplicity and efficiency.
+
+Git:
+ - A "repository" is where all the code for a program is stored (root folder)
+ - "Commits" are individual changes tagged with a message
+ - "Branches" are different independent variations of your program
+ - Your final program is the sum of your commits
+
+See: https://git-scm.com/
+Verify your install: `git --version`
+
+Steps for use:
+ 0. Initialize repository once in the root folder: `git init`
+ 1. Write code
+ 2.1 `git status`                     to get an overview of what files were changed
+ 2.2 `git diff`                       to see a "diff" of changes made
+ 2.3 `git add [FILE... ]`             to stage files to be committed
+
+ 3. `git commit -m "description..."`  to create a commit
+ 3.1 `git checkout -b BRANCH_NAME`    to check out a new branch
+ 3.2 `git checkout master`            to return to the default branch (master)
+ 3.3 `git checkout COMMIT`            to check out a specific commit
+ 3.4 `git log`                        to view commit history for the current branch
  4. GOTO 1
 
 Git stores all of its state information in the hidden `.git` folder,
