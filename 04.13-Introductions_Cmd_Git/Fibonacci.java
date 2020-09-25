@@ -3,7 +3,7 @@ import java.math.BigInteger;
 
 public class Fibonacci {
     public static void main(String args[]) {
-        System.out.println(Arrays.toString(computeRange(10)));
+        System.out.println(Arrays.toString(computeRange(5000)));
     }
 
     public static int[] computeRange(int upToIndex) {
