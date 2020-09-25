@@ -72,9 +72,9 @@ However, some type errors can be detected at compile time (good)
 
 Problem:
  - Programming is complicated, most pieces of code depend on several others
- - one change can easily break everything, hard to recover and track
- - single source of truth prohibits large experimentation
- - someone else can clobber your code
+ - one change can easily break everything, hard to recover working copy after overwriting
+ - single source of truth prohibits large scale experimentation
+ - someone else can clobber your code by overwriting it
 
 Version Control: software for tracking code changes over time,
 enabling you to follow different versions of your code as it is developed
@@ -86,29 +86,13 @@ What do we want in a VCS?
  - Easy on the filesystem
 
 `git` is a popular command line Version Control Software (VCS)
-used throughout the industry for its relative simplicity and efficiency.
-
-Git:
- - A "repository" is where all the code for a program is stored (root folder)
- - "Commits" are individual changes tagged with a message
- - "Branches" are different independent variations of your program
- - Your final program is the sum of your commits
-
-Steps for use:
- 0. Initialize repository: `git init`
- 1. Write code
- 2.1 `git status`                     to get an overview of what files were changed
- 2.2 `git diff`                       to see a "diff" of changes made
- 2.3 `git add [FILE... ]`             to stage files to be committed
-
- 3. `git commit -m "description..."` to create a commit 
  4. GOTO 1
 
 Git stores all of its state information in the hidden `.git` folder,
 which is generated when first running `git init` in the root of the repository.
 
-Pro tips:
- - .gitignore
+Pro Tips:
+ - Use the `.gitignore` file to ignore files from being tracked, e.g. `*.class`
  - commit early, commit often
- - branching is cheap
+ - Branching is cheap: `git branch`
  - checkout to time travel, branch if needed
