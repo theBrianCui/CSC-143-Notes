@@ -3,33 +3,38 @@ import java.math.BigInteger;
 
 public class Fibonacci {
     public static void main(String args[]) {
-        System.out.println(Arrays.toString(computeRange(5000)));
+        System.out.println(Arrays.toString(computeRange(
+            10000
+        )));
     }
 
-    public static int[] computeRange(int upToIndex) {
-        int[] fib = new int[upToIndex];
+    public static BigInteger[] computeRange(int upToIndex) {
+        BigInteger[] fib = new BigInteger[upToIndex];
         for (int i = 0; i < upToIndex; ++i) {
-            fib[i] = fibonacci(i);
+            fib[i] = fibonacci(BigInteger.valueOf(i));
         }
 
         return fib;
     }
 
     // O(2^n)
-    public static int fibonacci(int n) {
-        if (n == 0) {
-            return 0;
+    public static BigInteger fibonacci(BigInteger n) {
+        if (n.equals(BigInteger.ZERO)) {
+            return BigInteger.ZERO;
         }
 
-        if (n == 1) {
-            return 1;
+        if (n.equals(BigInteger.ONE)) {
+            return BigInteger.ONE;
         }
 
-        int first = 0;
-        int second = 1;
-        int next = first + second;
-        for (int i = 2; i <= n; ++i) {
-            next = first + second;
+        BigInteger first = BigInteger.ZERO;
+        BigInteger second = BigInteger.ONE;
+        BigInteger next = first.add(second);
+    
+        for (BigInteger i = BigInteger.TWO;
+             i.compareTo(n) <= 0;
+             i = i.add(BigInteger.ONE)) {
+            next = first.add(second);
             first = second;
             second = next;
         }
