@@ -117,5 +117,5 @@ which is generated when first running `git init` in the root of the repository.
 Pro Tips:
  - Use the `.gitignore` file to ignore files from being tracked, e.g. `*.class`
  - commit early, commit often
- - Branching is cheap: `git branch`
+ - Branching is cheap: `git branch` to list, `git checkout -b NAME` to create a new branch
  - checkout to time travel, branch if needed
