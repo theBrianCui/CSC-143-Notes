@@ -12,21 +12,21 @@ public class FizzBuzzTest {
 
     @Test
     public void FizzBuzzThreesTest() {
-        assertEquals("Fizz", FizzBuzz.fizzbuzz(3));
-        assertEquals("Fizz", FizzBuzz.fizzbuzz(6));
-        assertEquals("Fizz", FizzBuzz.fizzbuzz(9));
+        assertEquals(FizzBuzz.fizzbuzz(3), fizz);
+        assertEquals(FizzBuzz.fizzbuzz(6), fizz);
 
-        for (int i = 3; i <= 100; i += 3) {
-            assertTrue(FizzBuzz.fizzbuzz(i).contains("Fizz"));
+        for (int i = 3; i < 100; i += 3) {
+            assertTrue(FizzBuzz.fizzbuzz(i).contains(fizz));
         }
     }
 
     // Unit tests
     @Test
     public void FizzBuzzFiveTest() {
-        assertEquals("Buzz", FizzBuzz.fizzbuzz(5));
+        assertEquals(FizzBuzz.fizzbuzz(5), buzz);
+
         for (int i = 5; i <= 100; i += 5) {
-            assertTrue(FizzBuzz.fizzbuzz(i).contains("Buzz"));
+            assertTrue(FizzBuzz.fizzbuzz(i).contains(buzz));
         }
     }
 
@@ -41,9 +41,11 @@ public class FizzBuzzTest {
             if (i % 5 == 0) {
                 assertTrue(output.contains("Buzz"));
             }
+
             if (i % 3 != 0 && i % 5 != 0) {
                 assertEquals(Integer.toString(i), output);
             }
+
         }
     }
 }

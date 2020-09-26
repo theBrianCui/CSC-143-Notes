@@ -18,11 +18,10 @@ though I recommend IntelliJ for a number of reasons.
  - Built-in test suite support for jUnit: run and debug individual tests,
    see the expected vs. actual output for assertions
  
- - Built-in support for Git: use `git` entirely through the GUI,
-   inline `git diff` shows changes directly in the editor
+ - Built-in support for Git: use `git` entirely through the GUI menus
 
  - Customizable interface: light and dark theme, editor colors,
-   customizable keyboard shortcuts
+   keyboard shortcuts
 
 **Bonus**: IntelliJ supports Eclipse project configurations.
 
@@ -95,7 +94,9 @@ There are several *testing libraries* available for languages that
 contain all the needed components to write unit tests.
 
  - **Test Runner:** a program with a `main` method that runs tests and reports output)
+ 
  - **Assertion library:** a collection of assertions like `assertEquals` and `assertTrue`
+ 
  - Mocking library: a program that can substitute behavior of other classes
 
 jUnit contains the first two: a runner and assertion library.
