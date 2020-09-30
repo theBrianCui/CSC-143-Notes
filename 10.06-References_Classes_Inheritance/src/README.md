@@ -5,14 +5,18 @@
 **Classes** are blueprints for objects: containers of *state*.
 
  - Properties (fields) maintain the state of a given instance.
+ 
  - Methods are functions attached to classes that manipulate state.
+ 
  - Access modifiers `public`, `protected`, and `private` can be used to hide implementation details
+ 
  - Classes expose **interfaces** that enable external clients to modify state.
    
-   - Interfaces, formally, are like blueprints for classes
+**Interfaces**, formally, are like blueprints for classes
+
    - Interfaces do not contain implementation, classes are required to provide it
    - Classes can implement any number of interfaces (mix and match)
-   - `Iterator<T>` and `Comparable<T>` in Project 0
+   - `Iterable<T>` and `Comparable<T>` in Project 0
 
 When a class implements an interface,
 the class must implement *every* method of the interface.
@@ -35,10 +39,10 @@ individual responsibilities should be fulfilled by independent entities
 
 Changes to the program specification should be limited in scope to the affected responsible entities
 
-Real world example: car systems
- - wheels: tires, rims, axles
- - power: engine, 12v battery
- - frame: doors, bumpers, hood, trunk
+Real world example: computers
+ - computational hardware: cpu, graphics, ram
+ - physical frame: case, power supply, cables
+ - external accessories: monitor, mouse, keyboard
 
 ## References and Reference Types
 
@@ -100,7 +104,7 @@ Java does not expose raw pointers for the reasons above.
 Instead, Java use a special form of pointer called a **reference**.
 
 A **reference** in Java is like a pointer:
-internally, it is a number which locates an Object in memory.
+internally, it is a number (address) which locates an Object in memory.
 
 However, it comes with some key differences to pointers:
 

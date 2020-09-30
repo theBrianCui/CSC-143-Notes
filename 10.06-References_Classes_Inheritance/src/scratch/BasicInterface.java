@@ -26,6 +26,6 @@ class ConcreteClass implements BasicInterface {
         System.out.println(a.hello());
         System.out.println(a.count());
 
-        //BasicInterface b = new BasicInterface();
+        // BasicInterface b = //new BasicInterface();
     }
 }
