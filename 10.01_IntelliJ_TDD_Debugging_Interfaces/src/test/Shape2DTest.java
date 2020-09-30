@@ -46,7 +46,9 @@ public class Shape2DTest {
         assertEquals(2, Math.round(s1.area()));
         assertEquals(314, Math.round(s2.area()));
 
+
         s2 = s1;
+        assertEquals(2, Math.round(s2.area()));
 
     }
 }

@@ -194,7 +194,7 @@ In Java, an **interface** is a blueprint for a class.
 
  - Describes methods a class *must* implement
  - Does NOT describe *how* the methods are implemented
- - Cannot have properties* (for the purposes of this class)
+ - Cannot have properties* (for the purposes of this course)
 
 *See:* Shape2D
 *See:* Shape2DTest
@@ -206,7 +206,11 @@ Interfaces are useful because they let clients (you)
 use classes that fulfill the interface's requirements
 *without any knowledge* of the underlying implementation! (Abstraction!)
 
-*See:* Popular Java interfaces
+*See:* Popular Java interfaces:
+
+ - List: https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html
+ - Comparable: https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Comparable.html
+ - Iterable: https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Iterable.html
 
 A class can mix-and-match any number of interfaces,
 so long as it fulfills all the methods of those interfaces.
@@ -217,7 +221,7 @@ Project 0 features some Java interfaces that you need to implement.
 
  - *Iterable*: describes classes which can be iterated over
 
- - *Iterator*: describes classes which iterate over a list or sequence
+ - *Iterator*: describes classes which iterate over a sequence or structure
 
  - *Comparable*: describes classes which can be compared (ordered)
 

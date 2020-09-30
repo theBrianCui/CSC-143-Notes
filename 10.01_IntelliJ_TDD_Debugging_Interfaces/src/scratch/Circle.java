@@ -4,6 +4,9 @@ public class Circle implements Shape2D {
     private int radius;
 
     public Circle(int radius) {
+        if (radius < 0) {
+            throw new RuntimeException("Invalid radius specified");
+        }
         this.radius = radius;
     }
 
