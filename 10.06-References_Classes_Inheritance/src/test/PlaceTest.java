@@ -22,6 +22,9 @@ public class PlaceTest {
 
         assertEquals("North Seattle College: John", nsc.toString());
 
+        Place nsc2 = nsc;
+        assertEquals("North Seattle College: John", nsc2.toString());
+
         nsc.expel("John");
         assertEquals("North Seattle College: ", nsc.toString());
     }

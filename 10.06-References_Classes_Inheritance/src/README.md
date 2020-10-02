@@ -133,8 +133,10 @@ When comparing two Objects:
 Object-Oriented Programming has three pillars:
 
  - **Inheritance**: Classes can be extensions of others.
- - **Polymorphism**: Classes that fulfill the same interface can be used interchangably for that interface.
- - **Encapsulation**: Classes expose (simple) interfaces to hide (complex) implementation.
+ 
+ - **Polymorphism**: Classes that fulfill the same interface can be used interchangeably where that interface is expected.
+ 
+ - **Encapsulation**: Classes expose (simple) interfaces that hide (complex) implementation.
 
 ### Inheritance
 
