@@ -9,22 +9,22 @@ public class BigO {
         this.array = new int[n];
     }
 
-    // O(???) - constant time
+    // O(1) - constant time
     public int get(int i) {
         return this.array[i];
     }
 
-    // O(???) - constant time
+    // O(1) - constant time
     public void set(int i, int value) {
         this.array[i] = value;
     }
 
-    // O(???) - property lookup is constant time
+    // O(1) - property lookup is constant time
     public int size() {
         return this.array.length;
     }
 
-    // O(???) - linear time
+    // O(n) - linear time
     public int indexOf(int o) {
         for (int i = 0; i < this.array.length; ++i) {
             if (o == this.get(i))
@@ -33,7 +33,7 @@ public class BigO {
         return -1;
     }
 
-    // O(???) - linear time
+    // O(n) - linear time
     public String toString() {
         // O(n)
         return Arrays.toString(array); // O(n)
@@ -51,7 +51,7 @@ public class BigO {
         return square;
     }
 
-    // O(???)
+    // O(n^3)
     public static int[][][] cube(int n) {
         int[][][] cube = new int[n][n][n];
         int counter = 0;
@@ -89,7 +89,7 @@ public class BigO {
         }
     }
 
-    // O(???)
+    // O(n)
     public boolean isSorted() {
         int current = this.get(0);
         for (int value : this.array) {
@@ -131,7 +131,7 @@ public class BigO {
         return binSearch(target, begin, middle);
     }
 
-    // O(???)
+    // O(2^n)
     public static int fib(int i) {
         if (i == 0)
             return 0;

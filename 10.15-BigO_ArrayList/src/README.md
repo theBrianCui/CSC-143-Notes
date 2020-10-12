@@ -105,7 +105,7 @@ With our newfound knowledge of Big O, we can analyze the efficiency of arrays, o
 
  - Search (Linear vs. Binary): `O(n)` vs. `O(logn)`. Searching a sorted list using binary search is much faster.
 
- - Sorting: `O(nlogn)` best case. Not bad, all things considered.
+ - Sorting: `O(nlogn)` best case. Not bad, all things considered. `O(n^2)` for naive algorithms.
 
  - Length: `O(1)` in Java, thanks to an internal `.length` property. (Property lookup is a form of indexing, to the compiler).
 
