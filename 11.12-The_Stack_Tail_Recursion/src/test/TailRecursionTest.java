@@ -16,12 +16,15 @@ public class TailRecursionTest {
         return rangeSumTailRecursive(limit, 0);
     }
 
-    private int rangeSumTailRecursive(int limit, int solution) {
+    private int rangeSumTailRecursive(
+            int limit, int solution) {
+
         if (limit == 0) {
             return solution;
         }
 
-        return rangeSumTailRecursive(limit - 1, solution + limit);
+        return rangeSumTailRecursive(
+            limit - 1, solution + limit);
     }
 
     public int rangeSumRecursive(int limit) {
@@ -29,7 +32,8 @@ public class TailRecursionTest {
             return 0;
         }
 
-        return limit + rangeSumRecursive(limit - 1);
+        return limit +
+                rangeSumRecursive(limit - 1);
     }
 
     @Test
@@ -46,7 +50,8 @@ public class TailRecursionTest {
      * @return The maximum Integer in the list, or null if the list is empty.
      */
     public Integer getMaxOfList(ListNode<Integer> root) {
-        return getMaxOfListTailRecursive(root, null);
+        return getMaxOfListTailRecursive(
+                root, null);
     }
 
     public Integer getMaxOfListTailRecursive(ListNode<Integer> root, Integer currentMax) {
@@ -54,10 +59,13 @@ public class TailRecursionTest {
             return currentMax;
         }
 
-        if (currentMax == null || root.payload.compareTo(currentMax) > 0) {
+        if (currentMax == null
+            || root.payload.compareTo(currentMax) > 0) {
             currentMax = root.payload;
         }
-        return getMaxOfListTailRecursive(root.next, currentMax);
+
+        return getMaxOfListTailRecursive(
+                root.next, currentMax);
     }
 
     /*

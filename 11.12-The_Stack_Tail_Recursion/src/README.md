@@ -39,11 +39,12 @@ public <T> boolean containsTree(BinaryTreeNode<T> root, T value) {
 
 ## The Stack
 
-**Debugging**: `containsTree` in BinaryTreeTest.java
+**Debugging**: `containsTree` in RecursionTest.java
 
 When tracing the recursive calls of `containsTree`, we observe the following:
 
  - The context of each function call is preserved until it returns
+ 
  - Each function call can only return when its own recursive calls return
 
 This is the case with **all** function calls, not just recursive calls! The *caller* function must save its context (local variables) while the *callee* is running. The callee is going to take up space for context, called a **stack frame**.
@@ -133,6 +134,7 @@ Wow, trees are awful at everything! Why would anyone want to use them?
 **Binary Search Trees**, or BSTs, are a special subset of Binary Trees, with the following condition for every node:
 
  - All child nodes to the left of the node are *less than* the current node.
+ 
  - All child nodes to the right of the node are *greater than* the current node.
 
 **Whiteboard**: Binary Search Tree containing Integers
@@ -192,11 +194,15 @@ passed as an argument to the recursive call.
 Observations:
 
  - Unlike traditional recursion,
+ 
         - the base case returns the trivial solution OR the solution passed by the argument
+        
         - the recursive return statement returns *exactly* the recursive call
+            
             - as a result, tail recursion is not appropriate for tree search (why?)
         
  - Every iterative algorithm can be turned into a tail recursive algorithm, and vice versa
+ 
         - not possible with recursion, unless you manage your own stack
 
  - Tail recursion can be optimized to take `O(1)` stack space by the compiler (how?)
